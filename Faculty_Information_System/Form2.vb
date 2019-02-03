@@ -9,7 +9,7 @@ Public Class Form2
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString =
-       "server=localhost;userid=root;password=Jeeprs@509@iitg;database=faculty"
+       "server=localhost;userid=root;password=<your local host pass>;database=faculty"
 
         Try
             MysqlConn.Open()
@@ -44,7 +44,6 @@ Public Class Form2
                 MessageBox.Show("Username and password are not correct")
 
             End If
-
 
             MysqlConn.Close()
 
