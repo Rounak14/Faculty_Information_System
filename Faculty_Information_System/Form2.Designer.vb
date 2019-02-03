@@ -31,58 +31,65 @@ Partial Class Form2
         '
         'Label2
         '
-        Me.Label2.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(12, 21)
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(16, 26)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(122, 28)
+        Me.Label2.Size = New System.Drawing.Size(163, 34)
         Me.Label2.TabIndex = 5
         Me.Label2.Text = "Email id :"
         '
         'Label3
         '
-        Me.Label3.Font = New System.Drawing.Font("Arial Unicode MS", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(12, 71)
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(16, 87)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(122, 28)
+        Me.Label3.Size = New System.Drawing.Size(163, 34)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Password :"
         '
         'TextBox_email
         '
-        Me.TextBox_email.Font = New System.Drawing.Font("Arial Unicode MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox_email.Location = New System.Drawing.Point(140, 22)
+        Me.TextBox_email.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_email.Location = New System.Drawing.Point(187, 27)
+        Me.TextBox_email.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox_email.Name = "TextBox_email"
-        Me.TextBox_email.Size = New System.Drawing.Size(267, 28)
+        Me.TextBox_email.Size = New System.Drawing.Size(355, 29)
         Me.TextBox_email.TabIndex = 7
         '
         'TextBox_Pass
         '
-        Me.TextBox_Pass.Font = New System.Drawing.Font("Arial Unicode MS", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox_Pass.Location = New System.Drawing.Point(140, 68)
+        Me.TextBox_Pass.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_Pass.Location = New System.Drawing.Point(187, 84)
+        Me.TextBox_Pass.Margin = New System.Windows.Forms.Padding(4)
         Me.TextBox_Pass.Name = "TextBox_Pass"
-        Me.TextBox_Pass.Size = New System.Drawing.Size(267, 28)
+        Me.TextBox_Pass.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
+        Me.TextBox_Pass.Size = New System.Drawing.Size(355, 29)
         Me.TextBox_Pass.TabIndex = 8
         '
         'btn_login
         '
         Me.btn_login.Font = New System.Drawing.Font("Arial Rounded MT Bold", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_login.Location = New System.Drawing.Point(156, 112)
+        Me.btn_login.Location = New System.Drawing.Point(208, 138)
+        Me.btn_login.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_login.Name = "btn_login"
-        Me.btn_login.Size = New System.Drawing.Size(130, 36)
+        Me.btn_login.Size = New System.Drawing.Size(173, 44)
         Me.btn_login.TabIndex = 9
         Me.btn_login.Text = "LOGIN"
         Me.btn_login.UseVisualStyleBackColor = True
         '
         'Form2
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(433, 160)
+        Me.ClientSize = New System.Drawing.Size(577, 197)
         Me.Controls.Add(Me.btn_login)
         Me.Controls.Add(Me.TextBox_Pass)
         Me.Controls.Add(Me.TextBox_email)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Form2"
         Me.Text = "LOGIN"
         Me.ResumeLayout(False)
