@@ -33,3 +33,5 @@ C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Resources.resources
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.vbproj.GenerateResource.Cache
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.vbprojResolveAssemblyReference.cache
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.vbprojResolveAssemblyReference.cache
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Search_Form.resources

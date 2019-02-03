@@ -10,7 +10,6 @@ Public Class Form2
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString =
        "server=localhost;userid=root;password=Jeeprs@509@iitg;database=faculty"
-
         Try
             MysqlConn.Open()
             'MessageBox.Show("Connection Successful")
@@ -24,9 +23,10 @@ Public Class Form2
         Try
             MysqlConn.Open()
             Dim Query As String
-            Query = "select * from login_table where email_id='" & TextBox_email.Text & "' and password='" & TextBox_Pass.Text & "' "
+            Query = "select * from faculty_info where email_id='" & TextBox_email.Text & "' and password='" & TextBox_Pass.Text & "' "
             COMMAND = New MySqlCommand(Query, MysqlConn)
             READER = COMMAND.ExecuteReader()
+
             Dim count As Integer
             count = 0
             While READER.Read
@@ -38,6 +38,7 @@ Public Class Form2
                 OBJ.QueryPass = Query
                 OBJ.Show()
                 Me.Hide()
+                Search_Form.Hide()
             ElseIf count > 1 Then
                 MessageBox.Show("Username and password are Duplicate")
             Else
