@@ -9,9 +9,13 @@ Public Class Form2
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString =
+<<<<<<< HEAD
        "server=localhost;userid=root;password=Password11;database=faculty"
 
 
+=======
+       "server=localhost;userid=root;password=Jeeprs@509@iitg;database=faculty"
+>>>>>>> f42a51e922f5e8ad41725dc321bb0372c58cfee0
         Try
             MysqlConn.Open()
             'MessageBox.Show("Connection Successful")
@@ -33,12 +37,12 @@ Public Class Form2
             count = 0
             While READER.Read
                 count = count + 1
-                MessageBox.Show(READER.GetValue(1))
             End While
-
             If count = 1 Then
                 MessageBox.Show("Username and password are correct", "Message")
-                Form1.Show()
+                Dim OBJ As New Form1
+                OBJ.QueryPass = Query
+                OBJ.Show()
                 Me.Hide()
                 Search_Form.Hide()
             ElseIf count > 1 Then
