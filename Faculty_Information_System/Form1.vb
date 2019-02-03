@@ -10,7 +10,7 @@ Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString =
-       "server=localhost;userid=root;password=Jeeprs@509@iitg;database=faculty"
+       "server=localhost;userid=root;password=<your password>;database=faculty"
 
         Dim READER As MySqlDataReader
         Try
