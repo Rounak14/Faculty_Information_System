@@ -9,7 +9,7 @@ Public Class Form2
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         MysqlConn = New MySqlConnection
         MysqlConn.ConnectionString =
-       "server=localhost;userid=root;password=<your local host pass>;database=faculty"
+       "server=localhost;userid=root;password=Jeeprs@509@iitg;database=faculty"
 
         Try
             MysqlConn.Open()
@@ -31,12 +31,12 @@ Public Class Form2
             count = 0
             While READER.Read
                 count = count + 1
-
             End While
-
             If count = 1 Then
                 MessageBox.Show("Username and password are correct", "Message")
-                Form1.Show()
+                Dim OBJ As New Form1
+                OBJ.QueryPass = Query
+                OBJ.Show()
                 Me.Hide()
             ElseIf count > 1 Then
                 MessageBox.Show("Username and password are Duplicate")
