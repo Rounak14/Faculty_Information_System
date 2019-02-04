@@ -5,16 +5,13 @@ Imports System.Data
 Public Class Form2
     Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
-<<<<<<< HEAD
+
         Dim email_id As String = ""
         Dim password As String
         Dim username As String = ""
         Dim pass As String
-=======
-        MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString = "server=localhost;userid=root;password=Password11;database=faculty"
+       
 
->>>>>>> b0a5384e0c9a2ca1826c2d586e299a5f9d5d8227
         Try
             
         Catch ex As Exception
