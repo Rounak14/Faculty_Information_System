@@ -8,14 +8,8 @@ Public Class Form2
 
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
         MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString =
-<<<<<<< HEAD
-       "server=localhost;userid=root;password=Password11;database=faculty"
+        MysqlConn.ConnectionString = "server=localhost;userid=root;password=Password11;database=faculty"
 
-
-=======
-       "server=localhost;userid=root;password=Jeeprs@509@iitg;database=faculty"
->>>>>>> f42a51e922f5e8ad41725dc321bb0372c58cfee0
         Try
             MysqlConn.Open()
             'MessageBox.Show("Connection Successful")

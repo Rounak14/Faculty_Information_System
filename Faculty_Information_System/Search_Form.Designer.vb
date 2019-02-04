@@ -29,6 +29,7 @@ Partial Class Search_Form
         Me.RadioButton_dept = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
+        Me.ComboBox_dept = New System.Windows.Forms.ComboBox()
         Me.SuspendLayout()
         '
         'SearchBox
@@ -60,7 +61,7 @@ Partial Class Search_Form
         '
         'Button_search
         '
-        Me.Button_search.Location = New System.Drawing.Point(221, 239)
+        Me.Button_search.Location = New System.Drawing.Point(210, 269)
         Me.Button_search.Name = "Button_search"
         Me.Button_search.Size = New System.Drawing.Size(120, 29)
         Me.Button_search.TabIndex = 3
@@ -83,7 +84,7 @@ Partial Class Search_Form
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(160, 183)
+        Me.RadioButton2.Location = New System.Drawing.Point(55, 222)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(121, 19)
         Me.RadioButton2.TabIndex = 5
@@ -101,11 +102,22 @@ Partial Class Search_Form
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Search By -"
         '
+        'ComboBox_dept
+        '
+        Me.ComboBox_dept.FormattingEnabled = True
+        Me.ComboBox_dept.Items.AddRange(New Object() {"Bioscience and Bioengineering", "Chemical Engineering", "Chemistry", "Civil Engineering", "Computer Science and Engineering", "Design", "Electronics and Electrical Engineering", "Humanities and Social Science", "Mathematics", "Mechanical Engineering", "Physics"})
+        Me.ComboBox_dept.Location = New System.Drawing.Point(188, 184)
+        Me.ComboBox_dept.Name = "ComboBox_dept"
+        Me.ComboBox_dept.Size = New System.Drawing.Size(207, 21)
+        Me.ComboBox_dept.TabIndex = 7
+        Me.ComboBox_dept.Text = "---------------Select Department-------------------"
+        '
         'Search_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(560, 343)
+        Me.Controls.Add(Me.ComboBox_dept)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton_dept)
@@ -126,4 +138,5 @@ Partial Class Search_Form
     Friend WithEvents RadioButton_dept As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents ComboBox_dept As System.Windows.Forms.ComboBox
 End Class
