@@ -64,6 +64,34 @@ Public Class Search_Form
         End Try
     End Function
 
+    Function SearchByResearchInterest(input As String) As String
+        MysqlConn = New MySqlConnection
+        MysqlConn.ConnectionString = "server=localhost;userid=root;password=Password11;database=faculty"
+        Dim READER As MySqlDataReader
+        Try
+            MysqlConn.Open()
+            Dim Query As String
+            Query = "select * from faculty_info where Name='" & input & "' "
+            COMMAND = New MySqlCommand(Query, MysqlConn)
+            READER = COMMAND.ExecuteReader()
+
+            Dim count As Integer
+            count = 0
+            While READER.Read
+                count = count + 1
+                MessageBox.Show(READER.GetValue(1))
+            End While
+
+            MysqlConn.Close()
+
+        Catch ex As MySqlException
+            MessageBox.Show(ex.Message)
+        Finally
+            MysqlConn.Dispose()
+
+        End Try
+    End Function
+
 
     Private Sub Login_Button_Click(sender As Object, e As EventArgs) Handles Login_Button.Click
         Form2.Show()
@@ -78,6 +106,14 @@ Public Class Search_Form
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         filter = "Research Interest"
+        ComboBox_dept.ResetText()
+        ComboBox_dept.Hide()
+        SearchBox.Text = ""
+    End Sub
+
+    Private Sub RadioButton_Name_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_Name.CheckedChanged
+        filter = "Name"
+        ComboBox_dept.ResetText()
         ComboBox_dept.Hide()
         SearchBox.Text = ""
     End Sub
@@ -90,8 +126,9 @@ Public Class Search_Form
         ElseIf filter = "Department" Then
             SearchByDepartment(SearchBox.Text.ToString)
         ElseIf filter = "Research Interest" Then
-            MessageBox.Show("Fiter not available as of now. Will get back to you soon!!!!!")
-            'SearchByName(SearchBox.Text.ToString)
+            SearchByResearchInterest(SearchBox.Text.ToString)
+        ElseIf filter = "Name" Then
+            SearchByName(SearchBox.Text.ToString)
         End If
 
     End Sub
@@ -103,4 +140,6 @@ Public Class Search_Form
     Private Sub ComboBox_dept_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_dept.SelectedIndexChanged
         SearchBox.Text = ComboBox_dept.Text
     End Sub
+
+    
 End Class

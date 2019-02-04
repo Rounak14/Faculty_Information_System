@@ -30,6 +30,7 @@ Partial Class Search_Form
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.ComboBox_dept = New System.Windows.Forms.ComboBox()
+        Me.RadioButton_Name = New System.Windows.Forms.RadioButton()
         Me.SuspendLayout()
         '
         'SearchBox
@@ -84,7 +85,7 @@ Partial Class Search_Form
         '
         Me.RadioButton2.AutoSize = True
         Me.RadioButton2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.RadioButton2.Location = New System.Drawing.Point(55, 222)
+        Me.RadioButton2.Location = New System.Drawing.Point(55, 233)
         Me.RadioButton2.Name = "RadioButton2"
         Me.RadioButton2.Size = New System.Drawing.Size(121, 19)
         Me.RadioButton2.TabIndex = 5
@@ -112,11 +113,24 @@ Partial Class Search_Form
         Me.ComboBox_dept.TabIndex = 7
         Me.ComboBox_dept.Text = "---------------Select Department-------------------"
         '
+        'RadioButton_Name
+        '
+        Me.RadioButton_Name.AutoSize = True
+        Me.RadioButton_Name.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.RadioButton_Name.Location = New System.Drawing.Point(55, 208)
+        Me.RadioButton_Name.Name = "RadioButton_Name"
+        Me.RadioButton_Name.Size = New System.Drawing.Size(59, 19)
+        Me.RadioButton_Name.TabIndex = 8
+        Me.RadioButton_Name.TabStop = True
+        Me.RadioButton_Name.Text = "Name"
+        Me.RadioButton_Name.UseVisualStyleBackColor = True
+        '
         'Search_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(560, 343)
+        Me.Controls.Add(Me.RadioButton_Name)
         Me.Controls.Add(Me.ComboBox_dept)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.RadioButton2)
@@ -139,4 +153,5 @@ Partial Class Search_Form
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents ComboBox_dept As System.Windows.Forms.ComboBox
+    Friend WithEvents RadioButton_Name As System.Windows.Forms.RadioButton
 End Class
