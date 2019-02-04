@@ -1,96 +1,74 @@
 ﻿Imports Microsoft.VisualBasic
-Imports MySql.Data.MySqlClient
+Imports System.Data.OleDb
+Imports System.Data
 
 Public Class Search_Form
-    Dim MysqlConn As MySqlConnection
-    Dim COMMAND As MySqlCommand
-
+    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
     Dim filter As String = ""
 
-   
+
     Function SearchByDepartment(input As String) As String
-        MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString = "server=localhost;userid=root;password=Password11;database=faculty"
-        Dim READER As MySqlDataReader
+        Dim conn = New OleDbConnection(connectionString)
         Try
-            MysqlConn.Open()
-            Dim Query As String
-            Query = "select * from faculty_info where Department='" & input & "' "
-            COMMAND = New MySqlCommand(Query, MysqlConn)
-            READER = COMMAND.ExecuteReader()
-
-            Dim count As Integer
-            count = 0
-            While READER.Read
-                count = count + 1
-                MessageBox.Show(READER.GetValue(1))
-            End While
-
-            MysqlConn.Close()
-
-        Catch ex As MySqlException
+            conn.Open()
+            Dim query As String = "Select Name From faculty_info where Department= '" & input & "';"
+            Dim cmd As New OleDbCommand(query, conn)
+            'Dim reader As OleDbDataReader = cmd.ExecuteReader()
+            'While (reader.Read())
+            MessageBox.Show(cmd.ExecuteScalar.ToString)
+            'End While
+            conn.Close()
+        Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
-            MysqlConn.Dispose()
-
+            conn.Dispose()
         End Try
     End Function
 
     Function SearchByName(input As String) As String
-        MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString = "server=localhost;userid=root;password=Password11;database=faculty"
-        Dim READER As MySqlDataReader
+        Dim conn = New OleDbConnection(connectionString)
         Try
-            MysqlConn.Open()
-            Dim Query As String
-            Query = "select * from faculty_info where Name='" & input & "' "
-            COMMAND = New MySqlCommand(Query, MysqlConn)
-            READER = COMMAND.ExecuteReader()
-
-            Dim count As Integer
-            count = 0
-            While READER.Read
-                count = count + 1
-                MessageBox.Show(READER.GetValue(1))
-            End While
-
-            MysqlConn.Close()
-
-        Catch ex As MySqlException
+            conn.Open()
+            Dim query As String = "Select Name From faculty_info where Name= '" & input & "';"
+            Dim cmd As New OleDbCommand(query, conn)
+            'Dim reader As OleDbDataReader = cmd.ExecuteReader()
+            'While (reader.Read())
+            MessageBox.Show(cmd.ExecuteScalar.ToString)
+            'End While
+            conn.Close()
+        Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
-            MysqlConn.Dispose()
-
+            conn.Dispose()
         End Try
     End Function
 
-    Function SearchByResearchInterest(input As String) As String
-        MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString = "server=localhost;userid=root;password=Password11;database=faculty"
-        Dim READER As MySqlDataReader
-        Try
-            MysqlConn.Open()
-            Dim Query As String
-            Query = "select * from faculty_info where Name='" & input & "' "
-            COMMAND = New MySqlCommand(Query, MysqlConn)
-            READER = COMMAND.ExecuteReader()
+    'Function SearchByResearchInterest(input As String) As String
+    'MysqlConn = New MySqlConnection
+    'MysqlConn.ConnectionString = "server=localhost;userid=root;password=Password11;database=faculty"
+    'Dim READER As MySqlDataReader
+    'Try
+    '    MysqlConn.Open()
+    '    Dim Query As String
+    '    Query = "select * from faculty_info where Name='" & input & "' "
+    '    COMMAND = New MySqlCommand(Query, MysqlConn)
+    '    READER = COMMAND.ExecuteReader()
 
-            Dim count As Integer
-            count = 0
-            While READER.Read
-                count = count + 1
-                MessageBox.Show(READER.GetValue(1))
-            End While
+    '    Dim count As Integer
+    '    count = 0
+    '    While READER.Read
+    '        count = count + 1
+    '        MessageBox.Show(READER.GetValue(1))
+    '    End While
 
-            MysqlConn.Close()
+    '    MysqlConn.Close()
 
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            MysqlConn.Dispose()
+    'Catch ex As MySqlException
+    '    MessageBox.Show(ex.Message)
+    'Finally
+    '    MysqlConn.Dispose()
 
-        End Try
-    End Function
+    'End Function
 
 
     Private Sub Login_Button_Click(sender As Object, e As EventArgs) Handles Login_Button.Click
@@ -126,9 +104,9 @@ Public Class Search_Form
         ElseIf filter = "Department" Then
             SearchByDepartment(SearchBox.Text.ToString)
         ElseIf filter = "Research Interest" Then
-            SearchByResearchInterest(SearchBox.Text.ToString)
+            'SearchByResearchInterest(SearchBox.Text.ToString)
         ElseIf filter = "Name" Then
-            SearchByName(SearchBox.Text.ToString)
+            'SearchByName(SearchBox.Text.ToString)
         End If
 
     End Sub
@@ -141,5 +119,5 @@ Public Class Search_Form
         SearchBox.Text = ComboBox_dept.Text
     End Sub
 
-    
+
 End Class

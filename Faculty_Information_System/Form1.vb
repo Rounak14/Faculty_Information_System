@@ -3,31 +3,28 @@ Imports System.Data.OleDb
 Imports System.Data
 
 Public Class Form1
-    
+    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
 
-    Public Property QueryPass As String
+    Public Property EmailPass As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim query As String = "Select Name From faculty_info where Email= '" & EmailPass & "';"
+        Dim conn = New OleDbConnection(connectionString)
+        Dim cmd As New OleDbCommand(query, conn)
+        Try
+            conn.Open()
+            Dim name As String = cmd.ExecuteScalar().ToString
+            Label_Details.Text = name
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Warning")
+        End Try
 
-        ' MysqlConn = New MySqlConnection
-        ' MysqlConn.ConnectionString =
-        '"server=localhost;userid=root;password=<your password>;database=faculty"
 
 
-        ' Dim READER As MySqlDataReader
-        ' Try
-        '     MysqlConn.Open()
-        '     'MessageBox.Show("Connection Successful")
-        '     COMMAND = New MySqlCommand(QueryPass, MysqlConn)
-        '     READER = COMMAND.ExecuteReader()
-        '     While READER.Read
-        '         Label2.Text = READER.GetValue(1)
-        '     End While
-        '     MysqlConn.Close()
-        ' Catch ex As Exception
-        '     MessageBox.Show(ex.Message)
-        ' End Try
 
-        
+
     End Sub
+
+   
 End Class

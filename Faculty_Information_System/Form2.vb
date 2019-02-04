@@ -12,11 +12,6 @@ Public Class Form2
         Dim pass As String
        
 
-        Try
-            
-        Catch ex As Exception
-
-        End Try
         email_id = TextBox_email.Text
         password = TextBox_Pass.Text
         Dim query As String = "Select Password From faculty_info where Email= '" & email_id & "';"
@@ -28,6 +23,10 @@ Public Class Form2
             pass = cmd.ExecuteScalar().ToString
             If (password = pass) Then
                 MessageBox.Show("Login success")
+                Dim OBJ As New Form1
+                OBJ.EmailPass = email_id
+                OBJ.Show()
+                Me.Hide()
             Else
                 MessageBox.Show("login Failed")
             End If
