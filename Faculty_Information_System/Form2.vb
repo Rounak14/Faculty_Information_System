@@ -1,59 +1,40 @@
 ﻿Imports Microsoft.VisualBasic
-Imports MySql.Data.MySqlClient
+Imports System.Data.OleDb
+Imports System.Data
 
 Public Class Form2
-    Dim MysqlConn As MySqlConnection
-    Dim COMMAND As MySqlCommand
-
-
+    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
-        MysqlConn = New MySqlConnection
-        MysqlConn.ConnectionString =
-       "server=localhost;userid=root;password=Jeeprs@509@iitg;database=faculty"
+        Dim email_id As String = ""
+        Dim password As String
+        Dim username As String = ""
+        Dim pass As String
         Try
-            MysqlConn.Open()
-            'MessageBox.Show("Connection Successful")
-            MysqlConn.Close()
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
+            
+        Catch ex As Exception
 
         End Try
-
-        Dim READER As MySqlDataReader
+        email_id = TextBox_email.Text
+        password = TextBox_Pass.Text
+        Dim query As String = "Select Password From faculty_info where Email= '" & email_id & "';"
+        'Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\siddh\Documents\Database2.accdb"
+        Dim conn = New OleDbConnection(connectionString)
+        Dim cmd As New OleDbCommand(query, conn)
         Try
-            MysqlConn.Open()
-            Dim Query As String
-            Query = "select * from faculty_info where email_id='" & TextBox_email.Text & "' and password='" & TextBox_Pass.Text & "' "
-            COMMAND = New MySqlCommand(Query, MysqlConn)
-            READER = COMMAND.ExecuteReader()
-
-            Dim count As Integer
-            count = 0
-            While READER.Read
-                count = count + 1
-            End While
-            If count = 1 Then
-                MessageBox.Show("Username and password are correct", "Message")
-                Dim OBJ As New Form1
-                OBJ.QueryPass = Query
-                OBJ.Show()
-                Me.Hide()
-                Search_Form.Hide()
-            ElseIf count > 1 Then
-                MessageBox.Show("Username and password are Duplicate")
+            conn.Open()
+            pass = cmd.ExecuteScalar().ToString
+            If (password = pass) Then
+                MessageBox.Show("Login success")
             Else
-                MessageBox.Show("Username and password are not correct")
-
+                MessageBox.Show("login Failed")
             End If
-
-            MysqlConn.Close()
-
-        Catch ex As MySqlException
-            MessageBox.Show(ex.Message)
-        Finally
-            MysqlConn.Dispose()
-
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Warning")
         End Try
+
+
+
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
