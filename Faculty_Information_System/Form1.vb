@@ -11,6 +11,7 @@ Public Class Form1
         Dim name As String
         Dim dept As String
         Dim email As String
+        Dim research As String
         Dim query As String = "SELECT * FROM faculty_info where Email= '" & EmailPass & "';"
         Dim conn = New OleDbConnection(connectionString)
         conn.Open()
@@ -22,12 +23,13 @@ Public Class Form1
                 name = Reader.GetValue(1)
                 dept = Reader.GetValue(2)
                 email = Reader.GetValue(3)
+
                 Dim id As String = Reader.GetValue(4)
                 'The below line is the path of the image, could be different for different PCs
                 Dim folder As String = "C:\Users\ashkp\Desktop\systemproglab_2\Faculty_Information_System\Faculty_Information_System\My Project"
                 Dim filename As String = System.IO.Path.Combine(folder, id & ".jpeg")
                 PictureBox2.Image = Image.FromFile(filename)
-
+                research = Reader.GetValue(6)
 
                 'PictureBox2.Image = Image.FromFile(Reader.GetValue(4))
             End While
@@ -36,7 +38,8 @@ Public Class Form1
             MessageBox.Show(ex.Message, "Warning")
         End Try
 
-        Label_Details.Text = name & vbNewLine & dept & vbNewLine & email
+        Label_Details.Text = name & vbNewLine & dept & vbNewLine & email & vbNewLine & research
+
 
 
 

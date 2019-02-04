@@ -57,7 +57,7 @@ Partial Class Form1
         Me.Label_Details.Location = New System.Drawing.Point(189, 54)
         Me.Label_Details.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label_Details.Name = "Label_Details"
-        Me.Label_Details.Size = New System.Drawing.Size(463, 92)
+        Me.Label_Details.Size = New System.Drawing.Size(467, 129)
         Me.Label_Details.TabIndex = 15
         Me.Label_Details.Text = "User Details"
         Me.Label_Details.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
