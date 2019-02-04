@@ -11,11 +11,11 @@ Public Class Search_Form
         Dim conn = New OleDbConnection(connectionString)
         Try
             conn.Open()
-            Dim query As String = "Select Name From faculty_info where Department= '" & input & "';"
+            Dim query As String = "Select * From faculty_info where Department= '" & input & "';"
             Dim cmd As New OleDbCommand(query, conn)
             Dim reader As OleDbDataReader = cmd.ExecuteReader()
             While (reader.Read())
-                MessageBox.Show(reader.GetString(0))
+                MessageBox.Show(reader.GetString(1))
             End While
             reader.Close()
             conn.Close()
@@ -30,11 +30,11 @@ Public Class Search_Form
         Dim conn = New OleDbConnection(connectionString)
         Try
             conn.Open()
-            Dim query As String = "Select Name From faculty_info where Name is like '%" & input & "';"
+            Dim query As String = "Select * From faculty_info where Name like '%" & input & "%'"
             Dim cmd As New OleDbCommand(query, conn)
             Dim reader As OleDbDataReader = cmd.ExecuteReader()
             While (reader.Read())
-                MessageBox.Show(reader.GetString(0))
+                MessageBox.Show(reader.GetString(1))
             End While
             reader.Close()
             conn.Close()
@@ -45,32 +45,24 @@ Public Class Search_Form
         End Try
     End Function
 
-    'Function SearchByResearchInterest(input As String) As String
-    'MysqlConn = New MySqlConnection
-    'MysqlConn.ConnectionString = "server=localhost;userid=root;password=Password11;database=faculty"
-    'Dim READER As MySqlDataReader
-    'Try
-    '    MysqlConn.Open()
-    '    Dim Query As String
-    '    Query = "select * from faculty_info where Name='" & input & "' "
-    '    COMMAND = New MySqlCommand(Query, MysqlConn)
-    '    READER = COMMAND.ExecuteReader()
-
-    '    Dim count As Integer
-    '    count = 0
-    '    While READER.Read
-    '        count = count + 1
-    '        MessageBox.Show(READER.GetValue(1))
-    '    End While
-
-    '    MysqlConn.Close()
-
-    'Catch ex As MySqlException
-    '    MessageBox.Show(ex.Message)
-    'Finally
-    '    MysqlConn.Dispose()
-
-    'End Function
+    Function SearchByResearchInterest(input As String) As String
+        Dim conn = New OleDbConnection(connectionString)
+        Try
+            conn.Open()
+            Dim query As String = "Select * From faculty_info where ResearchInterest like '%" & input & "%'"
+            Dim cmd As New OleDbCommand(query, conn)
+            Dim reader As OleDbDataReader = cmd.ExecuteReader()
+            While (reader.Read())
+                MessageBox.Show(reader.GetString(1))
+            End While
+            reader.Close()
+            conn.Close()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        Finally
+            conn.Dispose()
+        End Try
+    End Function
 
 
     Private Sub Login_Button_Click(sender As Object, e As EventArgs) Handles Login_Button.Click
@@ -106,9 +98,9 @@ Public Class Search_Form
         ElseIf filter = "Department" Then
             SearchByDepartment(SearchBox.Text.ToString)
         ElseIf filter = "Research Interest" Then
-            'SearchByResearchInterest(SearchBox.Text.ToString)
+            SearchByResearchInterest(SearchBox.Text.ToString)
         ElseIf filter = "Name" Then
-            'SearchByName(SearchBox.Text.ToString)
+            SearchByName(SearchBox.Text.ToString)
         End If
 
     End Sub
