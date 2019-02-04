@@ -13,10 +13,11 @@ Public Class Search_Form
             conn.Open()
             Dim query As String = "Select Name From faculty_info where Department= '" & input & "';"
             Dim cmd As New OleDbCommand(query, conn)
-            'Dim reader As OleDbDataReader = cmd.ExecuteReader()
-            'While (reader.Read())
-            MessageBox.Show(cmd.ExecuteScalar.ToString)
-            'End While
+            Dim reader As OleDbDataReader = cmd.ExecuteReader()
+            While (reader.Read())
+                MessageBox.Show(reader.GetString(0))
+            End While
+            reader.Close()
             conn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -29,12 +30,13 @@ Public Class Search_Form
         Dim conn = New OleDbConnection(connectionString)
         Try
             conn.Open()
-            Dim query As String = "Select Name From faculty_info where Name= '" & input & "';"
+            Dim query As String = "Select Name From faculty_info where Name is like '%" & input & "';"
             Dim cmd As New OleDbCommand(query, conn)
-            'Dim reader As OleDbDataReader = cmd.ExecuteReader()
-            'While (reader.Read())
-            MessageBox.Show(cmd.ExecuteScalar.ToString)
-            'End While
+            Dim reader As OleDbDataReader = cmd.ExecuteReader()
+            While (reader.Read())
+                MessageBox.Show(reader.GetString(0))
+            End While
+            reader.Close()
             conn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)

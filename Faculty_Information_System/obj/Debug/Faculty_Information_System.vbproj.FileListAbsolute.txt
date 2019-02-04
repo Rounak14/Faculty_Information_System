@@ -39,3 +39,4 @@ C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_database.accdb
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Faculty_Page.resources
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_database.accdb
+C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Faculty_Page.resources
