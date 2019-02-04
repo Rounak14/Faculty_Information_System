@@ -76,6 +76,11 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Faculty_databaseDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Faculty_databaseDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
     </Compile>
@@ -128,6 +133,17 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Faculty_databaseDataSet.xsc">
+      <DependentUpon>Faculty_databaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Faculty_databaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Faculty_databaseDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Faculty_databaseDataSet.xss">
+      <DependentUpon>Faculty_databaseDataSet.xsd</DependentUpon>
+    </None>
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>
@@ -140,10 +156,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <Content Include="Faculty_database.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+=======
     <None Include="My Project\IIT_Guwahati_Logo.svg.png" />
   </ItemGroup>
   <ItemGroup>
     <None Include="My Project\220px-User_icon_2.svg.png" />
+>>>>>>> b0a5384e0c9a2ca1826c2d586e299a5f9d5d8227
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
