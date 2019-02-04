@@ -156,9 +156,16 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Content Include="Faculty_database.accdb">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+=======
+    <None Include="My Project\IIT_Guwahati_Logo.svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\220px-User_icon_2.svg.png" />
+>>>>>>> b0a5384e0c9a2ca1826c2d586e299a5f9d5d8227
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

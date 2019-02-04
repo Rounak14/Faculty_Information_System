@@ -72,10 +72,14 @@ Public Class Search_Form
 
     Private Sub RadioButton_dept_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_dept.CheckedChanged
         filter = "Department"
+        ComboBox_dept.Show()
+
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         filter = "Research Interest"
+        ComboBox_dept.Hide()
+        SearchBox.Text = ""
     End Sub
 
     Private Sub Button_search_Click(sender As Object, e As EventArgs) Handles Button_search.Click
@@ -90,5 +94,13 @@ Public Class Search_Form
             'SearchByName(SearchBox.Text.ToString)
         End If
 
+    End Sub
+
+    Private Sub Search_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        ComboBox_dept.Hide()
+    End Sub
+
+    Private Sub ComboBox_dept_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_dept.SelectedIndexChanged
+        SearchBox.Text = ComboBox_dept.Text
     End Sub
 End Class
