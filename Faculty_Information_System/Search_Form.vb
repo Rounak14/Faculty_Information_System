@@ -66,7 +66,10 @@ Public Class Search_Form
 
 
     Private Sub Login_Button_Click(sender As Object, e As EventArgs) Handles Login_Button.Click
-        Form2.Show()
+        Dim Secondform As New Form2
+        Secondform.Show()
+        Me.Hide()
+
     End Sub
 
 

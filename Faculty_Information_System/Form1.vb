@@ -22,7 +22,14 @@ Public Class Form1
                 name = Reader.GetValue(1)
                 dept = Reader.GetValue(2)
                 email = Reader.GetValue(3)
-                PictureBox2.Image = Image.FromFile(Reader.GetValue(4))
+                Dim id As String = Reader.GetValue(4)
+                'The below line is the path of the image, could be different for different PCs
+                Dim folder As String = "C:\Users\ashkp\Desktop\systemproglab_2\Faculty_Information_System\Faculty_Information_System\My Project"
+                Dim filename As String = System.IO.Path.Combine(folder, id & ".jpeg")
+                PictureBox2.Image = Image.FromFile(filename)
+
+
+                'PictureBox2.Image = Image.FromFile(Reader.GetValue(4))
             End While
             conn.Close()
         Catch ex As Exception
@@ -36,4 +43,9 @@ Public Class Form1
     End Sub
 
    
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Dim SecondForm As New Search_Form
+        SecondForm.Show()
+        Me.Hide()
+    End Sub
 End Class

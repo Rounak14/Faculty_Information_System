@@ -36,7 +36,7 @@
                   </DbCommand>
                 </InsertCommand>
                 <SelectCommand>
-                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT ID, Name, Department, Email, [Password] FROM faculty_info</CommandText>
                     <Parameters />
                   </DbCommand>
@@ -78,7 +78,7 @@
   <xs:element name="Faculty_databaseDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="Faculty_databaseDataSet" msprop:Generator_UserDSName="Faculty_databaseDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="faculty_info" msprop:Generator_TableClassName="faculty_infoDataTable" msprop:Generator_TableVarName="tablefaculty_info" msprop:Generator_TablePropName="faculty_info" msprop:Generator_RowDeletingName="faculty_infoRowDeleting" msprop:Generator_RowChangingName="faculty_infoRowChanging" msprop:Generator_RowEvHandlerName="faculty_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="faculty_infoRowDeleted" msprop:Generator_UserTableName="faculty_info" msprop:Generator_RowChangedName="faculty_infoRowChanged" msprop:Generator_RowEvArgName="faculty_infoRowChangeEvent" msprop:Generator_RowClassName="faculty_infoRow">
+        <xs:element name="faculty_info" msprop:Generator_TableClassName="faculty_infoDataTable" msprop:Generator_TableVarName="tablefaculty_info" msprop:Generator_RowChangedName="faculty_infoRowChanged" msprop:Generator_TablePropName="faculty_info" msprop:Generator_RowDeletingName="faculty_infoRowDeleting" msprop:Generator_RowChangingName="faculty_infoRowChanging" msprop:Generator_RowEvHandlerName="faculty_infoRowChangeEventHandler" msprop:Generator_RowDeletedName="faculty_infoRowDeleted" msprop:Generator_RowClassName="faculty_infoRow" msprop:Generator_UserTableName="faculty_info" msprop:Generator_RowEvArgName="faculty_infoRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="ID" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnID" msprop:Generator_ColumnPropNameInRow="ID" msprop:Generator_ColumnPropNameInTable="IDColumn" msprop:Generator_UserColumnName="ID" type="xs:int" />
