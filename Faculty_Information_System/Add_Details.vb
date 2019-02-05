@@ -17,5 +17,13 @@ Public Class Add_Details
         conn.Open()
         Dim cmd As New OleDbCommand(query, conn)
         conn.Close()
+        Me.Hide()
+        Try
+            Dim OBJ As Form1
+            OBJ.EmailPass = EmailPass
+            OBJ.Show()
+        Catch ex As Exception
+
+        End Try
     End Sub
 End Class
