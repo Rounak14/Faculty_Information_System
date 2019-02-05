@@ -38,7 +38,7 @@ Public Class Form1
             MessageBox.Show(ex.Message, "Warning")
         End Try
 
-        Label_Details.Text = name & vbNewLine & dept & vbNewLine & email & vbNewLine
+        Label_Details.Text = name & vbNewLine & dept & vbNewLine & email
 
 
 
@@ -50,5 +50,17 @@ Public Class Form1
         Dim SecondForm As New Search_Form
         SecondForm.Show()
         Me.Hide()
+    End Sub
+
+    Private Sub AboutMe_Button_Click(sender As Object, e As EventArgs) Handles AboutMe_Button.Click
+        Dim OBJ As New Add_Details
+        OBJ.EmailPass = EmailPass
+        OBJ.Show()
+    End Sub
+
+    Private Sub Button_preview_Click(sender As Object, e As EventArgs) Handles Button_preview.Click
+        Dim OBJ As New Faculty_Page
+        OBJ.EmailPass = EmailPass
+        OBJ.Show()
     End Sub
 End Class
