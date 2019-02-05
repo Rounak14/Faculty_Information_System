@@ -14,7 +14,12 @@ Public Class Search_Form
             Dim query As String = "Select * From faculty_info where Department= '" & input & "';"
             Dim cmd As New OleDbCommand(query, conn)
             Dim reader As OleDbDataReader = cmd.ExecuteReader()
+            Dim count As Integer = 0
             While (reader.Read())
+                'Dim newLabel As New Label
+                'newLabel.Name = "TextBox" + reader.GetValue(0).ToString
+                'newLabel.Text = reader.GetString(1)
+                'Me.Controls.Add(newLabel)
                 MessageBox.Show(reader.GetString(1))
             End While
             reader.Close()
