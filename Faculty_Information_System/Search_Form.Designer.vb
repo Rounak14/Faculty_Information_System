@@ -99,7 +99,7 @@ Partial Class Search_Form
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label2.Location = New System.Drawing.Point(55, 164)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(88, 16)
+        Me.Label2.Size = New System.Drawing.Size(93, 16)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Search By -"
         '

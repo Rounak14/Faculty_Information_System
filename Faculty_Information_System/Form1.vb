@@ -26,7 +26,7 @@ Public Class Form1
 
                 Dim id As String = Reader.GetValue(4)
                 'The below line is the path of the image, could be different for different PCs
-                Dim folder As String = "C:\Users\ashkp\Desktop\systemproglab_2\Faculty_Information_System\Faculty_Information_System\My Project"
+                Dim folder As String = "C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\My Project"
                 Dim filename As String = System.IO.Path.Combine(folder, id & ".jpeg")
                 PictureBox2.Image = Image.FromFile(filename)
                 research = Reader.GetValue(6)
@@ -38,7 +38,7 @@ Public Class Form1
             MessageBox.Show(ex.Message, "Warning")
         End Try
 
-        Label_Details.Text = name & vbNewLine & dept & vbNewLine & email & vbNewLine & research
+        Label_Details.Text = name & vbNewLine & dept & vbNewLine & email & vbNewLine
 
 
 
