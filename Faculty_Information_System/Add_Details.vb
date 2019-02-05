@@ -10,4 +10,12 @@ Public Class Add_Details
     Private Sub Add_Details_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
+        Dim query As String = "Update faculty_info set Position = '" & ComboBox1.Text & "' where Email= '" & EmailPass & "';"
+        Dim conn = New OleDbConnection(connectionString)
+        conn.Open()
+        Dim cmd As New OleDbCommand(query, conn)
+        conn.Close()
+    End Sub
 End Class
