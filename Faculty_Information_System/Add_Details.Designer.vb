@@ -133,12 +133,19 @@ Partial Class Add_Details
         '
         'ComboBox1
         '
+        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Professor", "Assistant Professor", "Associate Professor", "Visiting Faculty"})
+<<<<<<< HEAD
         Me.ComboBox1.Location = New System.Drawing.Point(359, 37)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(284, 24)
+=======
+        Me.ComboBox1.Location = New System.Drawing.Point(268, 25)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(214, 26)
+>>>>>>> 01d93304eb158d90ea01118e617efb51d57f574d
         Me.ComboBox1.TabIndex = 17
         '
         'btn_login
