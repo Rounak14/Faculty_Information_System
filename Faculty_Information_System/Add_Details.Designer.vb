@@ -24,14 +24,14 @@ Partial Class Add_Details
     Private Sub InitializeComponent()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.TextBox_room = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
-        Me.TextBox2 = New System.Windows.Forms.TextBox()
+        Me.TextBox_tele = New System.Windows.Forms.TextBox()
         Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox3 = New System.Windows.Forms.TextBox()
+        Me.TextBox_edu = New System.Windows.Forms.TextBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.TextBox4 = New System.Windows.Forms.TextBox()
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.TextBox_Responsibility = New System.Windows.Forms.TextBox()
+        Me.ComboBox_desig = New System.Windows.Forms.ComboBox()
         Me.btn_login = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
@@ -57,13 +57,13 @@ Partial Class Add_Details
         Me.Label1.TabIndex = 9
         Me.Label1.Text = "Room No. :"
         '
-        'TextBox1
+        'TextBox_room
         '
-        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox1.Location = New System.Drawing.Point(268, 70)
-        Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(215, 24)
-        Me.TextBox1.TabIndex = 10
+        Me.TextBox_room.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_room.Location = New System.Drawing.Point(268, 70)
+        Me.TextBox_room.Name = "TextBox_room"
+        Me.TextBox_room.Size = New System.Drawing.Size(215, 24)
+        Me.TextBox_room.TabIndex = 10
         '
         'Label3
         '
@@ -76,13 +76,13 @@ Partial Class Add_Details
         Me.Label3.TabIndex = 11
         Me.Label3.Text = "Telephone :"
         '
-        'TextBox2
+        'TextBox_tele
         '
-        Me.TextBox2.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox2.Location = New System.Drawing.Point(268, 113)
-        Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(215, 24)
-        Me.TextBox2.TabIndex = 12
+        Me.TextBox_tele.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_tele.Location = New System.Drawing.Point(268, 113)
+        Me.TextBox_tele.Name = "TextBox_tele"
+        Me.TextBox_tele.Size = New System.Drawing.Size(215, 24)
+        Me.TextBox_tele.TabIndex = 12
         '
         'Label4
         '
@@ -95,13 +95,13 @@ Partial Class Add_Details
         Me.Label4.TabIndex = 13
         Me.Label4.Text = "Education :"
         '
-        'TextBox3
+        'TextBox_edu
         '
-        Me.TextBox3.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox3.Location = New System.Drawing.Point(268, 156)
-        Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(215, 24)
-        Me.TextBox3.TabIndex = 14
+        Me.TextBox_edu.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_edu.Location = New System.Drawing.Point(268, 156)
+        Me.TextBox_edu.Name = "TextBox_edu"
+        Me.TextBox_edu.Size = New System.Drawing.Size(215, 24)
+        Me.TextBox_edu.TabIndex = 14
         '
         'Label5
         '
@@ -114,23 +114,23 @@ Partial Class Add_Details
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Additional Responsibility :"
         '
-        'TextBox4
+        'TextBox_Responsibility
         '
-        Me.TextBox4.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox4.Location = New System.Drawing.Point(268, 199)
-        Me.TextBox4.Name = "TextBox4"
-        Me.TextBox4.Size = New System.Drawing.Size(215, 24)
-        Me.TextBox4.TabIndex = 16
+        Me.TextBox_Responsibility.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_Responsibility.Location = New System.Drawing.Point(268, 199)
+        Me.TextBox_Responsibility.Name = "TextBox_Responsibility"
+        Me.TextBox_Responsibility.Size = New System.Drawing.Size(215, 24)
+        Me.TextBox_Responsibility.TabIndex = 16
         '
-        'ComboBox1
+        'ComboBox_desig
         '
-        Me.ComboBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Items.AddRange(New Object() {"Professor", "Assistant Professor", "Associate Professor", "Visiting Faculty"})
-        Me.ComboBox1.Location = New System.Drawing.Point(268, 24)
-        Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(215, 26)
-        Me.ComboBox1.TabIndex = 17
+        Me.ComboBox_desig.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ComboBox_desig.FormattingEnabled = True
+        Me.ComboBox_desig.Items.AddRange(New Object() {"Professor", "Assistant Professor", "Associate Professor", "Visiting Faculty"})
+        Me.ComboBox_desig.Location = New System.Drawing.Point(268, 24)
+        Me.ComboBox_desig.Name = "ComboBox_desig"
+        Me.ComboBox_desig.Size = New System.Drawing.Size(215, 26)
+        Me.ComboBox_desig.TabIndex = 17
         '
         'btn_login
         '
@@ -151,14 +151,14 @@ Partial Class Add_Details
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(506, 318)
         Me.Controls.Add(Me.btn_login)
-        Me.Controls.Add(Me.ComboBox1)
-        Me.Controls.Add(Me.TextBox4)
+        Me.Controls.Add(Me.ComboBox_desig)
+        Me.Controls.Add(Me.TextBox_Responsibility)
         Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox3)
+        Me.Controls.Add(Me.TextBox_edu)
         Me.Controls.Add(Me.Label4)
-        Me.Controls.Add(Me.TextBox2)
+        Me.Controls.Add(Me.TextBox_tele)
         Me.Controls.Add(Me.Label3)
-        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.TextBox_room)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Name = "Add_Details"
@@ -169,13 +169,13 @@ Partial Class Add_Details
     End Sub
     Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Label1 As System.Windows.Forms.Label
-    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox_room As System.Windows.Forms.TextBox
     Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents TextBox2 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox_tele As System.Windows.Forms.TextBox
     Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox3 As System.Windows.Forms.TextBox
+    Friend WithEvents TextBox_edu As System.Windows.Forms.TextBox
     Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents TextBox4 As System.Windows.Forms.TextBox
-    Friend WithEvents ComboBox1 As System.Windows.Forms.ComboBox
+    Friend WithEvents TextBox_Responsibility As System.Windows.Forms.TextBox
+    Friend WithEvents ComboBox_desig As System.Windows.Forms.ComboBox
     Friend WithEvents btn_login As System.Windows.Forms.Button
 End Class

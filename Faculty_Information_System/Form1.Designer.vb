@@ -67,11 +67,19 @@ Partial Class Form1
         '
         'Button1
         '
+<<<<<<< HEAD
+
+=======
+>>>>>>> d857eda13ba67b9553d2fecce6e08ba31de99ffa
         Me.Button1.Location = New System.Drawing.Point(581, 533)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(97, 38)
 
+<<<<<<< HEAD
+
+=======
+>>>>>>> d857eda13ba67b9553d2fecce6e08ba31de99ffa
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(173, 217)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
