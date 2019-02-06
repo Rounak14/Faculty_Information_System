@@ -104,6 +104,7 @@ Public Class Search_Form
     End Sub
 
     Private Sub Button_search_Click(sender As Object, e As EventArgs) Handles Button_search.Click
+        Button_search.Enabled = False
         If filter = "" Then
             MessageBox.Show("Select one Search by option")
         ElseIf SearchBox.Text = "" Then
@@ -194,4 +195,16 @@ Public Class Search_Form
     End Sub
 
 
+    Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
+        SearchBox.Text = ""
+        RadioButton_dept.Checked = False
+        RadioButton_Name.Checked = False
+        RadioButton2.Checked = False
+        ComboBox_dept.ResetText()
+        ComboBox_dept.Hide()
+        DataGridView1.DataSource = Nothing
+        tb.Rows.Clear()
+        DataGridView1.Hide()
+        Button_search.Enabled = True
+    End Sub
 End Class

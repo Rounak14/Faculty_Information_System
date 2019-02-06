@@ -30,17 +30,22 @@ Public Class Form2
                     Dim OBJ As New Form1
                     OBJ.EmailPass = email_id
                     OBJ.Show()
-                    Me.Hide()
+                    Me.Close()
                 End If
             Else
                 MessageBox.Show("login Failed")
             End If
-                conn.Close()
+            conn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Warning")
         End Try
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    End Sub
+
+    Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Search_Form.Show()
+        Me.Close()
     End Sub
 End Class
