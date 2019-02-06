@@ -19,10 +19,34 @@ Public Class Search_Form
                 'Dim newLabel As New Label
                 'newLabel.Name = "TextBox" + reader.GetValue(0).ToString
                 'newLabel.Text = reader.GetString(1)
+                'newLabel.Location = New Point(100, 40)
                 'Me.Controls.Add(newLabel)
+                count = count + 1
                 MessageBox.Show(reader.GetString(1))
             End While
             reader.Close()
+            Dim MyLabel1(count) As Label
+            Dim MyLabel2(count) As Label
+            reader = cmd.ExecuteReader()
+            Dim i As Integer = 1
+            While (reader.Read())
+                MyLabel1(i) = New Label()
+                With MyLabel1(i)
+                    .Name = "Lable" + i.ToString
+                    .Text = reader.GetString(1)
+                    .Visible = True
+                    .Top = 60 + (30 * i)
+                    .Width = 100
+                End With
+                MyLabel2(i) = New Label()
+                With MyLabel2(i)
+                    .Name = "Lable" + i.ToString
+                    .Text = reader.GetString(1)
+                    .Visible = True
+                    .Top = 60 + (30 * i)
+                    .Width = 200
+                End With
+            End While
             conn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)

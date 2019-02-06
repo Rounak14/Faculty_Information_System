@@ -40,9 +40,6 @@ Public Class Form1
 
         Label_Details.Text = name & vbNewLine & dept & vbNewLine & email
 
-
-
-
     End Sub
 
    

@@ -67,18 +67,17 @@ Partial Class Form1
         '
         'Button1
         '
-<<<<<<< HEAD
         Me.Button1.Location = New System.Drawing.Point(581, 533)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(97, 38)
-=======
+
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button1.Location = New System.Drawing.Point(191, 226)
         Me.Button1.Margin = New System.Windows.Forms.Padding(2)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(136, 41)
->>>>>>> 237239426c9ee49789536399871de4c4d089a4c7
+
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "Logout"
         Me.Button1.UseVisualStyleBackColor = True
@@ -89,15 +88,15 @@ Partial Class Form1
         Me.AboutMe_Button.Location = New System.Drawing.Point(21, 183)
         Me.AboutMe_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.AboutMe_Button.Name = "AboutMe_Button"
-<<<<<<< HEAD
+
         Me.AboutMe_Button.Size = New System.Drawing.Size(160, 42)
         Me.AboutMe_Button.TabIndex = 17
         Me.AboutMe_Button.Text = "Add About"
-=======
+
         Me.AboutMe_Button.Size = New System.Drawing.Size(136, 38)
         Me.AboutMe_Button.TabIndex = 17
         Me.AboutMe_Button.Text = "Add Details"
->>>>>>> 237239426c9ee49789536399871de4c4d089a4c7
+
         Me.AboutMe_Button.UseVisualStyleBackColor = True
         '
         'addNews_Button
@@ -124,13 +123,13 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-<<<<<<< HEAD
+
         Me.ClientSize = New System.Drawing.Size(693, 585)
-=======
+
         Me.ClientSize = New System.Drawing.Size(510, 292)
         Me.Controls.Add(Me.Button_preview)
         Me.Controls.Add(Me.addNews_Button)
->>>>>>> 237239426c9ee49789536399871de4c4d089a4c7
+
         Me.Controls.Add(Me.AboutMe_Button)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label_Details)
