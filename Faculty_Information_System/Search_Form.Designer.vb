@@ -33,6 +33,7 @@ Partial Class Search_Form
         Me.RadioButton_Name = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
+        Me.reset = New System.Windows.Forms.Button()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -74,7 +75,7 @@ Partial Class Search_Form
         Me.Button_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_search.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_search.ForeColor = System.Drawing.Color.White
-        Me.Button_search.Location = New System.Drawing.Point(280, 331)
+        Me.Button_search.Location = New System.Drawing.Point(206, 333)
         Me.Button_search.Margin = New System.Windows.Forms.Padding(4)
         Me.Button_search.Name = "Button_search"
         Me.Button_search.Size = New System.Drawing.Size(160, 36)
@@ -175,15 +176,28 @@ Partial Class Search_Form
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(743, 106)
+        Me.DataGridView1.Size = New System.Drawing.Size(743, 44)
         Me.DataGridView1.TabIndex = 10
+        '
+        'reset
+        '
+        Me.reset.BackColor = System.Drawing.Color.IndianRed
+        Me.reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reset.Location = New System.Drawing.Point(417, 335)
+        Me.reset.Name = "reset"
+        Me.reset.Size = New System.Drawing.Size(160, 35)
+        Me.reset.TabIndex = 11
+        Me.reset.Text = "RESET"
+        Me.reset.UseVisualStyleBackColor = False
         '
         'Search_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(775, 579)
+        Me.ClientSize = New System.Drawing.Size(775, 517)
+        Me.Controls.Add(Me.reset)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.RadioButton_Name)
@@ -214,4 +228,5 @@ Partial Class Search_Form
     Friend WithEvents RadioButton_Name As System.Windows.Forms.RadioButton
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
+    Friend WithEvents reset As System.Windows.Forms.Button
 End Class

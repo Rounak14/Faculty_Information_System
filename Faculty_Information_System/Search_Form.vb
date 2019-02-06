@@ -4,7 +4,7 @@ Imports System.Data
 
 
 Public Class Search_Form
-    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Faculty_Information_System-master\Faculty_Information_System\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
+    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
     Dim filter As String = ""
     Dim ad As System.Data.OleDb.OleDbDataAdapter
     Dim cm As System.Data.OleDb.OleDbCommand
@@ -79,6 +79,7 @@ Public Class Search_Form
         Dim Secondform As New Form2
         Secondform.Show()
         Me.Hide()
+
     End Sub
 
 
@@ -103,6 +104,7 @@ Public Class Search_Form
     End Sub
 
     Private Sub Button_search_Click(sender As Object, e As EventArgs) Handles Button_search.Click
+        Button_search.Enabled = False
         If filter = "" Then
             MessageBox.Show("Select one Search by option")
         ElseIf SearchBox.Text = "" Then
@@ -193,4 +195,16 @@ Public Class Search_Form
     End Sub
 
 
+    Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
+        SearchBox.Text = ""
+        RadioButton_dept.Checked = False
+        RadioButton_Name.Checked = False
+        RadioButton2.Checked = False
+        ComboBox_dept.ResetText()
+        ComboBox_dept.Hide()
+        DataGridView1.DataSource = Nothing
+        tb.Rows.Clear()
+        DataGridView1.Hide()
+        Button_search.Enabled = True
+    End Sub
 End Class
