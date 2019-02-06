@@ -175,7 +175,7 @@ Partial Class Search_Form
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(743, 44)
+        Me.DataGridView1.Size = New System.Drawing.Size(743, 106)
         Me.DataGridView1.TabIndex = 10
         '
         'Search_Form
@@ -183,7 +183,7 @@ Partial Class Search_Form
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(775, 517)
+        Me.ClientSize = New System.Drawing.Size(775, 579)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.RadioButton_Name)

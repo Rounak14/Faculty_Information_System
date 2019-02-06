@@ -79,7 +79,6 @@ Public Class Search_Form
         Dim Secondform As New Form2
         Secondform.Show()
         Me.Hide()
-
     End Sub
 
 
@@ -110,7 +109,7 @@ Public Class Search_Form
             MessageBox.Show("Enter some query string")
         End If
         co = New System.Data.OleDb.OleDbConnection
-        co.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Faculty_Information_System-master\Faculty_Information_System\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
+        co.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
         If RadioButton_dept.Checked Then
             DataGridView1.Show()
             Try

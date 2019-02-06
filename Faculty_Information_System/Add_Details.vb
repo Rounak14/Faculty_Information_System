@@ -93,7 +93,8 @@ Public Class Add_Details
             MessageBox.Show(ex.Message) 'Error MEssage
         End Try
         conn.Close()
+        Faculty_Page.Show()
+        Me.Close()
     End Sub
-
    
 End Class
