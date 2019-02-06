@@ -61,7 +61,7 @@ Public Class Add_Details
         End While
 
         If ComboBox_desig.Text <> "" Then
-            Position = ComboBox_desig.Text
+            Position = ComboBox_desig.Text.ToString
         End If
 
         If TextBox_room.Text <> "" Then
@@ -86,12 +86,7 @@ Public Class Add_Details
 
 
         Dim cmdUpdate As New OleDbCommand(query, conn)
-        MessageBox.Show(Room)
-        MessageBox.Show(Education)
-        MessageBox.Show(Responsibility)
-        MessageBox.Show(Telephone)
-        MessageBox.Show(Position)
-        cmdUpdate.CommandText = "UPDATE faculty_info SET  Room = '" & Room & "' , Telephone = '" & CInt(Telephone) & "' , Education = '" & Education & "' , Additional_Responsibilty = '" & Responsibility & "'    WHERE ID = " & id_number & ";"
+        cmdUpdate.CommandText = "UPDATE faculty_info SET  Position = '" & Position & "' , Room = '" & Room & "' , Telephone = '" & CInt(Telephone) & "' , Education = '" & Education & "' , Additional_Responsibilty = '" & Responsibility & "'    WHERE ID = " & id_number & ";"
         Try
             cmdUpdate.ExecuteNonQuery() 'Executing Update Command
         Catch ex As Exception
