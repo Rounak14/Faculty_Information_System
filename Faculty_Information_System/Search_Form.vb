@@ -127,7 +127,7 @@ Public Class Search_Form
                     dept = dr("Department").ToString
                     tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
                     DataGridView1.DataSource = tb
-                    
+
 
                 End While
                 co.Close()
