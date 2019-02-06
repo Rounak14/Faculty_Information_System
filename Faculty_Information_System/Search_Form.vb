@@ -2,6 +2,7 @@
 Imports System.Data.OleDb
 Imports System.Data
 
+
 Public Class Search_Form
     Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Faculty_Information_System-master\Faculty_Information_System\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
     Dim filter As String = ""
@@ -126,6 +127,8 @@ Public Class Search_Form
                     dept = dr("Department").ToString
                     tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
                     DataGridView1.DataSource = tb
+                    
+
                 End While
                 co.Close()
             Catch ex As Exception
