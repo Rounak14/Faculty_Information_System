@@ -31,19 +31,5 @@ Public Class Add_Details
         conn.Close()
     End Sub
 
-    Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
-        Dim query As String = "Update faculty_info set Position = '" & ComboBox1.Text & "' where Email= '" & EmailPass & "';"
-        Dim conn = New OleDbConnection(connectionString)
-        conn.Open()
-        Dim cmd As New OleDbCommand(query, conn)
-        conn.Close()
-        Me.Hide()
-        Try
-            Dim OBJ As Form1
-            OBJ.EmailPass = EmailPass
-            OBJ.Show()
-        Catch ex As Exception
-
-        End Try
-    End Sub
+   
 End Class
