@@ -76,10 +76,22 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddProf.Designer.vb">
+      <DependentUpon>AddProf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="AddProf.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Add_Details.Designer.vb">
       <DependentUpon>Add_Details.vb</DependentUpon>
     </Compile>
     <Compile Include="Add_Details.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_form.Designer.vb">
+      <DependentUpon>Admin_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_form.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Faculty_databaseDataSet1.Designer.vb">
@@ -128,8 +140,14 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="AddProf.resx">
+      <DependentUpon>AddProf.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Add_Details.resx">
       <DependentUpon>Add_Details.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_form.resx">
+      <DependentUpon>Admin_form.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Faculty_Page.resx">
       <DependentUpon>Faculty_Page.vb</DependentUpon>

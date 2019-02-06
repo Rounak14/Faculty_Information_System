@@ -2,10 +2,15 @@
 Imports System.Data.OleDb
 Imports System.Data
 
-Public Class Search_Form
-    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
-    Dim filter As String = ""
 
+Public Class Search_Form
+    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Faculty_Information_System-master\Faculty_Information_System\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
+    Dim filter As String = ""
+    Dim ad As System.Data.OleDb.OleDbDataAdapter
+    Dim cm As System.Data.OleDb.OleDbCommand
+    Dim co As System.Data.OleDb.OleDbConnection
+    Dim dr As System.Data.OleDb.OleDbDataReader
+    Dim tb As New DataTable("faculty_info")
 
     Function SearchByDepartment(input As String) As String
         Dim conn = New OleDbConnection(connectionString)
@@ -19,34 +24,10 @@ Public Class Search_Form
                 'Dim newLabel As New Label
                 'newLabel.Name = "TextBox" + reader.GetValue(0).ToString
                 'newLabel.Text = reader.GetString(1)
-                'newLabel.Location = New Point(100, 40)
                 'Me.Controls.Add(newLabel)
-                count = count + 1
                 MessageBox.Show(reader.GetString(1))
             End While
             reader.Close()
-            Dim MyLabel1(count) As Label
-            Dim MyLabel2(count) As Label
-            reader = cmd.ExecuteReader()
-            Dim i As Integer = 1
-            While (reader.Read())
-                MyLabel1(i) = New Label()
-                With MyLabel1(i)
-                    .Name = "Lable" + i.ToString
-                    .Text = reader.GetString(1)
-                    .Visible = True
-                    .Top = 60 + (30 * i)
-                    .Width = 100
-                End With
-                MyLabel2(i) = New Label()
-                With MyLabel2(i)
-                    .Name = "Lable" + i.ToString
-                    .Text = reader.GetString(1)
-                    .Visible = True
-                    .Top = 60 + (30 * i)
-                    .Width = 200
-                End With
-            End While
             conn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message)
@@ -127,18 +108,86 @@ Public Class Search_Form
             MessageBox.Show("Select one Search by option")
         ElseIf SearchBox.Text = "" Then
             MessageBox.Show("Enter some query string")
-        ElseIf filter = "Department" Then
-            SearchByDepartment(SearchBox.Text.ToString)
-        ElseIf filter = "Research Interest" Then
-            SearchByResearchInterest(SearchBox.Text.ToString)
-        ElseIf filter = "Name" Then
-            SearchByName(SearchBox.Text.ToString)
         End If
+        co = New System.Data.OleDb.OleDbConnection
+        co.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Faculty_Information_System-master\Faculty_Information_System\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
+        If RadioButton_dept.Checked Then
+            DataGridView1.Show()
+            Try
+                co.Open()
+                Dim cd As String
+                cd = "SELECT * FROM faculty_info Where Department='" & SearchBox.Text & "'"
+                cm = New OleDb.OleDbCommand(cd, co)
+                dr = cm.ExecuteReader()
+                While dr.Read()
+                    Dim n As String
+                    Dim email, dept As String
+                    n = dr("Name").ToString
+                    email = dr("Email").ToString
+                    dept = dr("Department").ToString
+                    tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
+                    DataGridView1.DataSource = tb
+                    
 
+                End While
+                co.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
+        If RadioButton_Name.Checked Then
+            DataGridView1.Show()
+            Try
+                co.Open()
+                Dim cd As String
+                cd = "SELECT * FROM faculty_info Where Name='" & SearchBox.Text & "'"
+                cm = New OleDb.OleDbCommand(cd, co)
+                dr = cm.ExecuteReader()
+                While dr.Read()
+                    Dim n As String
+                    Dim email, dept As String
+                    n = dr("Name").ToString
+                    email = dr("Email").ToString
+                    dept = dr("Department").ToString
+                    tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
+                    DataGridView1.DataSource = tb
+                End While
+                co.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
+        If RadioButton2.Checked Then
+            DataGridView1.Show()
+            Try
+                co.Open()
+                Dim cd As String
+                cd = "SELECT * FROM faculty_info Where ResearchInterest='" & SearchBox.Text & "'"
+                cm = New OleDb.OleDbCommand(cd, co)
+                dr = cm.ExecuteReader()
+                While dr.Read()
+                    Dim n As String
+                    Dim email, dept As String
+                    n = dr("Name").ToString
+                    email = dr("Email").ToString
+                    dept = dr("Department").ToString
+                    tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
+                    DataGridView1.DataSource = tb
+                End While
+                co.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
     End Sub
 
     Private Sub Search_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ComboBox_dept.Hide()
+        DataGridView1.Hide()
+        tb.Columns.Add("Name", Type.GetType("System.String"))
+        tb.Columns.Add("Email", Type.GetType("System.String"))
+        tb.Columns.Add("Department", Type.GetType("System.String"))
+        DataGridView1.DataSource = tb
     End Sub
 
     Private Sub ComboBox_dept_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_dept.SelectedIndexChanged

@@ -11,7 +11,6 @@ Public Class Form2
         Dim username As String = ""
         Dim pass As String
        
-
         email_id = TextBox_email.Text
         password = TextBox_Pass.Text
         Dim query As String = "Select Password From faculty_info where Email= '" & email_id & "';"
@@ -22,21 +21,24 @@ Public Class Form2
             conn.Open()
             pass = cmd.ExecuteScalar().ToString
             If (password = pass) Then
-                MessageBox.Show("Login success")
-                Dim OBJ As New Form1
-                OBJ.EmailPass = email_id
-                OBJ.Show()
-                Me.Hide()
+                If (email_id = "admin@iitg.ac.in") Then
+                    MessageBox.Show("Login Success")
+                    Admin_form.Show()
+                    Me.Hide()
+                Else
+                    MessageBox.Show("Login success")
+                    Dim OBJ As New Form1
+                    OBJ.EmailPass = email_id
+                    OBJ.Show()
+                    Me.Hide()
+                End If
             Else
                 MessageBox.Show("login Failed")
             End If
-            conn.Close()
+                conn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Warning")
         End Try
-
-
-
     End Sub
 
     Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
