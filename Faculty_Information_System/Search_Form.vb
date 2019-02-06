@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+﻿Imports Microsoft.VisualBasic
+Imports System.Data.OleDb
+Imports System.Data
+
+
+Public Class Search_Form
+    Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Faculty_Information_System-master\Faculty_Information_System\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
+    Dim filter As String = ""
+    Dim ad As System.Data.OleDb.OleDbDataAdapter
+=======
 ﻿Imports Microsoft.VisualBasic
 Imports System.Data.OleDb
 Imports System.Data
@@ -7,6 +18,7 @@ Public Class Search_Form
     Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
     Dim filter As String = ""
     Dim ad As System.Data.OleDb.OleDbDataAdapter
+>>>>>>> 3e8ca9a73e9066bfdf469fbbaf9b6ac094cde2bd
     Dim cm As System.Data.OleDb.OleDbCommand
     Dim co As System.Data.OleDb.OleDbConnection
     Dim dr As System.Data.OleDb.OleDbDataReader
@@ -110,7 +122,11 @@ Public Class Search_Form
             MessageBox.Show("Enter some query string")
         End If
         co = New System.Data.OleDb.OleDbConnection
+<<<<<<< HEAD
+        co.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=D:\Faculty_Information_System-master\Faculty_Information_System\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
+=======
         co.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
+>>>>>>> 3e8ca9a73e9066bfdf469fbbaf9b6ac094cde2bd
         If RadioButton_dept.Checked Then
             DataGridView1.Show()
             Try
@@ -127,7 +143,7 @@ Public Class Search_Form
                     dept = dr("Department").ToString
                     tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
                     DataGridView1.DataSource = tb
-                    
+
 
                 End While
                 co.Close()
