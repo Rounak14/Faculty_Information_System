@@ -50,7 +50,7 @@ Public Class Form1
     End Sub
 
     Private Sub AboutMe_Button_Click(sender As Object, e As EventArgs) Handles AboutMe_Button.Click
-        Dim OBJ As New Add_Details
+        Dim OBJ As New Add_personal_prof
         OBJ.EmailPass = EmailPass
         OBJ.Show()
     End Sub
