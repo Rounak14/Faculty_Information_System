@@ -82,10 +82,10 @@
     <Compile Include="AddProf.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Add_Details.Designer.vb">
-      <DependentUpon>Add_Details.vb</DependentUpon>
+    <Compile Include="Add_personal_prof.Designer.vb">
+      <DependentUpon>Add_personal_prof.vb</DependentUpon>
     </Compile>
-    <Compile Include="Add_Details.vb">
+    <Compile Include="Add_personal_prof.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Admin_form.Designer.vb">
@@ -143,8 +143,8 @@
     <EmbeddedResource Include="AddProf.resx">
       <DependentUpon>AddProf.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Add_Details.resx">
-      <DependentUpon>Add_Details.vb</DependentUpon>
+    <EmbeddedResource Include="Add_personal_prof.resx">
+      <DependentUpon>Add_personal_prof.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_form.resx">
       <DependentUpon>Admin_form.vb</DependentUpon>
