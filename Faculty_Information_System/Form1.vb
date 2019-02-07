@@ -20,18 +20,16 @@ Public Class Form1
         Try
 
             While (Reader.Read())
-                name = Reader.GetValue(1)
-                dept = Reader.GetValue(2)
-                email = Reader.GetValue(3)
+                name = Reader("Name")
+                dept = Reader("Department")
+                email = Reader("Email")
 
                 Dim id As String = Reader.GetValue(4)
-                'The below line is the path of the image, could be different for different PCs
-                Dim folder As String = "C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\My Project"
-                Dim filename As String = System.IO.Path.Combine(folder, id & ".jpeg")
-                PictureBox2.Image = Image.FromFile(filename)
+
+                PictureBox2.Image = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
                 research = Reader.GetValue(6)
 
-                'PictureBox2.Image = Image.FromFile(Reader.GetValue(4))
+
             End While
             conn.Close()
         Catch ex As Exception
