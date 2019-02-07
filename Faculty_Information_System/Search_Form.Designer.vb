@@ -34,6 +34,10 @@ Partial Class Search_Form
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.reset = New System.Windows.Forms.Button()
+        Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.Dept = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.interest = New System.Windows.Forms.DataGridViewTextBoxColumn()
+        Me.View = New System.Windows.Forms.DataGridViewButtonColumn()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -42,7 +46,7 @@ Partial Class Search_Form
         Me.SearchBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchBox.Location = New System.Drawing.Point(55, 131)
         Me.SearchBox.Name = "SearchBox"
-        Me.SearchBox.Size = New System.Drawing.Size(446, 26)
+        Me.SearchBox.Size = New System.Drawing.Size(508, 26)
         Me.SearchBox.TabIndex = 0
         '
         'Label1
@@ -58,7 +62,7 @@ Partial Class Search_Form
         'Login_Button
         '
         Me.Login_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Login_Button.Location = New System.Drawing.Point(428, 12)
+        Me.Login_Button.Location = New System.Drawing.Point(480, 12)
         Me.Login_Button.Name = "Login_Button"
         Me.Login_Button.Size = New System.Drawing.Size(120, 34)
         Me.Login_Button.TabIndex = 2
@@ -161,6 +165,7 @@ Partial Class Search_Form
         Me.DataGridView1.BackgroundColor = System.Drawing.Color.LightGray
         Me.DataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column1, Me.Dept, Me.interest, Me.View})
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.Info
         Me.DataGridView1.Location = New System.Drawing.Point(15, 384)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
@@ -184,6 +189,34 @@ Partial Class Search_Form
         Me.reset.TabIndex = 11
         Me.reset.Text = "RESET"
         Me.reset.UseVisualStyleBackColor = False
+        '
+        'Column1
+        '
+        Me.Column1.HeaderText = "Name"
+        Me.Column1.Name = "Column1"
+        Me.Column1.ReadOnly = True
+        Me.Column1.Visible = False
+        '
+        'Dept
+        '
+        Me.Dept.HeaderText = "Department"
+        Me.Dept.Name = "Dept"
+        Me.Dept.ReadOnly = True
+        Me.Dept.Visible = False
+        '
+        'interest
+        '
+        Me.interest.HeaderText = "Research Interest"
+        Me.interest.Name = "interest"
+        Me.interest.ReadOnly = True
+        Me.interest.Visible = False
+        '
+        'View
+        '
+        Me.View.HeaderText = "View Page"
+        Me.View.Name = "View"
+        Me.View.ReadOnly = True
+        Me.View.Visible = False
         '
         'Search_Form
         '
@@ -222,4 +255,8 @@ Partial Class Search_Form
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
     Friend WithEvents reset As System.Windows.Forms.Button
+    Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents Dept As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents interest As System.Windows.Forms.DataGridViewTextBoxColumn
+    Friend WithEvents View As System.Windows.Forms.DataGridViewButtonColumn
 End Class
