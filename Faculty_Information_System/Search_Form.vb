@@ -9,7 +9,7 @@ Public Class Search_Form
     Dim ad As System.Data.OleDb.OleDbDataAdapter
     Dim cm As System.Data.OleDb.OleDbCommand
     Dim co As System.Data.OleDb.OleDbConnection
-    Dim dr As System.Data.OleDb.OleDbDataReader
+    Dim dr, df As System.Data.OleDb.OleDbDataReader
     Dim tb As New DataTable("faculty_info")
 
     Function SearchByDepartment(input As String) As String
@@ -105,6 +105,7 @@ Public Class Search_Form
 
     Private Sub Button_search_Click(sender As Object, e As EventArgs) Handles Button_search.Click
         Button_search.Enabled = False
+        DataGridView1.Hide()
         If filter = "" Then
             MessageBox.Show("Select one Search by option")
         ElseIf SearchBox.Text = "" Then
@@ -113,12 +114,23 @@ Public Class Search_Form
         co = New System.Data.OleDb.OleDbConnection
         co.ConnectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
         If RadioButton_dept.Checked Then
-            DataGridView1.Show()
             Try
                 co.Open()
                 Dim cd As String
                 cd = "SELECT * FROM faculty_info Where Department='" & SearchBox.Text & "'"
                 cm = New OleDb.OleDbCommand(cd, co)
+                df = cm.ExecuteReader()
+                Dim num As Integer = 0
+                While df.Read()
+                    num = num + 1
+                End While
+                If num = 0 Then
+                    MessageBox.Show("No Records!")
+                    Exit Sub
+                Else
+                    DataGridView1.Show()
+                End If
+                df.Close()
                 dr = cm.ExecuteReader()
                 While dr.Read()
                     Dim n, email, dept As String
@@ -135,12 +147,23 @@ Public Class Search_Form
             End Try
         End If
         If RadioButton_Name.Checked Then
-            DataGridView1.Show()
             Try
                 co.Open()
                 Dim cd As String
                 cd = "SELECT * FROM faculty_info Where Name='" & SearchBox.Text & "'"
                 cm = New OleDb.OleDbCommand(cd, co)
+                df = cm.ExecuteReader()
+                Dim num As Integer = 0
+                While df.Read()
+                    num = num + 1
+                End While
+                If num = 0 Then
+                    MessageBox.Show("No Records!")
+                    Exit Sub
+                Else
+                    DataGridView1.Show()
+                End If
+                df.Close()
                 dr = cm.ExecuteReader()
                 While dr.Read()
                     Dim n, email, dept As String
@@ -157,12 +180,23 @@ Public Class Search_Form
             End Try
         End If
         If RadioButton2.Checked Then
-            DataGridView1.Show()
             Try
                 co.Open()
                 Dim cd As String
                 cd = "SELECT * FROM faculty_info Where ResearchInterest='" & SearchBox.Text & "'"
                 cm = New OleDb.OleDbCommand(cd, co)
+                df = cm.ExecuteReader()
+                Dim num As Integer = 0
+                While df.Read()
+                    num = num + 1
+                End While
+                If num = 0 Then
+                    MessageBox.Show("No Records!")
+                    Exit Sub
+                Else
+                    DataGridView1.Show()
+                End If
+                df.Close()
                 dr = cm.ExecuteReader()
                 While dr.Read()
                     Dim n, email, dept As String
