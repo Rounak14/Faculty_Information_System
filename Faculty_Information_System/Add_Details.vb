@@ -28,25 +28,25 @@ Public Class Add_Details
 
         While (Reader.Read())
             id_number = Reader.GetValue(0)
-            If IsDBNull(Reader.GetValue(8)) Then
+            If IsDBNull(Reader("Position")) Then
                 Position = ""
             Else
-                Position = Reader.GetValue(8)
+                Position = Reader("Position")
             End If
 
-            If IsDBNull(Reader.GetValue(9)) Then
+            If IsDBNull(Reader("Room")) Then
                 Room = ""
             Else
-                Room = Reader.GetValue(9)
+                Room = Reader("Room")
             End If
 
-            If IsDBNull(Reader.GetValue(10)) Then
+            If IsDBNull(Reader("Telephone")) Then
                 Telephone = ""
             Else
-                Telephone = Reader.GetValue(10)
+                Telephone = Reader("Telephone")
             End If
 
-            If IsDBNull(Reader.GetValue(7)) Then
+            If IsDBNull(Reader("Education")) Then
                 Education = ""
             Else
                 Education = Reader.GetValue(7)

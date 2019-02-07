@@ -207,4 +207,5 @@ Public Class Search_Form
         DataGridView1.Hide()
         Button_search.Enabled = True
     End Sub
+  
 End Class
