@@ -22,20 +22,11 @@ Public Class Faculty_Page
                 name = Reader.GetValue(1)
                 dept = Reader.GetValue(2)
                 email = Reader.GetValue(3)
-
-<<<<<<< HEAD
-                Dim id As String = Reader.GetValue(4)
-
-                PictureBox2.Image = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
-                research = Reader.GetValue(6)
-
-
-=======
                 Dim id As String = Reader.GetValue(0)
 
                 PictureBox2.Image = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
                 research = Reader.GetValue(6)
->>>>>>> 259b6a71829b26fdab265815ca3a04c45e822114
+
             End While
             conn.Close()
         Catch ex As Exception

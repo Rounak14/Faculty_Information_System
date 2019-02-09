@@ -16,6 +16,13 @@ Public Class Add_personal_prof
         Dim Reader As OleDbDataReader = cmd.ExecuteReader()
 
         While (Reader.Read())
+
+            If IsDBNull(Reader("Designation")) Then
+                ComboBox_desig.Text = ""
+            Else
+                ComboBox_desig.Text = Reader("Designation")
+            End If
+
             If IsDBNull(Reader("Room")) Then
                 TextBox_room.Text = ""
             Else
@@ -63,25 +70,14 @@ Public Class Add_personal_prof
         Dim homepage As String = ""
 
         Dim conn = New OleDbConnection(connectionString)
-        'Dim bytImage() As Byte
-        'Try
-        '    Dim ms As New System.IO.MemoryStream
-        '    Dim bmpImage As New Bitmap(PictureBox1.Image)
-        '    bmpImage.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg)
-        '    bytImage = ms.ToArray()
-        '    ms.Close()
-        'Catch ex As Exception
-        '    MsgBox(ex.Message)
-        'End Try
         conn.Open()
 
         Dim query As String = "SELECT * FROM faculty_info where Email= '" & EmailPass & "';"
         Dim cmd As New OleDbCommand(query, conn)
         Dim Reader As OleDbDataReader = cmd.ExecuteReader()
 
-        If ComboBox_desig.Text <> "" Then
-            Designation = ComboBox_desig.Text.ToString
-        End If
+
+        Designation = ComboBox_desig.Text.ToString
 
         While (Reader.Read())
             id_number = Reader("ID")
@@ -100,33 +96,19 @@ Public Class Add_personal_prof
             MessageBox.Show(ex.Message) 'Error Message
         End Try
 
-        'Dim path As String = Application.StartupPath & "\media\" & id_number & ".jpeg"
-        'Try
-        '    My.Computer.FileSystem.DeleteFile(path)
-        '    MessageBox.Show("jsdk")
-        'Catch ex As Exception
-        '    MessageBox.Show(ex.Message)
-        'End Try
         conn.Close()
-        Try
-            'PictureBox1.Image.Save(Application.StartupPath & "\media\" & id_number & ".jpeg")
-            Using img As Image = PictureBox1.Image
-                img.Save(Application.StartupPath & "\media\" & id_number & ".jpeg")
-            End Using
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
-        'Dim cmdUpdate2 As New OleDbCommand(query, conn)
-        'cmdUpdate2.CommandText = "INSERT INTO `faculty_info` [Image] VALUES (@image)"
-        'cmdUpdate2.Parameters.AddWithValue("@image", bytImage)
-        'Try
-        '    cmdUpdate.ExecuteNonQuery() 'Executing Update Command
-        'Catch ex As Exception
-        '    MessageBox.Show(ex.Message) 'Error Message
-        'End Try
-        'conn.Close()
-        'Faculty_Page.Show()
-        'Me.Close()
+        If Not PictureBox1.Image Is Nothing Then
+            Try
+                Using img As Image = PictureBox1.Image
+                    img.Save(Application.StartupPath & "\media\" & id_number & ".jpeg")
+                End Using
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
     End Sub
 
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        PictureBox1.Image = Nothing
+    End Sub
 End Class

@@ -148,9 +148,9 @@ Public Class Search_Form
         Button_search.Enabled = False
         DataGridView1.Hide()
         If filter = "" Then
-            MessageBox.Show("Select one Search by option")
+            MessageBox.Show("Select one Search by option", "Warning")
         ElseIf SearchBox.Text = "" Then
-            MessageBox.Show("Enter some query string")
+            MessageBox.Show("Enter some query string", "Warning")
         End If
 
         If RadioButton_dept.Checked Then
