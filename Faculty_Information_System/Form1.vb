@@ -26,7 +26,7 @@ Public Class Form1
 
                 Dim id As String = Reader.GetValue(0)
 
-                'PictureBox2.Image = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
+
                 img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
                 PictureBox2.Image = img
                 research = Reader.GetValue(6)
