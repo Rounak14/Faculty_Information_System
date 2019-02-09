@@ -24,13 +24,11 @@ Public Class Faculty_Page
                 email = Reader.GetValue(3)
 
                 Dim id As String = Reader.GetValue(4)
-                'The below line is the path of the image, could be different for different PCs
-                Dim folder As String = "C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\My Project"
-                Dim filename As String = System.IO.Path.Combine(folder, id & ".jpeg")
-                PictureBox2.Image = Image.FromFile(filename)
+                
+                PictureBox2.Image = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
                 research = Reader.GetValue(6)
 
-                'PictureBox2.Image = Image.FromFile(Reader.GetValue(4))
+
             End While
             conn.Close()
         Catch ex As Exception
@@ -39,4 +37,36 @@ Public Class Faculty_Page
 
         Label_Details.Text = name & vbNewLine & dept & vbNewLine & email
     End Sub
+
+    Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
+        HomePanel.Visible = True
+        TeachingPanel.Visible = False
+        ResearchPanel.Visible = False
+        PublicationsPanel.Visible = False
+
+
+    End Sub
+
+    Private Sub PublicationsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PublicationsToolStripMenuItem.Click
+        HomePanel.Visible = False
+        TeachingPanel.Visible = False
+        ResearchPanel.Visible = False
+        PublicationsPanel.Visible = True
+    End Sub
+
+    Private Sub ResearchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResearchToolStripMenuItem.Click
+        HomePanel.Visible = False
+        TeachingPanel.Visible = False
+        ResearchPanel.Visible = True
+        PublicationsPanel.Visible = False
+    End Sub
+
+    Private Sub TeachingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TeachingToolStripMenuItem.Click
+        HomePanel.Visible = False
+        TeachingPanel.Visible = True
+        ResearchPanel.Visible = False
+        PublicationsPanel.Visible = False
+    End Sub
+
+    
 End Class

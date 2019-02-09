@@ -33,11 +33,12 @@ Partial Class Search_Form
         Me.RadioButton_Name = New System.Windows.Forms.RadioButton()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
-        Me.reset = New System.Windows.Forms.Button()
         Me.Column1 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Dept = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.interest = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.View = New System.Windows.Forms.DataGridViewButtonColumn()
+        Me.reset = New System.Windows.Forms.Button()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -177,19 +178,6 @@ Partial Class Search_Form
         Me.DataGridView1.Size = New System.Drawing.Size(588, 139)
         Me.DataGridView1.TabIndex = 10
         '
-        'reset
-        '
-        Me.reset.BackColor = System.Drawing.Color.IndianRed
-        Me.reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
-        Me.reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.reset.Location = New System.Drawing.Point(313, 272)
-        Me.reset.Margin = New System.Windows.Forms.Padding(2)
-        Me.reset.Name = "reset"
-        Me.reset.Size = New System.Drawing.Size(120, 28)
-        Me.reset.TabIndex = 11
-        Me.reset.Text = "RESET"
-        Me.reset.UseVisualStyleBackColor = False
-        '
         'Column1
         '
         Me.Column1.HeaderText = "Name"
@@ -217,6 +205,23 @@ Partial Class Search_Form
         Me.View.Name = "View"
         Me.View.ReadOnly = True
         Me.View.Visible = False
+        '
+        'reset
+        '
+        Me.reset.BackColor = System.Drawing.Color.IndianRed
+        Me.reset.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.reset.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.reset.Location = New System.Drawing.Point(313, 272)
+        Me.reset.Margin = New System.Windows.Forms.Padding(2)
+        Me.reset.Name = "reset"
+        Me.reset.Size = New System.Drawing.Size(120, 28)
+        Me.reset.TabIndex = 11
+        Me.reset.Text = "RESET"
+        Me.reset.UseVisualStyleBackColor = False
+        '
+        'OpenFileDialog1
+        '
+        Me.OpenFileDialog1.FileName = "OpenFileDialog1"
         '
         'Search_Form
         '
@@ -259,4 +264,5 @@ Partial Class Search_Form
     Friend WithEvents Dept As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents interest As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents View As System.Windows.Forms.DataGridViewButtonColumn
+    Friend WithEvents OpenFileDialog1 As System.Windows.Forms.OpenFileDialog
 End Class
