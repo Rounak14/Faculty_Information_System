@@ -4,7 +4,7 @@ Imports System.Data
 
 Public Class Form1
     Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
-
+    Dim img As Image
     Public Property EmailPass As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -24,11 +24,12 @@ Public Class Form1
                 dept = Reader("Department")
                 email = Reader("Email")
 
-                Dim id As String = Reader.GetValue(4)
+                Dim id As String = Reader.GetValue(0)
 
-                PictureBox2.Image = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
+                'PictureBox2.Image = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
+                img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
+                PictureBox2.Image = img
                 research = Reader.GetValue(6)
-
 
             End While
             conn.Close()
@@ -40,7 +41,7 @@ Public Class Form1
 
     End Sub
 
-   
+
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim SecondForm As New Search_Form
         SecondForm.Show()
@@ -50,6 +51,7 @@ Public Class Form1
     Private Sub AboutMe_Button_Click(sender As Object, e As EventArgs) Handles AboutMe_Button.Click
         Dim OBJ As New Add_personal_prof
         OBJ.EmailPass = EmailPass
+        img.Dispose()
         OBJ.Show()
     End Sub
 

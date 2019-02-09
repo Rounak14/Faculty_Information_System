@@ -34,6 +34,9 @@ Partial Class Add_personal_prof
         Me.Label4 = New System.Windows.Forms.Label()
         Me.TextBox_homepage = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label2
@@ -128,7 +131,7 @@ Partial Class Add_personal_prof
         Me.btn_login.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btn_login.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_login.Location = New System.Drawing.Point(272, 441)
+        Me.btn_login.Location = New System.Drawing.Point(38, 537)
         Me.btn_login.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_login.Name = "btn_login"
         Me.btn_login.Size = New System.Drawing.Size(173, 44)
@@ -169,11 +172,32 @@ Partial Class Add_personal_prof
         Me.Label6.TabIndex = 22
         Me.Label6.Text = "Update Profile Pic"
         '
+        'Button1
+        '
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(357, 333)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(153, 34)
+        Me.Button1.TabIndex = 23
+        Me.Button1.Text = "Choose Pic"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'PictureBox1
+        '
+        Me.PictureBox1.Location = New System.Drawing.Point(357, 389)
+        Me.PictureBox1.Name = "PictureBox1"
+        Me.PictureBox1.Size = New System.Drawing.Size(249, 192)
+        Me.PictureBox1.TabIndex = 24
+        Me.PictureBox1.TabStop = False
+        '
         'Add_personal_prof
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(804, 518)
+        Me.AutoScroll = True
+        Me.ClientSize = New System.Drawing.Size(797, 717)
+        Me.Controls.Add(Me.PictureBox1)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.TextBox_homepage)
         Me.Controls.Add(Me.Label4)
@@ -189,6 +213,7 @@ Partial Class Add_personal_prof
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Add_personal_prof"
         Me.Text = "Add_Details"
+        CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -205,4 +230,6 @@ Partial Class Add_personal_prof
     Friend WithEvents Label4 As System.Windows.Forms.Label
     Friend WithEvents TextBox_homepage As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
 End Class

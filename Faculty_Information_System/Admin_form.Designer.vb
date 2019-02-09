@@ -25,6 +25,7 @@ Partial Class Admin_form
         Me.Label1 = New System.Windows.Forms.Label()
         Me.AddButton = New System.Windows.Forms.Button()
         Me.DelButton = New System.Windows.Forms.Button()
+        Me.Button1 = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Label1
@@ -57,11 +58,21 @@ Partial Class Admin_form
         Me.DelButton.Text = "Delete a Professor"
         Me.DelButton.UseVisualStyleBackColor = True
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(794, 43)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(126, 44)
+        Me.Button1.TabIndex = 3
+        Me.Button1.Text = "Logout"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'Admin_form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(982, 410)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DelButton)
         Me.Controls.Add(Me.AddButton)
         Me.Controls.Add(Me.Label1)
@@ -77,4 +88,5 @@ Partial Class Admin_form
     Friend WithEvents Label1 As Label
     Friend WithEvents AddButton As Button
     Friend WithEvents DelButton As Button
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
