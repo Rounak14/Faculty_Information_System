@@ -10,7 +10,9 @@ Public Class Faculty_Page
         Dim name As String
         Dim dept As String
         Dim email As String
-        Dim research As String
+        Dim id As String
+        Dim designation As String
+        Dim institute As String = "Indian Institute of Technology, Guwahati"
         Dim query As String = "SELECT * FROM faculty_info where Email= '" & EmailPass & "';"
         Dim conn = New OleDbConnection(connectionString)
         conn.Open()
@@ -19,21 +21,19 @@ Public Class Faculty_Page
         Try
 
             While (Reader.Read())
-                name = Reader.GetValue(1)
-                dept = Reader.GetValue(2)
-                email = Reader.GetValue(3)
-                Dim id As String = Reader.GetValue(0)
-
+                name = Reader("Name")
+                dept = Reader("Department")
+                email = Reader("Email")
+                id = Reader("ID")
+                designation = Reader("Designation")
                 PictureBox2.Image = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
-                research = Reader.GetValue(6)
-
             End While
             conn.Close()
         Catch ex As Exception
-            MessageBox.Show(ex.Message, "Warning")
+            'MessageBox.Show(ex.Message, "Warning")
         End Try
 
-        Label_Details.Text = name & vbNewLine & dept & vbNewLine & email
+        Label_Details.Text = name & vbNewLine & designation & vbNewLine & dept & vbNewLine & institute & vbNewLine & email
     End Sub
 
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
@@ -66,5 +66,6 @@ Public Class Faculty_Page
         PublicationsPanel.Visible = False
     End Sub
 
+    
     
 End Class

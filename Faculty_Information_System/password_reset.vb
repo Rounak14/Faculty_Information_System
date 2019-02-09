@@ -9,10 +9,11 @@ Public Class password_reset
     Private Sub password_reset_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim conn = New OleDbConnection(connectionString)
         Dim query As String = "SELECT * FROM faculty_info where Email= '" & EmailPass & "';"
+        conn.Open()
         Dim cmdUpdate As New OleDbCommand(query, conn)
         Dim Reader As OleDbDataReader = cmdUpdate.ExecuteReader()
 
-        conn.Open()
+
 
         Dim old_pass As String
         Dim id As String
