@@ -36,6 +36,7 @@ Partial Class Add_personal_prof
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -190,12 +191,23 @@ Partial Class Add_personal_prof
         Me.PictureBox1.TabIndex = 24
         Me.PictureBox1.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(530, 333)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(208, 34)
+        Me.Button2.TabIndex = 25
+        Me.Button2.Text = "Clear Selected Image"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Add_personal_prof
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.ClientSize = New System.Drawing.Size(797, 717)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.Label6)
@@ -232,4 +244,5 @@ Partial Class Add_personal_prof
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

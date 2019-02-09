@@ -22,6 +22,12 @@ Public Class Faculty_Page
                 name = Reader.GetValue(1)
                 dept = Reader.GetValue(2)
                 email = Reader.GetValue(3)
+
+
+                
+
+
+
                 Dim id As String = Reader.GetValue(0)
 
                 PictureBox2.Image = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")

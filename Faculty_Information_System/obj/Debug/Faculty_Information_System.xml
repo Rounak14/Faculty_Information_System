@@ -147,11 +147,43 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources._1859b6432e5af07">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Faculty_Information_System.My.Resources.Resources._220px_User_icon_2_svg">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources._77597064f5b9eb0">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.admin_login_background_images_8">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.cliqz_search_background">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Faculty_Information_System.My.Resources.Resources.IIT_Guwahati_Logo_svg">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.logbg">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.login_bg">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.top_line_management_login_background_1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.white_tecnologia_background_template">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

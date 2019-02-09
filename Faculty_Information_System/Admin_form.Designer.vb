@@ -31,45 +31,49 @@ Partial Class Admin_form
         'Label1
         '
         Me.Label1.AutoSize = True
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.ForeColor = System.Drawing.Color.White
         Me.Label1.Location = New System.Drawing.Point(318, 55)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(304, 32)
+        Me.Label1.Size = New System.Drawing.Size(245, 26)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ADMIN DASHBOARD"
         '
         'AddButton
         '
+        Me.AddButton.BackColor = System.Drawing.Color.Tomato
         Me.AddButton.Location = New System.Drawing.Point(201, 139)
         Me.AddButton.Margin = New System.Windows.Forms.Padding(5, 4, 5, 4)
         Me.AddButton.Name = "AddButton"
         Me.AddButton.Size = New System.Drawing.Size(532, 92)
         Me.AddButton.TabIndex = 1
         Me.AddButton.Text = "Add a new Professor"
-        Me.AddButton.UseVisualStyleBackColor = True
+        Me.AddButton.UseVisualStyleBackColor = False
         '
         'DelButton
         '
+        Me.DelButton.BackColor = System.Drawing.Color.Blue
         Me.DelButton.Location = New System.Drawing.Point(201, 276)
         Me.DelButton.Name = "DelButton"
         Me.DelButton.Size = New System.Drawing.Size(532, 85)
         Me.DelButton.TabIndex = 2
         Me.DelButton.Text = "Delete a Professor"
-        Me.DelButton.UseVisualStyleBackColor = True
+        Me.DelButton.UseVisualStyleBackColor = False
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(794, 43)
+        Me.Button1.Location = New System.Drawing.Point(30, 13)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(126, 44)
+        Me.Button1.Size = New System.Drawing.Size(103, 40)
         Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Logout"
+        Me.Button1.Text = "Back"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Admin_form
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 25.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(982, 410)
         Me.Controls.Add(Me.Button1)
