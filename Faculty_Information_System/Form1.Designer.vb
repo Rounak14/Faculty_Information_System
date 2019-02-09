@@ -29,6 +29,7 @@ Partial Class Form1
         Me.addNews_Button = New System.Windows.Forms.Button()
         Me.Button_preview = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.Button2 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -59,10 +60,10 @@ Partial Class Form1
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(476, 267)
+        Me.Button1.Location = New System.Drawing.Point(449, 267)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(136, 46)
+        Me.Button1.Size = New System.Drawing.Size(163, 46)
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "Logout"
         Me.Button1.UseVisualStyleBackColor = True
@@ -119,6 +120,19 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
         '
+        'Button2
+        '
+        Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button2.Location = New System.Drawing.Point(251, 267)
+        Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button2.Name = "Button2"
+        Me.Button2.Size = New System.Drawing.Size(168, 46)
+        Me.Button2.TabIndex = 20
+        Me.Button2.Text = "Reset Password"
+        Me.Button2.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -126,6 +140,7 @@ Partial Class Form1
         Me.BackgroundImage = Global.Faculty_Information_System.My.Resources.Resources.white_tecnologia_background_template
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(659, 341)
+        Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button_preview)
         Me.Controls.Add(Me.addNews_Button)
         Me.Controls.Add(Me.AboutMe_Button)
@@ -147,4 +162,5 @@ Partial Class Form1
     Friend WithEvents AboutMe_Button As System.Windows.Forms.Button
     Friend WithEvents addNews_Button As System.Windows.Forms.Button
     Friend WithEvents Button_preview As System.Windows.Forms.Button
+    Friend WithEvents Button2 As System.Windows.Forms.Button
 End Class

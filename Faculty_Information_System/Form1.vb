@@ -60,4 +60,10 @@ Public Class Form1
         OBJ.EmailPass = EmailPass
         OBJ.Show()
     End Sub
+
+    Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Dim OBJ As New password_reset
+        OBJ.EmailPass = EmailPass
+        OBJ.Show()
+    End Sub
 End Class

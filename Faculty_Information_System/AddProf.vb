@@ -35,7 +35,7 @@ Public Class AddProf
             cmd.ExecuteNonQuery() 'Executing Update Command
             cmd.Dispose()
         Catch ex As Exception
-            MessageBox.Show(ex.Message) 'Error MEssage
+            MessageBox.Show(ex.Message) 'Error Message
         End Try
         Me.Hide()
         Admin_form.Show()

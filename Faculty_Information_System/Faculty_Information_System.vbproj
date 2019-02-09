@@ -132,6 +132,12 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Compile Include="password_reset.Designer.vb">
+      <DependentUpon>password_reset.vb</DependentUpon>
+    </Compile>
+    <Compile Include="password_reset.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Search_Form.Designer.vb">
       <DependentUpon>Search_Form.vb</DependentUpon>
     </Compile>
@@ -163,6 +169,9 @@
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="password_reset.resx">
+      <DependentUpon>password_reset.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search_Form.resx">
       <DependentUpon>Search_Form.vb</DependentUpon>
