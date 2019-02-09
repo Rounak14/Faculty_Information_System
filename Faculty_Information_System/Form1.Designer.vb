@@ -125,10 +125,10 @@ Partial Class Form1
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(251, 267)
+        Me.Button2.Location = New System.Drawing.Point(28, 267)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(168, 46)
+        Me.Button2.Size = New System.Drawing.Size(198, 46)
         Me.Button2.TabIndex = 20
         Me.Button2.Text = "Reset Password"
         Me.Button2.UseVisualStyleBackColor = True
