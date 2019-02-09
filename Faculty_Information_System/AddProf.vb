@@ -40,6 +40,7 @@ Public Class AddProf
         Me.Hide()
         Admin_form.Show()
         conn.Close()
+        Me.Close()
     End Sub
 
 End Class

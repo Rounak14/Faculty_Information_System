@@ -25,7 +25,7 @@ Public Class password_reset
             MessageBox.Show(ex.Message)
         End Try
         Reader.Close()
-
+        conn.Close()
         If String.IsNullOrEmpty(TextBox1.Text) Or String.IsNullOrEmpty(TextBox2.Text) Or String.IsNullOrEmpty(TextBox3.Text) Then
             MessageBox.Show("Fill all the three boxes", "Warning")
             Exit Sub
@@ -46,14 +46,15 @@ Public Class password_reset
             TextBox3.Clear()
             Exit Sub
         End If
-
+        conn.Open()
         Dim cmdUpdate As New OleDbCommand(query, conn)
-        cmdUpdate.CommandText = "UPDATE faculty_info SET Password = '" & new_pass & "' WHERE ID = " & id_number & ";"
+        cmdUpdate.CommandText = "UPDATE faculty_info SET [Password] = '" + new_pass + "' WHERE ID = " & id_number & ";"
         Try
             cmdUpdate.ExecuteNonQuery() 'Executing Update Command
         Catch ex As Exception
             MessageBox.Show(ex.Message) 'Error Message
         End Try
         conn.Close()
+        Me.Close()
     End Sub
 End Class
