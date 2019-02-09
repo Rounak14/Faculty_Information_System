@@ -23,23 +23,88 @@ Partial Class Form1
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.Label1 = New System.Windows.Forms.Label()
-        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Label_Details = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.AboutMe_Button = New System.Windows.Forms.Button()
         Me.addNews_Button = New System.Windows.Forms.Button()
         Me.Button_preview = New System.Windows.Forms.Button()
+        Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Label1
         '
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(224, 14)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(375, 32)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "Welcome To Dashboard!!!!!"
+        '
+        'Label_Details
+        '
+        Me.Label_Details.BackColor = System.Drawing.Color.Transparent
+        Me.Label_Details.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_Details.Location = New System.Drawing.Point(189, 54)
+        Me.Label_Details.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label_Details.Name = "Label_Details"
+        Me.Label_Details.Size = New System.Drawing.Size(467, 129)
+        Me.Label_Details.TabIndex = 15
+        Me.Label_Details.Text = "User Details"
+        Me.Label_Details.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'Button1
+        '
+        Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button1.Location = New System.Drawing.Point(476, 267)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(136, 46)
+        Me.Button1.TabIndex = 16
+        Me.Button1.Text = "Logout"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'AboutMe_Button
+        '
+        Me.AboutMe_Button.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.AboutMe_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.AboutMe_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.AboutMe_Button.Location = New System.Drawing.Point(28, 183)
+        Me.AboutMe_Button.Margin = New System.Windows.Forms.Padding(4)
+        Me.AboutMe_Button.Name = "AboutMe_Button"
+        Me.AboutMe_Button.Size = New System.Drawing.Size(198, 64)
+        Me.AboutMe_Button.TabIndex = 17
+        Me.AboutMe_Button.Text = "Add/Edit Personal Details"
+        Me.AboutMe_Button.UseVisualStyleBackColor = True
+        '
+        'addNews_Button
+        '
+        Me.addNews_Button.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.addNews_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.addNews_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.addNews_Button.Location = New System.Drawing.Point(251, 183)
+        Me.addNews_Button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.addNews_Button.Name = "addNews_Button"
+        Me.addNews_Button.Size = New System.Drawing.Size(168, 64)
+        Me.addNews_Button.TabIndex = 18
+        Me.addNews_Button.Text = "Add News"
+        Me.addNews_Button.UseVisualStyleBackColor = True
+        '
+        'Button_preview
+        '
+        Me.Button_preview.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button_preview.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button_preview.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button_preview.Location = New System.Drawing.Point(449, 183)
+        Me.Button_preview.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button_preview.Name = "Button_preview"
+        Me.Button_preview.Size = New System.Drawing.Size(163, 64)
+        Me.Button_preview.TabIndex = 19
+        Me.Button_preview.Text = "View Page"
+        Me.Button_preview.UseVisualStyleBackColor = True
         '
         'PictureBox2
         '
@@ -54,65 +119,12 @@ Partial Class Form1
         Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
         '
-        'Label_Details
-        '
-        Me.Label_Details.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label_Details.Location = New System.Drawing.Point(189, 54)
-        Me.Label_Details.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label_Details.Name = "Label_Details"
-        Me.Label_Details.Size = New System.Drawing.Size(467, 129)
-        Me.Label_Details.TabIndex = 15
-        Me.Label_Details.Text = "User Details"
-        Me.Label_Details.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'Button1
-        '
-        Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(251, 267)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(136, 46)
-        Me.Button1.TabIndex = 16
-        Me.Button1.Text = "Logout"
-        Me.Button1.UseVisualStyleBackColor = True
-        '
-        'AboutMe_Button
-        '
-        Me.AboutMe_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.AboutMe_Button.Location = New System.Drawing.Point(28, 183)
-        Me.AboutMe_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
-        Me.AboutMe_Button.Name = "AboutMe_Button"
-        Me.AboutMe_Button.Size = New System.Drawing.Size(198, 64)
-        Me.AboutMe_Button.TabIndex = 17
-        Me.AboutMe_Button.Text = "Add/Edit Personal Details"
-        Me.AboutMe_Button.UseVisualStyleBackColor = True
-        '
-        'addNews_Button
-        '
-        Me.addNews_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addNews_Button.Location = New System.Drawing.Point(251, 183)
-        Me.addNews_Button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.addNews_Button.Name = "addNews_Button"
-        Me.addNews_Button.Size = New System.Drawing.Size(168, 64)
-        Me.addNews_Button.TabIndex = 18
-        Me.addNews_Button.Text = "Add News"
-        Me.addNews_Button.UseVisualStyleBackColor = True
-        '
-        'Button_preview
-        '
-        Me.Button_preview.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_preview.Location = New System.Drawing.Point(449, 183)
-        Me.Button_preview.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.Button_preview.Name = "Button_preview"
-        Me.Button_preview.Size = New System.Drawing.Size(163, 64)
-        Me.Button_preview.TabIndex = 19
-        Me.Button_preview.Text = "View Page"
-        Me.Button_preview.UseVisualStyleBackColor = True
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Faculty_Information_System.My.Resources.Resources.white_tecnologia_background_template
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(659, 341)
         Me.Controls.Add(Me.Button_preview)
         Me.Controls.Add(Me.addNews_Button)
