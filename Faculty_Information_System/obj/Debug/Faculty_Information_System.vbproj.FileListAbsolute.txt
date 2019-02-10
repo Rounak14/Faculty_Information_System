@@ -58,3 +58,4 @@ C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_
 =======
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.DelProf.resources
 >>>>>>> 7454757b0fad5b639d623a4d981d5fffe76ea89e
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.DelProf.resources

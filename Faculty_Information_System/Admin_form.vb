@@ -1,7 +1,7 @@
 ﻿Public Class Admin_form
 
     Private Sub DelButton_Click(sender As Object, e As EventArgs) Handles DelButton.Click
-        'DelProf.Show()
+        DelProf.Show()
         Me.Hide()
     End Sub
 
