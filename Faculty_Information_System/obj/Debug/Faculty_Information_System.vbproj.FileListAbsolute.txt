@@ -55,12 +55,9 @@ C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.Designer.vb
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.vb
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.DelProf.resources
-<<<<<<< HEAD
-=======
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Prof_Edu.resources
->>>>>>> 7454757b0fad5b639d623a4d981d5fffe76ea89e
->>>>>>> 5deebe0112b127ff83f15fd646ca67f98d501b8a
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.DelProf.resources
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.resx
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.Designer.vb
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.vb
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Prof_Edu.resources
