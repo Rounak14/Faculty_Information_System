@@ -129,28 +129,26 @@ Public Class Search_Form
         Dim Secondform As New Form2
         Secondform.Show()
         Me.Hide()
-
     End Sub
 
 
     Private Sub RadioButton_dept_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_dept.CheckedChanged
         filter = "Department"
         ComboBox_dept.Show()
-
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         filter = "Research Interest"
         ComboBox_dept.ResetText()
         ComboBox_dept.Hide()
-        SearchBox.Text = ""
+        'SearchBox.Text = ""
     End Sub
 
     Private Sub RadioButton_Name_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_Name.CheckedChanged
         filter = "Name"
         ComboBox_dept.ResetText()
         ComboBox_dept.Hide()
-        SearchBox.Text = ""
+        'SearchBox.Text = ""
     End Sub
 
     Private Sub Button_search_Click(sender As Object, e As EventArgs) Handles Button_search.Click
@@ -180,13 +178,11 @@ Public Class Search_Form
         tb.Columns.Add("Email", Type.GetType("System.String"))
         tb.Columns.Add("Department", Type.GetType("System.String"))
         tb.Columns.Add("View More")
-
     End Sub
 
     Private Sub ComboBox_dept_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_dept.SelectedIndexChanged
         SearchBox.Text = ComboBox_dept.Text
     End Sub
-
 
     Private Sub reset_Click(sender As Object, e As EventArgs) Handles Reset.Click
         SearchBox.Text = ""
@@ -200,6 +196,5 @@ Public Class Search_Form
         DataGridView1.Hide()
         Button_search.Enabled = True
     End Sub
-
 
 End Class
