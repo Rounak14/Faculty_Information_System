@@ -62,7 +62,7 @@ Partial Class Faculty_Page
         '
         'Label_Details
         '
-        Me.Label_Details.Font = New System.Drawing.Font("Times New Roman", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label_Details.Font = New System.Drawing.Font("Trebuchet MS", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label_Details.Location = New System.Drawing.Point(123, 4)
         Me.Label_Details.Name = "Label_Details"
         Me.Label_Details.Size = New System.Drawing.Size(413, 108)
