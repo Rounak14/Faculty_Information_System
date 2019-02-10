@@ -82,6 +82,7 @@ Partial Class Faculty_Page
         '
         'HomePanel
         '
+        Me.HomePanel.AutoScroll = True
         Me.HomePanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.HomePanel.Location = New System.Drawing.Point(0, 0)
         Me.HomePanel.Name = "HomePanel"
@@ -90,6 +91,7 @@ Partial Class Faculty_Page
         '
         'ParentPanel
         '
+        Me.ParentPanel.AutoScroll = True
         Me.ParentPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ParentPanel.Controls.Add(Me.TeachingPanel)
         Me.ParentPanel.Controls.Add(Me.PublicationsPanel)
@@ -102,6 +104,7 @@ Partial Class Faculty_Page
         '
         'TeachingPanel
         '
+        Me.TeachingPanel.AutoScroll = True
         Me.TeachingPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TeachingPanel.Location = New System.Drawing.Point(0, 0)
         Me.TeachingPanel.Name = "TeachingPanel"
@@ -111,6 +114,7 @@ Partial Class Faculty_Page
         '
         'PublicationsPanel
         '
+        Me.PublicationsPanel.AutoScroll = True
         Me.PublicationsPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PublicationsPanel.Location = New System.Drawing.Point(0, 0)
         Me.PublicationsPanel.Name = "PublicationsPanel"
@@ -120,6 +124,7 @@ Partial Class Faculty_Page
         '
         'ResearchPanel
         '
+        Me.ResearchPanel.AutoScroll = True
         Me.ResearchPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ResearchPanel.Location = New System.Drawing.Point(0, 0)
         Me.ResearchPanel.Name = "ResearchPanel"
