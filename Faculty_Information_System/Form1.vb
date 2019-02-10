@@ -1,4 +1,6 @@
-﻿Imports Microsoft.VisualBasic
+﻿' add/edit personal details mein error after we are doing something else
+
+Imports Microsoft.VisualBasic
 Imports System.Data.OleDb
 Imports System.Data
 
@@ -51,7 +53,11 @@ Public Class Form1
     Private Sub AboutMe_Button_Click(sender As Object, e As EventArgs) Handles AboutMe_Button.Click
         Dim OBJ As New Add_personal_prof
         OBJ.EmailPass = EmailPass
-        img.Dispose()
+        Try
+            img.Dispose()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Warning")
+        End Try
         OBJ.Show()
     End Sub
 
@@ -63,6 +69,12 @@ Public Class Form1
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
         Dim OBJ As New password_reset
+        OBJ.EmailPass = EmailPass
+        OBJ.Show()
+    End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim OBJ As New Prof_Edu
         OBJ.EmailPass = EmailPass
         OBJ.Show()
     End Sub

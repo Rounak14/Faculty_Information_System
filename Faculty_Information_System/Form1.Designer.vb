@@ -30,6 +30,7 @@ Partial Class Form1
         Me.Button_preview = New System.Windows.Forms.Button()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Button3 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -133,6 +134,19 @@ Partial Class Form1
         Me.Button2.Text = "Reset Password"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Button3
+        '
+        Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button3.Location = New System.Drawing.Point(251, 267)
+        Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button3.Name = "Button3"
+        Me.Button3.Size = New System.Drawing.Size(163, 46)
+        Me.Button3.TabIndex = 21
+        Me.Button3.Text = "Add Education"
+        Me.Button3.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -140,6 +154,7 @@ Partial Class Form1
         Me.BackgroundImage = Global.Faculty_Information_System.My.Resources.Resources.white_tecnologia_background_template
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(659, 341)
+        Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button_preview)
         Me.Controls.Add(Me.addNews_Button)
@@ -163,4 +178,5 @@ Partial Class Form1
     Friend WithEvents addNews_Button As System.Windows.Forms.Button
     Friend WithEvents Button_preview As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Button3 As System.Windows.Forms.Button
 End Class
