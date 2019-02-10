@@ -204,7 +204,7 @@ Partial Class AddProf
         Me.Controls.Add(Me.TextBox1)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "AddProf"
-        Me.Text = "7"
+        Me.Text = "Add_Prof"
         CType(Me.Faculty_databaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.Faculty_infoBindingSource, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

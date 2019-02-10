@@ -146,10 +146,22 @@
     <Compile Include="password_reset.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Prof_Courses.Designer.vb">
+      <DependentUpon>Prof_Courses.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prof_Courses.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Prof_Edu.Designer.vb">
       <DependentUpon>Prof_Edu.vb</DependentUpon>
     </Compile>
     <Compile Include="Prof_Edu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prof_Publication.Designer.vb">
+      <DependentUpon>Prof_Publication.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prof_Publication.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Search_Form.Designer.vb">
@@ -191,8 +203,14 @@
     <EmbeddedResource Include="password_reset.resx">
       <DependentUpon>password_reset.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Prof_Courses.resx">
+      <DependentUpon>Prof_Courses.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prof_Edu.resx">
       <DependentUpon>Prof_Edu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prof_Publication.resx">
+      <DependentUpon>Prof_Publication.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search_Form.resx">
       <DependentUpon>Search_Form.vb</DependentUpon>
@@ -229,7 +247,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Faculty_database.accdb">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
