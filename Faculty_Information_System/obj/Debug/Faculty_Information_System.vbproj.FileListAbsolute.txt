@@ -50,5 +50,16 @@ C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Add_personal_prof.resources
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Add_personal_prof.resources
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.password_reset.resources
+<<<<<<< HEAD
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.password_reset.resources
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.resx
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.Designer.vb
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.vb
+=======
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.DelProf.resources
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Prof_Edu.resources
+>>>>>>> 7454757b0fad5b639d623a4d981d5fffe76ea89e
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.DelProf.resources
+C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.resx
+C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.Designer.vb
+C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.vb

@@ -6,7 +6,7 @@ Imports System.Data
 Public Class Search_Form
     Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
     Dim filter As String = ""
-    
+
     Dim dr, df As System.Data.OleDb.OleDbDataReader
     Dim tb As New DataTable("faculty_info")
 
@@ -84,12 +84,29 @@ Public Class Search_Form
         Dim conn = New OleDbConnection(connectionString)
         Try
             conn.Open()
-            Dim query As String = "Select * From faculty_info where ResearchInterest like '%" & input & "%'"
+            Dim id As Int32
+            Dim query As String = "Select * From Research_Interest where Field like '%" & input & "%'"
             Dim cmd As New OleDbCommand(query, conn)
             Dim reader As OleDbDataReader = cmd.ExecuteReader()
             Dim count As Integer = 0
             While (reader.Read())
                 count += 1
+                id = reader("Prof_id")
+                Dim query2 As String = "Select * From faculty_info "
+                Dim cmd2 As New OleDbCommand(query2, conn)
+                dr = cmd2.ExecuteReader()
+                While dr.Read()
+                    If dr("ID") = id Then
+                        Dim n, email, dept As String
+                        n = dr("Name").ToString
+                        email = dr("Email").ToString
+                        dept = dr("Department").ToString
+                        tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
+                        DataGridView1.DataSource = tb
+                    End If
+                   
+                End While
+                dr.Close()
             End While
             If count = 0 Then
                 MessageBox.Show("No Records!")
@@ -97,17 +114,9 @@ Public Class Search_Form
                 DataGridView1.Show()
             End If
             reader.Close()
-            dr = cmd.ExecuteReader()
-            While dr.Read()
-                Dim n, email, dept As String
-                n = dr("Name").ToString
-                email = dr("Email").ToString
-                dept = dr("Department").ToString
-                tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
-                DataGridView1.DataSource = tb
-            End While
+            
             conn.Close()
-            dr.Close()
+
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         Finally
@@ -179,7 +188,7 @@ Public Class Search_Form
     End Sub
 
 
-    Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
+    Private Sub reset_Click(sender As Object, e As EventArgs) Handles Reset.Click
         SearchBox.Text = ""
         RadioButton_dept.Checked = False
         RadioButton_Name.Checked = False
@@ -191,6 +200,6 @@ Public Class Search_Form
         DataGridView1.Hide()
         Button_search.Enabled = True
     End Sub
-  
-   
+
+
 End Class

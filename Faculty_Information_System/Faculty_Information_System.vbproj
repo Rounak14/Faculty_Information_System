@@ -107,9 +107,11 @@
     </Compile>
     <Compile Include="Faculty_Page.Designer.vb">
       <DependentUpon>Faculty_Page.vb</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Faculty_Page.vb">
       <SubType>Form</SubType>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Compile>
     <Compile Include="Form2.Designer.vb">
       <DependentUpon>Form2.vb</DependentUpon>
@@ -172,6 +174,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Faculty_Page.resx">
       <DependentUpon>Faculty_Page.vb</DependentUpon>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.vb</DependentUpon>
@@ -226,7 +229,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Faculty_database.accdb">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />

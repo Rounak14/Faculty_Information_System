@@ -1,19 +1,18 @@
-﻿' add/edit personal details mein error after we are doing something else
-
-Imports Microsoft.VisualBasic
+﻿Imports Microsoft.VisualBasic
 Imports System.Data.OleDb
 Imports System.Data
 
 Public Class Form1
     Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
     Dim img As Image
+    Dim Imagepresent As Int32 = 1
     Public Property EmailPass As String
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Dim name As String
         Dim dept As String
         Dim email As String
-        Dim research As String
+        Dim id As String
         Dim query As String = "SELECT * FROM faculty_info where Email= '" & EmailPass & "';"
         Dim conn = New OleDbConnection(connectionString)
         conn.Open()
@@ -25,20 +24,19 @@ Public Class Form1
                 name = Reader("Name")
                 dept = Reader("Department")
                 email = Reader("Email")
-
-                Dim id As String = Reader.GetValue(0)
-
-
-                img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
-                PictureBox2.Image = img
-                research = Reader.GetValue(6)
-
+                id = Reader("ID")
             End While
             conn.Close()
         Catch ex As Exception
             MessageBox.Show(ex.Message, "Warning")
         End Try
 
+        Try
+            img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
+            PictureBox2.Image = img
+        Catch ex As Exception
+            Imagepresent = 0
+        End Try
         Label_Details.Text = name & vbNewLine & dept & vbNewLine & email
 
     End Sub
@@ -53,11 +51,9 @@ Public Class Form1
     Private Sub AboutMe_Button_Click(sender As Object, e As EventArgs) Handles AboutMe_Button.Click
         Dim OBJ As New Add_personal_prof
         OBJ.EmailPass = EmailPass
-        Try
+        If Imagepresent = 1 Then
             img.Dispose()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Warning")
-        End Try
+        End If
         OBJ.Show()
     End Sub
 

@@ -83,6 +83,14 @@ Represents the strongly named DataTable class.
 	<summary>
 Represents the strongly named DataTable class.
 </summary>
+</member><member name="T:Faculty_Information_System.Faculty_databaseDataSet.Research_InterestDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:Faculty_Information_System.Faculty_databaseDataSet.TeachingDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
 </member><member name="T:Faculty_Information_System.Faculty_databaseDataSet.AchievementsRow">
 	<summary>
 Represents strongly named DataRow class.
@@ -107,6 +115,14 @@ Represents strongly named DataRow class.
 	<summary>
 Represents strongly named DataRow class.
 </summary>
+</member><member name="T:Faculty_Information_System.Faculty_databaseDataSet.Research_InterestRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:Faculty_Information_System.Faculty_databaseDataSet.TeachingRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
 </member><member name="T:Faculty_Information_System.Faculty_databaseDataSet.AchievementsRowChangeEvent">
 	<summary>
 Row event argument class
@@ -128,6 +144,14 @@ Row event argument class
 Row event argument class
 </summary>
 </member><member name="T:Faculty_Information_System.Faculty_databaseDataSet.PublicationsRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Faculty_Information_System.Faculty_databaseDataSet.Research_InterestRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:Faculty_Information_System.Faculty_databaseDataSet.TeachingRowChangeEvent">
 	<summary>
 Row event argument class
 </summary>
@@ -156,6 +180,14 @@ Represents the connection and commands used to retrieve and save data.
 Represents the connection and commands used to retrieve and save data.
 </summary>
 </member><member name="T:Faculty_Information_System.Faculty_databaseDataSetTableAdapters.PublicationsTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Faculty_Information_System.Faculty_databaseDataSetTableAdapters.Research_InterestTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="T:Faculty_Information_System.Faculty_databaseDataSetTableAdapters.TeachingTableAdapter">
 	<summary>
 Represents the connection and commands used to retrieve and save data.
 </summary>
