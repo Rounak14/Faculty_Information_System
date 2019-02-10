@@ -31,6 +31,8 @@ Partial Class Form1
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
+        Me.Button4 = New System.Windows.Forms.Button()
+        Me.Button5 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -64,7 +66,7 @@ Partial Class Form1
         Me.Button1.Location = New System.Drawing.Point(449, 267)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(163, 46)
+        Me.Button1.Size = New System.Drawing.Size(190, 46)
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "Logout"
         Me.Button1.UseVisualStyleBackColor = True
@@ -90,7 +92,7 @@ Partial Class Form1
         Me.addNews_Button.Location = New System.Drawing.Point(251, 183)
         Me.addNews_Button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.addNews_Button.Name = "addNews_Button"
-        Me.addNews_Button.Size = New System.Drawing.Size(168, 64)
+        Me.addNews_Button.Size = New System.Drawing.Size(171, 64)
         Me.addNews_Button.TabIndex = 18
         Me.addNews_Button.Text = "Add News"
         Me.addNews_Button.UseVisualStyleBackColor = True
@@ -103,7 +105,7 @@ Partial Class Form1
         Me.Button_preview.Location = New System.Drawing.Point(449, 183)
         Me.Button_preview.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button_preview.Name = "Button_preview"
-        Me.Button_preview.Size = New System.Drawing.Size(163, 64)
+        Me.Button_preview.Size = New System.Drawing.Size(190, 64)
         Me.Button_preview.TabIndex = 19
         Me.Button_preview.Text = "View Page"
         Me.Button_preview.UseVisualStyleBackColor = True
@@ -142,10 +144,36 @@ Partial Class Form1
         Me.Button3.Location = New System.Drawing.Point(251, 267)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(163, 46)
+        Me.Button3.Size = New System.Drawing.Size(171, 46)
         Me.Button3.TabIndex = 21
         Me.Button3.Text = "Add Education"
         Me.Button3.UseVisualStyleBackColor = True
+        '
+        'Button4
+        '
+        Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button4.Location = New System.Drawing.Point(28, 341)
+        Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button4.Name = "Button4"
+        Me.Button4.Size = New System.Drawing.Size(198, 46)
+        Me.Button4.TabIndex = 22
+        Me.Button4.Text = "Add Courses"
+        Me.Button4.UseVisualStyleBackColor = True
+        '
+        'Button5
+        '
+        Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(449, 341)
+        Me.Button5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(190, 46)
+        Me.Button5.TabIndex = 23
+        Me.Button5.Text = "Add Publications"
+        Me.Button5.UseVisualStyleBackColor = True
         '
         'Form1
         '
@@ -153,7 +181,9 @@ Partial Class Form1
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Faculty_Information_System.My.Resources.Resources.white_tecnologia_background_template
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(659, 341)
+        Me.ClientSize = New System.Drawing.Size(723, 452)
+        Me.Controls.Add(Me.Button5)
+        Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button_preview)
@@ -179,4 +209,6 @@ Partial Class Form1
     Friend WithEvents Button_preview As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
+    Friend WithEvents Button4 As System.Windows.Forms.Button
+    Friend WithEvents Button5 As System.Windows.Forms.Button
 End Class

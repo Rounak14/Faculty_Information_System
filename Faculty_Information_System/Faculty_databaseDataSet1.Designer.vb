@@ -530,7 +530,7 @@ Partial Public Class Faculty_databaseDataSet
         
         Private columnID As Global.System.Data.DataColumn
         
-        Private columnProf_Id As Global.System.Data.DataColumn
+        Private columnProf_id As Global.System.Data.DataColumn
         
         Private columnTitle As Global.System.Data.DataColumn
         
@@ -583,9 +583,9 @@ Partial Public Class Faculty_databaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Prof_IdColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Prof_idColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnProf_Id
+                Return Me.columnProf_id
             End Get
         End Property
         
@@ -650,9 +650,9 @@ Partial Public Class Faculty_databaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddAchievementsRow(ByVal Prof_Id As Integer, ByVal Title As String, ByVal Issued_By As String, ByVal Year As Integer) As AchievementsRow
+        Public Overloads Function AddAchievementsRow(ByVal Prof_id As Integer, ByVal Title As String, ByVal Issued_By As String, ByVal Year As Integer) As AchievementsRow
             Dim rowAchievementsRow As AchievementsRow = CType(Me.NewRow,AchievementsRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Prof_Id, Title, Issued_By, Year}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Prof_id, Title, Issued_By, Year}
             rowAchievementsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowAchievementsRow)
             Return rowAchievementsRow
@@ -682,7 +682,7 @@ Partial Public Class Faculty_databaseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnID = MyBase.Columns("ID")
-            Me.columnProf_Id = MyBase.Columns("Prof_Id")
+            Me.columnProf_id = MyBase.Columns("Prof_id")
             Me.columnTitle = MyBase.Columns("Title")
             Me.columnIssued_By = MyBase.Columns("Issued_By")
             Me.columnYear = MyBase.Columns("Year")
@@ -693,8 +693,8 @@ Partial Public Class Faculty_databaseDataSet
         Private Sub InitClass()
             Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnID)
-            Me.columnProf_Id = New Global.System.Data.DataColumn("Prof_Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnProf_Id)
+            Me.columnProf_id = New Global.System.Data.DataColumn("Prof_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnProf_id)
             Me.columnTitle = New Global.System.Data.DataColumn("Title", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTitle)
             Me.columnIssued_By = New Global.System.Data.DataColumn("Issued_By", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -858,6 +858,8 @@ Partial Public Class Faculty_databaseDataSet
         
         Private columnPassing_Year As Global.System.Data.DataColumn
         
+        Private columnCourse_Link As Global.System.Data.DataColumn
+        
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub New()
@@ -942,6 +944,14 @@ Partial Public Class Faculty_databaseDataSet
         End Property
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public ReadOnly Property Course_LinkColumn() As Global.System.Data.DataColumn
+            Get
+                Return Me.columnCourse_Link
+            End Get
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Browsable(false)>  _
         Public ReadOnly Property Count() As Integer
@@ -978,9 +988,9 @@ Partial Public Class Faculty_databaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddEducationRow(ByVal Prof_id As Integer, ByVal Degree As String, ByVal Institute As String, ByVal Subject As String, ByVal Passing_Year As Integer) As EducationRow
+        Public Overloads Function AddEducationRow(ByVal Prof_id As Integer, ByVal Degree As String, ByVal Institute As String, ByVal Subject As String, ByVal Passing_Year As Integer, ByVal Course_Link As String) As EducationRow
             Dim rowEducationRow As EducationRow = CType(Me.NewRow,EducationRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Prof_id, Degree, Institute, Subject, Passing_Year}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Prof_id, Degree, Institute, Subject, Passing_Year, Course_Link}
             rowEducationRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowEducationRow)
             Return rowEducationRow
@@ -1015,6 +1025,7 @@ Partial Public Class Faculty_databaseDataSet
             Me.columnInstitute = MyBase.Columns("Institute")
             Me.columnSubject = MyBase.Columns("Subject")
             Me.columnPassing_Year = MyBase.Columns("Passing_Year")
+            Me.columnCourse_Link = MyBase.Columns("Course_Link")
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -1032,6 +1043,8 @@ Partial Public Class Faculty_databaseDataSet
             MyBase.Columns.Add(Me.columnSubject)
             Me.columnPassing_Year = New Global.System.Data.DataColumn("Passing_Year", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnPassing_Year)
+            Me.columnCourse_Link = New Global.System.Data.DataColumn("Course_Link", GetType(String), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnCourse_Link)
             Me.Constraints.Add(New Global.System.Data.UniqueConstraint("Constraint1", New Global.System.Data.DataColumn() {Me.columnID}, true))
             Me.columnID.AutoIncrement = true
             Me.columnID.AutoIncrementSeed = -1
@@ -1041,6 +1054,7 @@ Partial Public Class Faculty_databaseDataSet
             Me.columnDegree.MaxLength = 255
             Me.columnInstitute.MaxLength = 536870910
             Me.columnSubject.MaxLength = 536870910
+            Me.columnCourse_Link.MaxLength = 536870910
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -2180,7 +2194,7 @@ Partial Public Class Faculty_databaseDataSet
         
         Private columnID As Global.System.Data.DataColumn
         
-        Private columnProf_Id As Global.System.Data.DataColumn
+        Private columnProf_id As Global.System.Data.DataColumn
         
         Private columnTopic As Global.System.Data.DataColumn
         
@@ -2233,9 +2247,9 @@ Partial Public Class Faculty_databaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public ReadOnly Property Prof_IdColumn() As Global.System.Data.DataColumn
+        Public ReadOnly Property Prof_idColumn() As Global.System.Data.DataColumn
             Get
-                Return Me.columnProf_Id
+                Return Me.columnProf_id
             End Get
         End Property
         
@@ -2300,9 +2314,9 @@ Partial Public Class Faculty_databaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Overloads Function AddPublicationsRow(ByVal Prof_Id As Integer, ByVal Topic As String, ByVal Publication_Year As String, ByVal Link As String) As PublicationsRow
+        Public Overloads Function AddPublicationsRow(ByVal Prof_id As Integer, ByVal Topic As String, ByVal Publication_Year As String, ByVal Link As String) As PublicationsRow
             Dim rowPublicationsRow As PublicationsRow = CType(Me.NewRow,PublicationsRow)
-            Dim columnValuesArray() As Object = New Object() {Nothing, Prof_Id, Topic, Publication_Year, Link}
+            Dim columnValuesArray() As Object = New Object() {Nothing, Prof_id, Topic, Publication_Year, Link}
             rowPublicationsRow.ItemArray = columnValuesArray
             Me.Rows.Add(rowPublicationsRow)
             Return rowPublicationsRow
@@ -2332,7 +2346,7 @@ Partial Public Class Faculty_databaseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Friend Sub InitVars()
             Me.columnID = MyBase.Columns("ID")
-            Me.columnProf_Id = MyBase.Columns("Prof_Id")
+            Me.columnProf_id = MyBase.Columns("Prof_id")
             Me.columnTopic = MyBase.Columns("Topic")
             Me.columnPublication_Year = MyBase.Columns("Publication_Year")
             Me.columnLink = MyBase.Columns("Link")
@@ -2343,8 +2357,8 @@ Partial Public Class Faculty_databaseDataSet
         Private Sub InitClass()
             Me.columnID = New Global.System.Data.DataColumn("ID", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnID)
-            Me.columnProf_Id = New Global.System.Data.DataColumn("Prof_Id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
-            MyBase.Columns.Add(Me.columnProf_Id)
+            Me.columnProf_id = New Global.System.Data.DataColumn("Prof_id", GetType(Integer), Nothing, Global.System.Data.MappingType.Element)
+            MyBase.Columns.Add(Me.columnProf_id)
             Me.columnTopic = New Global.System.Data.DataColumn("Topic", GetType(String), Nothing, Global.System.Data.MappingType.Element)
             MyBase.Columns.Add(Me.columnTopic)
             Me.columnPublication_Year = New Global.System.Data.DataColumn("Publication_Year", GetType(String), Nothing, Global.System.Data.MappingType.Element)
@@ -3166,16 +3180,16 @@ Partial Public Class Faculty_databaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Prof_Id() As Integer
+        Public Property Prof_id() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tableAchievements.Prof_IdColumn),Integer)
+                    Return CType(Me(Me.tableAchievements.Prof_idColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Prof_Id' in table 'Achievements' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Prof_id' in table 'Achievements' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tableAchievements.Prof_IdColumn) = value
+                Me(Me.tableAchievements.Prof_idColumn) = value
             End Set
         End Property
         
@@ -3226,14 +3240,14 @@ Partial Public Class Faculty_databaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsProf_IdNull() As Boolean
-            Return Me.IsNull(Me.tableAchievements.Prof_IdColumn)
+        Public Function IsProf_idNull() As Boolean
+            Return Me.IsNull(Me.tableAchievements.Prof_idColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetProf_IdNull()
-            Me(Me.tableAchievements.Prof_IdColumn) = Global.System.Convert.DBNull
+        Public Sub SetProf_idNull()
+            Me(Me.tableAchievements.Prof_idColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -3376,6 +3390,21 @@ Partial Public Class Faculty_databaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Property Course_Link() As String
+            Get
+                Try 
+                    Return CType(Me(Me.tableEducation.Course_LinkColumn),String)
+                Catch e As Global.System.InvalidCastException
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Course_Link' in table 'Education' is DBNull.", e)
+                End Try
+            End Get
+            Set
+                Me(Me.tableEducation.Course_LinkColumn) = value
+            End Set
+        End Property
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Function IsProf_idNull() As Boolean
             Return Me.IsNull(Me.tableEducation.Prof_idColumn)
         End Function
@@ -3432,6 +3461,18 @@ Partial Public Class Faculty_databaseDataSet
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
         Public Sub SetPassing_YearNull()
             Me(Me.tableEducation.Passing_YearColumn) = Global.System.Convert.DBNull
+        End Sub
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Function IsCourse_LinkNull() As Boolean
+            Return Me.IsNull(Me.tableEducation.Course_LinkColumn)
+        End Function
+        
+        <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
+         Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
+        Public Sub SetCourse_LinkNull()
+            Me(Me.tableEducation.Course_LinkColumn) = Global.System.Convert.DBNull
         End Sub
     End Class
     
@@ -3950,16 +3991,16 @@ Partial Public Class Faculty_databaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Property Prof_Id() As Integer
+        Public Property Prof_id() As Integer
             Get
                 Try 
-                    Return CType(Me(Me.tablePublications.Prof_IdColumn),Integer)
+                    Return CType(Me(Me.tablePublications.Prof_idColumn),Integer)
                 Catch e As Global.System.InvalidCastException
-                    Throw New Global.System.Data.StrongTypingException("The value for column 'Prof_Id' in table 'Publications' is DBNull.", e)
+                    Throw New Global.System.Data.StrongTypingException("The value for column 'Prof_id' in table 'Publications' is DBNull.", e)
                 End Try
             End Get
             Set
-                Me(Me.tablePublications.Prof_IdColumn) = value
+                Me(Me.tablePublications.Prof_idColumn) = value
             End Set
         End Property
         
@@ -4010,14 +4051,14 @@ Partial Public Class Faculty_databaseDataSet
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Function IsProf_IdNull() As Boolean
-            Return Me.IsNull(Me.tablePublications.Prof_IdColumn)
+        Public Function IsProf_idNull() As Boolean
+            Return Me.IsNull(Me.tablePublications.Prof_idColumn)
         End Function
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0")>  _
-        Public Sub SetProf_IdNull()
-            Me(Me.tablePublications.Prof_IdColumn) = Global.System.Convert.DBNull
+        Public Sub SetProf_idNull()
+            Me(Me.tablePublications.Prof_idColumn) = Global.System.Convert.DBNull
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -4773,43 +4814,43 @@ Namespace Faculty_databaseDataSetTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Achievements"
             tableMapping.ColumnMappings.Add("ID", "ID")
-            tableMapping.ColumnMappings.Add("Prof_Id", "Prof_Id")
+            tableMapping.ColumnMappings.Add("Prof_id", "Prof_id")
             tableMapping.ColumnMappings.Add("Title", "Title")
             tableMapping.ColumnMappings.Add("Issued_By", "Issued_By")
             tableMapping.ColumnMappings.Add("Year", "Year")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Achievements` WHERE ((`ID` = ?) AND ((? = 1 AND `Prof_Id` IS NULL) O"& _ 
-                "R (`Prof_Id` = ?)) AND ((? = 1 AND `Year` IS NULL) OR (`Year` = ?)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Achievements` WHERE ((`ID` = ?) AND ((? = 1 AND `Prof_id` IS NULL) O"& _ 
+                "R (`Prof_id` = ?)) AND ((? = 1 AND `Year` IS NULL) OR (`Year` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Year", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Year", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Year", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Year", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Achievements` (`Prof_Id`, `Title`, `Issued_By`, `Year`) VALUES (?, ?"& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Achievements` (`Prof_id`, `Title`, `Issued_By`, `Year`) VALUES (?, ?"& _ 
                 ", ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Title", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Title", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Issued_By", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Issued_By", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Year", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Year", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `Achievements` SET `Prof_Id` = ?, `Title` = ?, `Issued_By` = ?, `Year` = ?"& _ 
-                " WHERE ((`ID` = ?) AND ((? = 1 AND `Prof_Id` IS NULL) OR (`Prof_Id` = ?)) AND (("& _ 
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `Achievements` SET `Prof_id` = ?, `Title` = ?, `Issued_By` = ?, `Year` = ?"& _ 
+                " WHERE ((`ID` = ?) AND ((? = 1 AND `Prof_id` IS NULL) OR (`Prof_id` = ?)) AND (("& _ 
                 "? = 1 AND `Year` IS NULL) OR (`Year` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Title", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Title", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Issued_By", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Issued_By", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Year", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Year", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Year", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Year", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Year", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Year", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
@@ -4827,7 +4868,7 @@ Namespace Faculty_databaseDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID, Prof_Id, Title, Issued_By, [Year] FROM Achievements"
+            Me._commandCollection(0).CommandText = "SELECT ID, Prof_id, Title, Issued_By, [Year] FROM Achievements"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -4887,11 +4928,11 @@ Namespace Faculty_databaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_Prof_Id As Global.System.Nullable(Of Integer), ByVal Original_Year As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_Prof_id As Global.System.Nullable(Of Integer), ByVal Original_Year As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
-            If (Original_Prof_Id.HasValue = true) Then
+            If (Original_Prof_id.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Prof_Id.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Prof_id.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
@@ -4922,9 +4963,9 @@ Namespace Faculty_databaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Prof_Id As Global.System.Nullable(Of Integer), ByVal Title As String, ByVal Issued_By As String, ByVal Year As Global.System.Nullable(Of Integer)) As Integer
-            If (Prof_Id.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Prof_Id.Value,Integer)
+        Public Overloads Overridable Function Insert(ByVal Prof_id As Global.System.Nullable(Of Integer), ByVal Title As String, ByVal Issued_By As String, ByVal Year As Global.System.Nullable(Of Integer)) As Integer
+            If (Prof_id.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Prof_id.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
@@ -4962,9 +5003,9 @@ Namespace Faculty_databaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Prof_Id As Global.System.Nullable(Of Integer), ByVal Title As String, ByVal Issued_By As String, ByVal Year As Global.System.Nullable(Of Integer), ByVal Original_ID As Integer, ByVal Original_Prof_Id As Global.System.Nullable(Of Integer), ByVal Original_Year As Global.System.Nullable(Of Integer)) As Integer
-            If (Prof_Id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Prof_Id.Value,Integer)
+        Public Overloads Overridable Function Update(ByVal Prof_id As Global.System.Nullable(Of Integer), ByVal Title As String, ByVal Issued_By As String, ByVal Year As Global.System.Nullable(Of Integer), ByVal Original_ID As Integer, ByVal Original_Prof_id As Global.System.Nullable(Of Integer), ByVal Original_Year As Global.System.Nullable(Of Integer)) As Integer
+            If (Prof_id.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Prof_id.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
@@ -4984,9 +5025,9 @@ Namespace Faculty_databaseDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(3).Value = Global.System.DBNull.Value
             End If
             Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_ID,Integer)
-            If (Original_Prof_Id.HasValue = true) Then
+            If (Original_Prof_id.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Prof_Id.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Prof_id.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
@@ -5147,6 +5188,7 @@ Namespace Faculty_databaseDataSetTableAdapters
             tableMapping.ColumnMappings.Add("Institute", "Institute")
             tableMapping.ColumnMappings.Add("Subject", "Subject")
             tableMapping.ColumnMappings.Add("Passing_Year", "Passing_Year")
+            tableMapping.ColumnMappings.Add("Course_Link", "Course_Link")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
@@ -5164,25 +5206,27 @@ Namespace Faculty_databaseDataSetTableAdapters
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
             Me._adapter.InsertCommand.CommandText = "INSERT INTO `Education` (`Prof_id`, `Degree`, `Institute`, `Subject`, `Passing_Ye"& _ 
-                "ar`) VALUES (?, ?, ?, ?, ?)"
+                "ar`, `Course_Link`) VALUES (?, ?, ?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Degree", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Degree", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Institute", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Institute", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Subject", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Subject", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Passing_Year", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Passing_Year", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Course_Link", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Course_Link", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
             Me._adapter.UpdateCommand.CommandText = "UPDATE `Education` SET `Prof_id` = ?, `Degree` = ?, `Institute` = ?, `Subject` = "& _ 
-                "?, `Passing_Year` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Prof_id` IS NULL) OR (`"& _ 
-                "Prof_id` = ?)) AND ((? = 1 AND `Degree` IS NULL) OR (`Degree` = ?)) AND ((? = 1 "& _ 
-                "AND `Passing_Year` IS NULL) OR (`Passing_Year` = ?)))"
+                "?, `Passing_Year` = ?, `Course_Link` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Prof"& _ 
+                "_id` IS NULL) OR (`Prof_id` = ?)) AND ((? = 1 AND `Degree` IS NULL) OR (`Degree`"& _ 
+                " = ?)) AND ((? = 1 AND `Passing_Year` IS NULL) OR (`Passing_Year` = ?)))"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Degree", Global.System.Data.OleDb.OleDbType.VarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Degree", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Institute", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Institute", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Subject", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Subject", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Passing_Year", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Passing_Year", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Course_Link", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Course_Link", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
@@ -5205,7 +5249,8 @@ Namespace Faculty_databaseDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID, Prof_id, Degree, Institute, Subject, Passing_Year FROM Education"
+            Me._commandCollection(0).CommandText = "SELECT ID, Prof_id, Degree, Institute, Subject, Passing_Year, Course_Link FROM Ed"& _ 
+                "ucation"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -5307,7 +5352,7 @@ Namespace Faculty_databaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Prof_id As Global.System.Nullable(Of Integer), ByVal Degree As String, ByVal Institute As String, ByVal Subject As String, ByVal Passing_Year As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Insert(ByVal Prof_id As Global.System.Nullable(Of Integer), ByVal Degree As String, ByVal Institute As String, ByVal Subject As String, ByVal Passing_Year As Global.System.Nullable(Of Integer), ByVal Course_Link As String) As Integer
             If (Prof_id.HasValue = true) Then
                 Me.Adapter.InsertCommand.Parameters(0).Value = CType(Prof_id.Value,Integer)
             Else
@@ -5333,6 +5378,11 @@ Namespace Faculty_databaseDataSetTableAdapters
             Else
                 Me.Adapter.InsertCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
+            If (Course_Link Is Nothing) Then
+                Me.Adapter.InsertCommand.Parameters(5).Value = Global.System.DBNull.Value
+            Else
+                Me.Adapter.InsertCommand.Parameters(5).Value = CType(Course_Link,String)
+            End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.InsertCommand.Connection.State
             If ((Me.Adapter.InsertCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
                         <> Global.System.Data.ConnectionState.Open) Then
@@ -5352,7 +5402,7 @@ Namespace Faculty_databaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Prof_id As Global.System.Nullable(Of Integer), ByVal Degree As String, ByVal Institute As String, ByVal Subject As String, ByVal Passing_Year As Global.System.Nullable(Of Integer), ByVal Original_ID As Integer, ByVal Original_Prof_id As Global.System.Nullable(Of Integer), ByVal Original_Degree As String, ByVal Original_Passing_Year As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Update(ByVal Prof_id As Global.System.Nullable(Of Integer), ByVal Degree As String, ByVal Institute As String, ByVal Subject As String, ByVal Passing_Year As Global.System.Nullable(Of Integer), ByVal Course_Link As String, ByVal Original_ID As Integer, ByVal Original_Prof_id As Global.System.Nullable(Of Integer), ByVal Original_Degree As String, ByVal Original_Passing_Year As Global.System.Nullable(Of Integer)) As Integer
             If (Prof_id.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Prof_id.Value,Integer)
             Else
@@ -5378,27 +5428,32 @@ Namespace Faculty_databaseDataSetTableAdapters
             Else
                 Me.Adapter.UpdateCommand.Parameters(4).Value = Global.System.DBNull.Value
             End If
-            Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Original_ID,Integer)
-            If (Original_Prof_id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(Original_Prof_id.Value,Integer)
+            If (Course_Link Is Nothing) Then
+                Me.Adapter.UpdateCommand.Parameters(5).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(7).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(5).Value = CType(Course_Link,String)
+            End If
+            Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_ID,Integer)
+            If (Original_Prof_id.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(Original_Prof_id.Value,Integer)
+            Else
+                Me.Adapter.UpdateCommand.Parameters(7).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(8).Value = Global.System.DBNull.Value
             End If
             If (Original_Degree Is Nothing) Then
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = Global.System.DBNull.Value
             Else
-                Me.Adapter.UpdateCommand.Parameters(8).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(Original_Degree,String)
+                Me.Adapter.UpdateCommand.Parameters(9).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(Original_Degree,String)
             End If
             If (Original_Passing_Year.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(Original_Passing_Year.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(0,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = CType(Original_Passing_Year.Value,Integer)
             Else
-                Me.Adapter.UpdateCommand.Parameters(10).Value = CType(1,Object)
-                Me.Adapter.UpdateCommand.Parameters(11).Value = Global.System.DBNull.Value
+                Me.Adapter.UpdateCommand.Parameters(11).Value = CType(1,Object)
+                Me.Adapter.UpdateCommand.Parameters(12).Value = Global.System.DBNull.Value
             End If
             Dim previousConnectionState As Global.System.Data.ConnectionState = Me.Adapter.UpdateCommand.Connection.State
             If ((Me.Adapter.UpdateCommand.Connection.State And Global.System.Data.ConnectionState.Open)  _
@@ -6726,41 +6781,41 @@ Namespace Faculty_databaseDataSetTableAdapters
             tableMapping.SourceTable = "Table"
             tableMapping.DataSetTable = "Publications"
             tableMapping.ColumnMappings.Add("ID", "ID")
-            tableMapping.ColumnMappings.Add("Prof_Id", "Prof_Id")
+            tableMapping.ColumnMappings.Add("Prof_id", "Prof_id")
             tableMapping.ColumnMappings.Add("Topic", "Topic")
             tableMapping.ColumnMappings.Add("Publication_Year", "Publication_Year")
             tableMapping.ColumnMappings.Add("Link", "Link")
             Me._adapter.TableMappings.Add(tableMapping)
             Me._adapter.DeleteCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.DeleteCommand.Connection = Me.Connection
-            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Publications` WHERE ((`ID` = ?) AND ((? = 1 AND `Prof_Id` IS NULL) O"& _ 
-                "R (`Prof_Id` = ?)))"
+            Me._adapter.DeleteCommand.CommandText = "DELETE FROM `Publications` WHERE ((`ID` = ?) AND ((? = 1 AND `Prof_id` IS NULL) O"& _ 
+                "R (`Prof_id` = ?)))"
             Me._adapter.DeleteCommand.CommandType = Global.System.Data.CommandType.Text
             Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.DeleteCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
             Me._adapter.InsertCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.InsertCommand.Connection = Me.Connection
-            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Publications` (`Prof_Id`, `Topic`, `Publication_Year`, `Link`) VALUE"& _ 
+            Me._adapter.InsertCommand.CommandText = "INSERT INTO `Publications` (`Prof_id`, `Topic`, `Publication_Year`, `Link`) VALUE"& _ 
                 "S (?, ?, ?, ?)"
             Me._adapter.InsertCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Topic", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Topic", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Publication_Year", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Publication_Year", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.InsertCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Link", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Link", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand = New Global.System.Data.OleDb.OleDbCommand()
             Me._adapter.UpdateCommand.Connection = Me.Connection
-            Me._adapter.UpdateCommand.CommandText = "UPDATE `Publications` SET `Prof_Id` = ?, `Topic` = ?, `Publication_Year` = ?, `Li"& _ 
-                "nk` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Prof_Id` IS NULL) OR (`Prof_Id` = ?))"& _ 
+            Me._adapter.UpdateCommand.CommandText = "UPDATE `Publications` SET `Prof_id` = ?, `Topic` = ?, `Publication_Year` = ?, `Li"& _ 
+                "nk` = ? WHERE ((`ID` = ?) AND ((? = 1 AND `Prof_id` IS NULL) OR (`Prof_id` = ?))"& _ 
                 ")"
             Me._adapter.UpdateCommand.CommandType = Global.System.Data.CommandType.Text
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Current, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Topic", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Topic", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Publication_Year", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Publication_Year", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Link", Global.System.Data.OleDb.OleDbType.LongVarWChar, 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Link", Global.System.Data.DataRowVersion.Current, false, Nothing))
             Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_ID", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "ID", Global.System.Data.DataRowVersion.Original, false, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Original, true, Nothing))
-            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prof_Id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_Id", Global.System.Data.DataRowVersion.Original, false, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("IsNull_Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Original, true, Nothing))
+            Me._adapter.UpdateCommand.Parameters.Add(New Global.System.Data.OleDb.OleDbParameter("Original_Prof_id", Global.System.Data.OleDb.OleDbType.[Integer], 0, Global.System.Data.ParameterDirection.Input, CType(0,Byte), CType(0,Byte), "Prof_id", Global.System.Data.DataRowVersion.Original, false, Nothing))
         End Sub
         
         <Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
@@ -6776,7 +6831,7 @@ Namespace Faculty_databaseDataSetTableAdapters
             Me._commandCollection = New Global.System.Data.OleDb.OleDbCommand(0) {}
             Me._commandCollection(0) = New Global.System.Data.OleDb.OleDbCommand()
             Me._commandCollection(0).Connection = Me.Connection
-            Me._commandCollection(0).CommandText = "SELECT ID, Prof_Id, Topic, Publication_Year, Link FROM Publications"
+            Me._commandCollection(0).CommandText = "SELECT ID, Prof_id, Topic, Publication_Year, Link FROM Publications"
             Me._commandCollection(0).CommandType = Global.System.Data.CommandType.Text
         End Sub
         
@@ -6836,11 +6891,11 @@ Namespace Faculty_databaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Delete, true)>  _
-        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_Prof_Id As Global.System.Nullable(Of Integer)) As Integer
+        Public Overloads Overridable Function Delete(ByVal Original_ID As Integer, ByVal Original_Prof_id As Global.System.Nullable(Of Integer)) As Integer
             Me.Adapter.DeleteCommand.Parameters(0).Value = CType(Original_ID,Integer)
-            If (Original_Prof_Id.HasValue = true) Then
+            If (Original_Prof_id.HasValue = true) Then
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(0,Object)
-                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Prof_Id.Value,Integer)
+                Me.Adapter.DeleteCommand.Parameters(2).Value = CType(Original_Prof_id.Value,Integer)
             Else
                 Me.Adapter.DeleteCommand.Parameters(1).Value = CType(1,Object)
                 Me.Adapter.DeleteCommand.Parameters(2).Value = Global.System.DBNull.Value
@@ -6864,9 +6919,9 @@ Namespace Faculty_databaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Insert, true)>  _
-        Public Overloads Overridable Function Insert(ByVal Prof_Id As Global.System.Nullable(Of Integer), ByVal Topic As String, ByVal Publication_Year As String, ByVal Link As String) As Integer
-            If (Prof_Id.HasValue = true) Then
-                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Prof_Id.Value,Integer)
+        Public Overloads Overridable Function Insert(ByVal Prof_id As Global.System.Nullable(Of Integer), ByVal Topic As String, ByVal Publication_Year As String, ByVal Link As String) As Integer
+            If (Prof_id.HasValue = true) Then
+                Me.Adapter.InsertCommand.Parameters(0).Value = CType(Prof_id.Value,Integer)
             Else
                 Me.Adapter.InsertCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
@@ -6904,9 +6959,9 @@ Namespace Faculty_databaseDataSetTableAdapters
          Global.System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "4.0.0.0"),  _
          Global.System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter"),  _
          Global.System.ComponentModel.DataObjectMethodAttribute(Global.System.ComponentModel.DataObjectMethodType.Update, true)>  _
-        Public Overloads Overridable Function Update(ByVal Prof_Id As Global.System.Nullable(Of Integer), ByVal Topic As String, ByVal Publication_Year As String, ByVal Link As String, ByVal Original_ID As Integer, ByVal Original_Prof_Id As Global.System.Nullable(Of Integer)) As Integer
-            If (Prof_Id.HasValue = true) Then
-                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Prof_Id.Value,Integer)
+        Public Overloads Overridable Function Update(ByVal Prof_id As Global.System.Nullable(Of Integer), ByVal Topic As String, ByVal Publication_Year As String, ByVal Link As String, ByVal Original_ID As Integer, ByVal Original_Prof_id As Global.System.Nullable(Of Integer)) As Integer
+            If (Prof_id.HasValue = true) Then
+                Me.Adapter.UpdateCommand.Parameters(0).Value = CType(Prof_id.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(0).Value = Global.System.DBNull.Value
             End If
@@ -6926,9 +6981,9 @@ Namespace Faculty_databaseDataSetTableAdapters
                 Me.Adapter.UpdateCommand.Parameters(3).Value = CType(Link,String)
             End If
             Me.Adapter.UpdateCommand.Parameters(4).Value = CType(Original_ID,Integer)
-            If (Original_Prof_Id.HasValue = true) Then
+            If (Original_Prof_id.HasValue = true) Then
                 Me.Adapter.UpdateCommand.Parameters(5).Value = CType(0,Object)
-                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Prof_Id.Value,Integer)
+                Me.Adapter.UpdateCommand.Parameters(6).Value = CType(Original_Prof_id.Value,Integer)
             Else
                 Me.Adapter.UpdateCommand.Parameters(5).Value = CType(1,Object)
                 Me.Adapter.UpdateCommand.Parameters(6).Value = Global.System.DBNull.Value
