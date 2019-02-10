@@ -31,12 +31,21 @@ Public Class Search_Form
             reader.Close()
             dr = cmd.ExecuteReader()
             While dr.Read()
-                Dim n, email, dept As String
+                Dim id, n, email, dept As String
+                Dim Img As Image
                 n = dr("Name").ToString
                 email = dr("Email").ToString
                 dept = dr("Department").ToString
-                tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
-                DataGridView1.DataSource = tb
+                id = dr("ID").ToString
+                Try
+                    Img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
+                Catch ex As Exception
+                    Img = Image.FromFile(Application.StartupPath & "\media\default.png")
+                End Try
+
+                DataGridView1.RowTemplate.Height = 60
+                DataGridView1.Rows.Add(Img, n.ToString, dept.ToString, email.ToString)
+
             End While
             conn.Close()
             dr.Close()
@@ -66,12 +75,21 @@ Public Class Search_Form
             reader.Close()
             dr = cmd.ExecuteReader()
             While dr.Read()
-                Dim n, email, dept As String
+                Dim id, n, email, dept As String
+                Dim Img As Image
                 n = dr("Name").ToString
                 email = dr("Email").ToString
                 dept = dr("Department").ToString
-                tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
-                DataGridView1.DataSource = tb
+                id = dr("ID").ToString
+                Try
+                    Img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
+                Catch ex As Exception
+                    Img = Image.FromFile(Application.StartupPath & "\media\default.png")
+                End Try
+
+                DataGridView1.RowTemplate.Height = 60
+                DataGridView1.Rows.Add(Img, n.ToString, dept.ToString, email.ToString)
+
             End While
             conn.Close()
             dr.Close()
@@ -99,12 +117,21 @@ Public Class Search_Form
                 dr = cmd2.ExecuteReader()
                 While dr.Read()
                     If dr("ID") = id Then
-                        Dim n, email, dept As String
+                        Dim id_n, n, email, dept As String
+                        Dim Img As Image
                         n = dr("Name").ToString
                         email = dr("Email").ToString
                         dept = dr("Department").ToString
-                        tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
-                        DataGridView1.DataSource = tb
+                        id_n = dr("ID").ToString
+                        Try
+                            Img = Image.FromFile(Application.StartupPath & "\media\" & id_n & ".jpeg")
+                        Catch ex As Exception
+                            Img = Image.FromFile(Application.StartupPath & "\media\default.png")
+                        End Try
+
+                        DataGridView1.RowTemplate.Height = 60
+                        DataGridView1.Rows.Add(Img, n.ToString, dept.ToString, email.ToString)
+
                     End If
                    
                 End While
@@ -136,11 +163,14 @@ Public Class Search_Form
 
     Private Sub RadioButton_dept_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_dept.CheckedChanged
         filter = "Department"
+        DataGridView1.Rows.Clear()
         ComboBox_dept.Show()
     End Sub
 
     Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton2.CheckedChanged
         filter = "Research Interest"
+        DataGridView1.Rows.Clear()
+        SearchBox.Text = ""
         ComboBox_dept.ResetText()
         ComboBox_dept.Hide()
         'SearchBox.Text = ""
@@ -148,14 +178,16 @@ Public Class Search_Form
 
     Private Sub RadioButton_Name_CheckedChanged(sender As Object, e As EventArgs) Handles RadioButton_Name.CheckedChanged
         filter = "Name"
+        DataGridView1.Rows.Clear()
+        SearchBox.Text = ""
         ComboBox_dept.ResetText()
         ComboBox_dept.Hide()
         'SearchBox.Text = ""
     End Sub
 
     Private Sub Button_search_Click(sender As Object, e As EventArgs) Handles Button_search.Click
-        Button_search.Enabled = False
         DataGridView1.Hide()
+        DataGridView1.Rows.Clear()
         If filter = "" Then
             MessageBox.Show("Select one Search by option", "Warning")
         ElseIf SearchBox.Text = "" Then
@@ -176,27 +208,19 @@ Public Class Search_Form
     Private Sub Search_Form_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         ComboBox_dept.Hide()
         DataGridView1.Hide()
-        tb.Columns.Add("Name", Type.GetType("System.String"))
-        tb.Columns.Add("Email", Type.GetType("System.String"))
-        tb.Columns.Add("Department", Type.GetType("System.String"))
-        tb.Columns.Add("View More")
     End Sub
 
     Private Sub ComboBox_dept_SelectedIndexChanged(sender As Object, e As EventArgs) Handles ComboBox_dept.SelectedIndexChanged
         SearchBox.Text = ComboBox_dept.Text
     End Sub
 
-    Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
-        SearchBox.Text = ""
-        RadioButton_dept.Checked = False
-        RadioButton_Name.Checked = False
-        RadioButton2.Checked = False
-        ComboBox_dept.ResetText()
-        ComboBox_dept.Hide()
-        DataGridView1.DataSource = Nothing
-        tb.Rows.Clear()
-        DataGridView1.Hide()
-        Button_search.Enabled = True
-    End Sub
 
+    Private Sub DataGridView1_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellContentClick
+        If e.ColumnIndex <> 4 Then
+            Exit Sub
+        End If
+        Dim OBJ As New Faculty_Page
+        OBJ.EmailPass = DataGridView1.Rows(e.RowIndex).Cells(3).Value
+        OBJ.Show()
+    End Sub
 End Class
