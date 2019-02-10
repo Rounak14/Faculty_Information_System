@@ -40,7 +40,7 @@ Public Class Search_Form
                 Try
                     Img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
                 Catch ex As Exception
-                    Img = Image.FromFile(Application.StartupPath & "\media\default.png")
+                    Img = Image.FromFile(Application.StartupPath & "\media\default.jpg")
                 End Try
 
                 DataGridView1.RowTemplate.Height = 60
@@ -84,7 +84,7 @@ Public Class Search_Form
                 Try
                     Img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
                 Catch ex As Exception
-                    Img = Image.FromFile(Application.StartupPath & "\media\default.png")
+                    Img = Image.FromFile(Application.StartupPath & "\media\default.jpg")
                 End Try
 
                 DataGridView1.RowTemplate.Height = 60
@@ -126,14 +126,14 @@ Public Class Search_Form
                         Try
                             Img = Image.FromFile(Application.StartupPath & "\media\" & id_n & ".jpeg")
                         Catch ex As Exception
-                            Img = Image.FromFile(Application.StartupPath & "\media\default.png")
+                            Img = Image.FromFile(Application.StartupPath & "\media\default.jpg")
                         End Try
 
                         DataGridView1.RowTemplate.Height = 60
                         DataGridView1.Rows.Add(Img, n.ToString, dept.ToString, email.ToString)
 
                     End If
-                   
+
                 End While
                 dr.Close()
             End While
@@ -143,7 +143,7 @@ Public Class Search_Form
                 DataGridView1.Show()
             End If
             reader.Close()
-            
+
             conn.Close()
 
         Catch ex As Exception
