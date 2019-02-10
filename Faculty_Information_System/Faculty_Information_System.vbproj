@@ -146,6 +146,12 @@
     <Compile Include="password_reset.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Prof_Edu.Designer.vb">
+      <DependentUpon>Prof_Edu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prof_Edu.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Search_Form.Designer.vb">
       <DependentUpon>Search_Form.vb</DependentUpon>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="password_reset.resx">
       <DependentUpon>password_reset.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prof_Edu.resx">
+      <DependentUpon>Prof_Edu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Search_Form.resx">
       <DependentUpon>Search_Form.vb</DependentUpon>

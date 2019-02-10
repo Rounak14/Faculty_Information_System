@@ -68,4 +68,10 @@ Public Class Form1
         OBJ.EmailPass = EmailPass
         OBJ.Show()
     End Sub
+
+    Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Dim OBJ As New Prof_Edu
+        OBJ.EmailPass = EmailPass
+        OBJ.Show()
+    End Sub
 End Class

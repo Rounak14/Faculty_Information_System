@@ -105,6 +105,7 @@ Public Class Add_personal_prof
                 MessageBox.Show(ex.Message)
             End Try
         End If
+        Me.Close()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
