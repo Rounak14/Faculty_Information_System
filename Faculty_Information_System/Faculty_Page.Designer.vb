@@ -26,15 +26,10 @@ Partial Class Faculty_Page
         Me.Label_Details = New System.Windows.Forms.Label()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.HomePanel = New System.Windows.Forms.Panel()
-        Me.Label1 = New System.Windows.Forms.Label()
         Me.ParentPanel = New System.Windows.Forms.Panel()
         Me.TeachingPanel = New System.Windows.Forms.Panel()
-        Me.Label5 = New System.Windows.Forms.Label()
         Me.PublicationsPanel = New System.Windows.Forms.Panel()
-        Me.Label2 = New System.Windows.Forms.Label()
         Me.ResearchPanel = New System.Windows.Forms.Panel()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.Label3 = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.HomeToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,11 +39,7 @@ Partial Class Faculty_Page
         Me.NewsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).BeginInit()
-        Me.HomePanel.SuspendLayout()
         Me.ParentPanel.SuspendLayout()
-        Me.TeachingPanel.SuspendLayout()
-        Me.PublicationsPanel.SuspendLayout()
-        Me.ResearchPanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
         Me.SuspendLayout()
@@ -91,21 +82,11 @@ Partial Class Faculty_Page
         '
         'HomePanel
         '
-        Me.HomePanel.Controls.Add(Me.Label1)
         Me.HomePanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.HomePanel.Location = New System.Drawing.Point(0, 0)
         Me.HomePanel.Name = "HomePanel"
         Me.HomePanel.Size = New System.Drawing.Size(533, 384)
         Me.HomePanel.TabIndex = 16
-        '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(3, 3)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(55, 13)
-        Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Education"
         '
         'ParentPanel
         '
@@ -121,7 +102,6 @@ Partial Class Faculty_Page
         '
         'TeachingPanel
         '
-        Me.TeachingPanel.Controls.Add(Me.Label5)
         Me.TeachingPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TeachingPanel.Location = New System.Drawing.Point(0, 0)
         Me.TeachingPanel.Name = "TeachingPanel"
@@ -129,18 +109,8 @@ Partial Class Faculty_Page
         Me.TeachingPanel.TabIndex = 20
         Me.TeachingPanel.Visible = False
         '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(97, 24)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(52, 13)
-        Me.Label5.TabIndex = 0
-        Me.Label5.Text = "Teaching"
-        '
         'PublicationsPanel
         '
-        Me.PublicationsPanel.Controls.Add(Me.Label2)
         Me.PublicationsPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PublicationsPanel.Location = New System.Drawing.Point(0, 0)
         Me.PublicationsPanel.Name = "PublicationsPanel"
@@ -148,42 +118,14 @@ Partial Class Faculty_Page
         Me.PublicationsPanel.TabIndex = 19
         Me.PublicationsPanel.Visible = False
         '
-        'Label2
-        '
-        Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(3, 16)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(64, 13)
-        Me.Label2.TabIndex = 0
-        Me.Label2.Text = "Publications"
-        '
         'ResearchPanel
         '
-        Me.ResearchPanel.Controls.Add(Me.Label4)
-        Me.ResearchPanel.Controls.Add(Me.Label3)
         Me.ResearchPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ResearchPanel.Location = New System.Drawing.Point(0, 0)
         Me.ResearchPanel.Name = "ResearchPanel"
         Me.ResearchPanel.Size = New System.Drawing.Size(533, 384)
         Me.ResearchPanel.TabIndex = 18
         Me.ResearchPanel.Visible = False
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(18, 5)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(53, 13)
-        Me.Label4.TabIndex = 1
-        Me.Label4.Text = "Research"
-        '
-        'Label3
-        '
-        Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 19)
-        Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(0, 13)
-        Me.Label3.TabIndex = 0
         '
         'Panel1
         '
@@ -250,15 +192,7 @@ Partial Class Faculty_Page
         Me.Text = "Faculty_Page"
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox3, System.ComponentModel.ISupportInitialize).EndInit()
-        Me.HomePanel.ResumeLayout(False)
-        Me.HomePanel.PerformLayout()
         Me.ParentPanel.ResumeLayout(False)
-        Me.TeachingPanel.ResumeLayout(False)
-        Me.TeachingPanel.PerformLayout()
-        Me.PublicationsPanel.ResumeLayout(False)
-        Me.PublicationsPanel.PerformLayout()
-        Me.ResearchPanel.ResumeLayout(False)
-        Me.ResearchPanel.PerformLayout()
         Me.Panel1.ResumeLayout(False)
         Me.MenuStrip1.ResumeLayout(False)
         Me.MenuStrip1.PerformLayout()
@@ -271,13 +205,8 @@ Partial Class Faculty_Page
     Friend WithEvents HomePanel As System.Windows.Forms.Panel
     Friend WithEvents ParentPanel As System.Windows.Forms.Panel
     Friend WithEvents TeachingPanel As System.Windows.Forms.Panel
-    Friend WithEvents Label5 As System.Windows.Forms.Label
     Friend WithEvents PublicationsPanel As System.Windows.Forms.Panel
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents ResearchPanel As System.Windows.Forms.Panel
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents Label3 As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents MenuStrip1 As System.Windows.Forms.MenuStrip
     Friend WithEvents HomeToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem

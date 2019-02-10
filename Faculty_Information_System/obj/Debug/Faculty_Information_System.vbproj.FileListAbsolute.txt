@@ -51,3 +51,6 @@ C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Add_personal_prof.resources
 C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.password_reset.resources
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.password_reset.resources
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.resx
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.Designer.vb
+C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\bin\Debug\Faculty_Page.vb
