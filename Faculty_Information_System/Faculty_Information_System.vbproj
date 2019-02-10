@@ -146,6 +146,12 @@
     <Compile Include="password_reset.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Prof_Achievements.Designer.vb">
+      <DependentUpon>Prof_Achievements.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prof_Achievements.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Prof_Courses.Designer.vb">
       <DependentUpon>Prof_Courses.vb</DependentUpon>
     </Compile>
@@ -156,6 +162,12 @@
       <DependentUpon>Prof_Edu.vb</DependentUpon>
     </Compile>
     <Compile Include="Prof_Edu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Prof_Experience.Designer.vb">
+      <DependentUpon>Prof_Experience.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prof_Experience.vb">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Prof_Publication.Designer.vb">
@@ -203,11 +215,17 @@
     <EmbeddedResource Include="password_reset.resx">
       <DependentUpon>password_reset.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Prof_Achievements.resx">
+      <DependentUpon>Prof_Achievements.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Prof_Courses.resx">
       <DependentUpon>Prof_Courses.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prof_Edu.resx">
       <DependentUpon>Prof_Edu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prof_Experience.resx">
+      <DependentUpon>Prof_Experience.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prof_Publication.resx">
       <DependentUpon>Prof_Publication.vb</DependentUpon>

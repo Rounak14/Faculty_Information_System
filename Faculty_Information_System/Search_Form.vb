@@ -1,4 +1,6 @@
-﻿Imports Microsoft.VisualBasic
+﻿' Check all the paths, whether they all close
+
+Imports Microsoft.VisualBasic
 Imports System.Data.OleDb
 Imports System.Data
 
