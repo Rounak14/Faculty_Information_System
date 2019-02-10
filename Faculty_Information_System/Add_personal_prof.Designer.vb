@@ -37,6 +37,9 @@ Partial Class Add_personal_prof
         Me.Button1 = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.Button2 = New System.Windows.Forms.Button()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.Label8 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -69,6 +72,7 @@ Partial Class Add_personal_prof
         Me.TextBox_room.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_room.Location = New System.Drawing.Point(357, 86)
         Me.TextBox_room.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox_room.Multiline = True
         Me.TextBox_room.Name = "TextBox_room"
         Me.TextBox_room.Size = New System.Drawing.Size(285, 29)
         Me.TextBox_room.TabIndex = 10
@@ -90,6 +94,7 @@ Partial Class Add_personal_prof
         Me.TextBox_tele.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_tele.Location = New System.Drawing.Point(357, 139)
         Me.TextBox_tele.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox_tele.Multiline = True
         Me.TextBox_tele.Name = "TextBox_tele"
         Me.TextBox_tele.Size = New System.Drawing.Size(285, 29)
         Me.TextBox_tele.TabIndex = 12
@@ -111,6 +116,7 @@ Partial Class Add_personal_prof
         Me.TextBox_Responsibility.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_Responsibility.Location = New System.Drawing.Point(357, 195)
         Me.TextBox_Responsibility.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox_Responsibility.Multiline = True
         Me.TextBox_Responsibility.Name = "TextBox_Responsibility"
         Me.TextBox_Responsibility.Size = New System.Drawing.Size(285, 29)
         Me.TextBox_Responsibility.TabIndex = 16
@@ -132,7 +138,7 @@ Partial Class Add_personal_prof
         Me.btn_login.Cursor = System.Windows.Forms.Cursors.Hand
         Me.btn_login.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.btn_login.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btn_login.Location = New System.Drawing.Point(38, 537)
+        Me.btn_login.Location = New System.Drawing.Point(38, 701)
         Me.btn_login.Margin = New System.Windows.Forms.Padding(4)
         Me.btn_login.Name = "btn_login"
         Me.btn_login.Size = New System.Drawing.Size(173, 44)
@@ -157,8 +163,9 @@ Partial Class Add_personal_prof
         Me.TextBox_homepage.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.TextBox_homepage.Location = New System.Drawing.Point(357, 253)
         Me.TextBox_homepage.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox_homepage.Multiline = True
         Me.TextBox_homepage.Name = "TextBox_homepage"
-        Me.TextBox_homepage.Size = New System.Drawing.Size(285, 29)
+        Me.TextBox_homepage.Size = New System.Drawing.Size(285, 33)
         Me.TextBox_homepage.TabIndex = 21
         '
         'Label6
@@ -166,7 +173,7 @@ Partial Class Add_personal_prof
         Me.Label6.BackColor = System.Drawing.Color.Transparent
         Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label6.ForeColor = System.Drawing.Color.Black
-        Me.Label6.Location = New System.Drawing.Point(33, 333)
+        Me.Label6.Location = New System.Drawing.Point(33, 411)
         Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
         Me.Label6.Size = New System.Drawing.Size(316, 34)
@@ -176,7 +183,7 @@ Partial Class Add_personal_prof
         'Button1
         '
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(357, 333)
+        Me.Button1.Location = New System.Drawing.Point(357, 411)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(153, 34)
         Me.Button1.TabIndex = 23
@@ -185,7 +192,7 @@ Partial Class Add_personal_prof
         '
         'PictureBox1
         '
-        Me.PictureBox1.Location = New System.Drawing.Point(357, 389)
+        Me.PictureBox1.Location = New System.Drawing.Point(357, 485)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(249, 192)
         Me.PictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -195,19 +202,54 @@ Partial Class Add_personal_prof
         'Button2
         '
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(530, 333)
+        Me.Button2.Location = New System.Drawing.Point(533, 411)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(208, 34)
         Me.Button2.TabIndex = 25
         Me.Button2.Text = "Clear Selected Image"
         Me.Button2.UseVisualStyleBackColor = True
         '
+        'Label7
+        '
+        Me.Label7.BackColor = System.Drawing.Color.Transparent
+        Me.Label7.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label7.ForeColor = System.Drawing.Color.Black
+        Me.Label7.Location = New System.Drawing.Point(33, 316)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(316, 34)
+        Me.Label7.TabIndex = 26
+        Me.Label7.Text = "Research Interests"
+        '
+        'TextBox1
+        '
+        Me.TextBox1.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox1.Location = New System.Drawing.Point(357, 306)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox1.Multiline = True
+        Me.TextBox1.Name = "TextBox1"
+        Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
+        Me.TextBox1.Size = New System.Drawing.Size(285, 83)
+        Me.TextBox1.TabIndex = 27
+        '
+        'Label8
+        '
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(35, 350)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(280, 17)
+        Me.Label8.TabIndex = 28
+        Me.Label8.Text = "(Enter each research interest in a new line)"
+        '
         'Add_personal_prof
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
-        Me.ClientSize = New System.Drawing.Size(797, 717)
+        Me.ClientSize = New System.Drawing.Size(804, 785)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.TextBox1)
+        Me.Controls.Add(Me.Label7)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)
@@ -246,4 +288,7 @@ Partial Class Add_personal_prof
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
     Friend WithEvents Button2 As System.Windows.Forms.Button
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
+    Friend WithEvents Label8 As System.Windows.Forms.Label
 End Class
