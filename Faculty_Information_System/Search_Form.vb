@@ -92,17 +92,19 @@ Public Class Search_Form
             While (reader.Read())
                 count += 1
                 id = reader("Prof_id")
-                MessageBox.Show(id)
-                Dim query2 As String = "Select * From faculty_info where ID = '" & id & "';"
+                Dim query2 As String = "Select * From faculty_info "
                 Dim cmd2 As New OleDbCommand(query2, conn)
                 dr = cmd2.ExecuteReader()
                 While dr.Read()
-                    Dim n, email, dept As String
-                    n = dr("Name").ToString
-                    email = dr("Email").ToString
-                    dept = dr("Department").ToString
-                    tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
-                    DataGridView1.DataSource = tb
+                    If dr("ID") = id Then
+                        Dim n, email, dept As String
+                        n = dr("Name").ToString
+                        email = dr("Email").ToString
+                        dept = dr("Department").ToString
+                        tb.Rows.Add(n.ToString, email.ToString, dept.ToString)
+                        DataGridView1.DataSource = tb
+                    End If
+                   
                 End While
                 dr.Close()
             End While

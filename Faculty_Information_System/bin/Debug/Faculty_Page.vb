@@ -298,7 +298,6 @@ Public Class Faculty_Page
         Catch ex As Exception
     'MessageBox.Show(ex.Message, "Warning")
         End Try
-        MessageBox.Show(count)
         If count = 0 Then
             label_pub.Visible = False
             y = y_prev
