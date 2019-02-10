@@ -184,7 +184,7 @@ Public Class Search_Form
         SearchBox.Text = ComboBox_dept.Text
     End Sub
 
-    Private Sub reset_Click(sender As Object, e As EventArgs) Handles Reset.Click
+    Private Sub reset_Click(sender As Object, e As EventArgs) Handles reset.Click
         SearchBox.Text = ""
         RadioButton_dept.Checked = False
         RadioButton_Name.Checked = False

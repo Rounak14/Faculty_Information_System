@@ -39,36 +39,58 @@ Public Class Faculty_Page
     Private Sub HomeToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles HomeToolStripMenuItem.Click
         HomePanel.Visible = True
         TeachingPanel.Visible = False
-        ResearchPanel.Visible = False
+        AchievementPanel.Visible = False
         PublicationsPanel.Visible = False
+        NewsPanel.Visible = False
+        ContactPanel.Visible = False
     End Sub
 
     Private Sub PublicationsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PublicationsToolStripMenuItem.Click
         HomePanel.Visible = False
         TeachingPanel.Visible = False
-        ResearchPanel.Visible = False
+        AchievementPanel.Visible = False
         PublicationsPanel.Visible = True
+        NewsPanel.Visible = False
+        ContactPanel.Visible = False
     End Sub
 
-    Private Sub ResearchToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ResearchToolStripMenuItem.Click
+    Private Sub AchievementToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles AchievementToolStripMenuItem.Click
         HomePanel.Visible = False
         TeachingPanel.Visible = False
-        ResearchPanel.Visible = True
+        AchievementPanel.Visible = True
         PublicationsPanel.Visible = False
+        NewsPanel.Visible = False
+        ContactPanel.Visible = False
     End Sub
 
     Private Sub TeachingToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles TeachingToolStripMenuItem.Click
         HomePanel.Visible = False
         TeachingPanel.Visible = True
-        ResearchPanel.Visible = False
+        AchievementPanel.Visible = False
         PublicationsPanel.Visible = False
+        NewsPanel.Visible = False
+        ContactPanel.Visible = False
     End Sub
 
-    
-    
-    Private Sub TeachingPanel_Paint(sender As Object, e As PaintEventArgs) Handles TeachingPanel.Paint
-
+    Private Sub NewsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewsToolStripMenuItem.Click
+        HomePanel.Visible = False
+        TeachingPanel.Visible = False
+        AchievementPanel.Visible = False
+        PublicationsPanel.Visible = False
+        NewsPanel.Visible = True
+        ContactPanel.Visible = False
     End Sub
+
+    Private Sub ContactDetailsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles ContactDetailsToolStripMenuItem.Click
+        HomePanel.Visible = False
+        TeachingPanel.Visible = False
+        AchievementPanel.Visible = False
+        PublicationsPanel.Visible = False
+        NewsPanel.Visible = False
+        ContactPanel.Visible = True
+    End Sub
+
+   
 
     Private Sub HomePanel_Paint(sender As Object, e As PaintEventArgs) Handles HomePanel.Paint
 
@@ -114,7 +136,7 @@ Public Class Faculty_Page
                     HomePanel.Controls.Add(newlabel)
                     y += 50
                     newlabel.Text = textOflabel
-                    End If
+                End If
             End While
             conn.Close()
         Catch ex As Exception
@@ -227,10 +249,6 @@ Public Class Faculty_Page
 
     End Sub
 
-    Private Sub ResearchPanel_Paint(sender As Object, e As PaintEventArgs) Handles ResearchPanel.Paint
-
-    End Sub
-
     Private Sub PublicationsPanel_Paint(sender As Object, e As PaintEventArgs) Handles PublicationsPanel.Paint
         Dim x As Int32 = 0
         Dim y As Int32 = 0
@@ -243,7 +261,7 @@ Public Class Faculty_Page
         label_pub.Size = New System.Drawing.Size(150, 30)
         label_pub.TextAlign = ContentAlignment.MiddleLeft
         label_pub.Location = New Point(x, y)
-        HomePanel.Controls.Add(label_pub)
+        PublicationsPanel.Controls.Add(label_pub)
         label_pub.Visible = True
 
         y += 30
@@ -258,7 +276,7 @@ Public Class Faculty_Page
         Dim dr As OleDbDataReader = cmd.ExecuteReader()
         Try
             While (dr.Read())
-                If dr("Prof_Id") = id_number Then
+                If dr("Prof_id") = id_number Then
                     count += 1
                     topic = dr("Topic")
                     If IsDBNull(dr("Publication_Year")) Then
@@ -291,12 +309,12 @@ Public Class Faculty_Page
                         y += 25
                     End If
 
-                    
+
                 End If
             End While
             conn.Close()
         Catch ex As Exception
-    'MessageBox.Show(ex.Message, "Warning")
+            'MessageBox.Show(ex.Message, "Warning")
         End Try
         If count = 0 Then
             label_pub.Visible = False
@@ -316,4 +334,181 @@ Public Class Faculty_Page
 
     End Sub
 
+    Private Sub TeachingPanel_Paint(sender As Object, e As PaintEventArgs) Handles TeachingPanel.Paint
+        Dim x As Int32 = 0
+        Dim y As Int32 = 0
+        Dim y_prev As Int32 = 0
+        '-------------------------------------For Current Course Information--------------------------------------------------------
+        Dim label_new As Label = New Label()
+        label_new.Text = "Current Courses"
+        label_new.AutoSize = False
+        label_new.Font = New Font(label_new.Font.FontFamily, 14, FontStyle.Bold)
+        label_new.Size = New System.Drawing.Size(150, 30)
+        label_new.TextAlign = ContentAlignment.MiddleLeft
+        label_new.Location = New Point(x, y)
+        TeachingPanel.Controls.Add(label_new)
+        label_new.Visible = True
+
+        y += 30
+
+        Dim course_no, title, textOflabel1, textoflabel2 As String
+        Dim sem, taught_year As Int32
+        Dim count As Int32 = 0
+        Dim query As String = "SELECT * FROM Teaching"
+        Dim conn = New OleDbConnection(connectionString)
+        conn.Open()
+        Dim cmd As New OleDbCommand(query, conn)
+        Dim dr As OleDbDataReader = cmd.ExecuteReader()
+        Try
+            While (dr.Read())
+                If dr("Prof_id") = id_number & dr("Current") = True Then
+                    count += 1
+                    course_no = dr("Course_No")
+                    title = dr("Course_Title")
+                    taught_year = dr("Taught_Year")
+                    sem = dr("Semester")
+
+                    textOflabel1 = course_no & " : " & title
+                    textoflabel2 = sem & " Semester, " & taught_year
+
+                    Dim newlabel As Label = New Label()
+                    newlabel.Name = "1course_new" & count
+                    newlabel.Font = New Font(newlabel.Font.FontFamily, 10, FontStyle.Bold)
+                    newlabel.Size = New System.Drawing.Size(HomePanel.Width, 25)
+                    newlabel.TextAlign = ContentAlignment.MiddleLeft
+                    newlabel.Location = New Point(x, y)
+                    TeachingPanel.Controls.Add(newlabel)
+                    newlabel.Text = textOflabel1
+                    y += 25
+
+                    Dim newlabel2 As Label = New Label()
+                    newlabel2.Name = "1course_new" & count
+                    newlabel2.Font = New Font(newlabel.Font.FontFamily, 10)
+                    newlabel2.Size = New System.Drawing.Size(HomePanel.Width, 25)
+                    newlabel2.TextAlign = ContentAlignment.MiddleLeft
+                    newlabel2.Location = New Point(x, y)
+                    TeachingPanel.Controls.Add(newlabel2)
+                    newlabel.Text = textoflabel2
+                    y += 25
+
+                    If IsDBNull(dr("Course_url")) Then
+
+                    Else
+                        Dim linklabel1 As LinkLabel = New LinkLabel()
+                        linklabel1.Text = "View Details"
+                        linklabel1.Size = New System.Drawing.Size(HomePanel.Width, 25)
+                        linklabel1.Links.Add(0, Len(linklabel1.Text), dr("Course_url"))
+                        linklabel1.Location = New Point(x, y)
+                        AddHandler linklabel1.LinkClicked, AddressOf LinkClicked
+                        TeachingPanel.Controls.Add(linklabel1)
+                        y += 25
+                    End If
+
+
+                End If
+            End While
+            conn.Close()
+        Catch ex As Exception
+            'MessageBox.Show(ex.Message, "Warning")
+        End Try
+        If count = 0 Then
+            label_new.Visible = False
+            y = y_prev
+        Else
+            y_prev = y
+        End If
+
+
+        '-------------------------------------For Old Course Information--------------------------------------------------------
+        Dim label_old As Label = New Label()
+        label_old.Text = "Old Courses"
+        label_old.AutoSize = False
+        label_old.Font = New Font(label_old.Font.FontFamily, 14, FontStyle.Bold, FontStyle.Underline)
+        label_old.Size = New System.Drawing.Size(150, 30)
+        label_old.TextAlign = ContentAlignment.MiddleLeft
+        label_old.Location = New Point(x, y)
+        TeachingPanel.Controls.Add(label_old)
+        label_old.Visible = True
+
+        y += 30
+
+        count = 0
+        query = "SELECT * FROM Teaching"
+        conn = New OleDbConnection(connectionString)
+        conn.Open()
+        Dim cmd2 As New OleDbCommand(query, conn)
+        dr = cmd2.ExecuteReader()
+        Try
+            While (dr.Read())
+                If dr("Prof_id") = id_number & dr("Current") = False Then
+                    count += 1
+                    course_no = dr("Course_No")
+                    title = dr("Course_Title")
+                    taught_year = dr("Taught_Year")
+                    sem = dr("Semester")
+
+                    textOflabel1 = course_no & " : " & title
+                    textoflabel2 = sem & " Semester, " & taught_year
+
+                    Dim newlabel As Label = New Label()
+                    newlabel.Name = "1course_new" & count
+                    newlabel.Font = New Font(newlabel.Font.FontFamily, 10, FontStyle.Bold)
+                    newlabel.Size = New System.Drawing.Size(HomePanel.Width, 25)
+                    newlabel.TextAlign = ContentAlignment.MiddleLeft
+                    newlabel.Location = New Point(x, y)
+                    TeachingPanel.Controls.Add(newlabel)
+                    newlabel.Text = textOflabel1
+                    y += 25
+
+                    Dim newlabel2 As Label = New Label()
+                    newlabel2.Name = "1course_new" & count
+                    newlabel2.Font = New Font(newlabel.Font.FontFamily, 10)
+                    newlabel2.Size = New System.Drawing.Size(HomePanel.Width, 25)
+                    newlabel2.TextAlign = ContentAlignment.MiddleLeft
+                    newlabel2.Location = New Point(x, y)
+                    TeachingPanel.Controls.Add(newlabel2)
+                    newlabel.Text = textoflabel2
+                    y += 25
+
+                    If IsDBNull(dr("Course_url")) Then
+
+                    Else
+                        Dim linklabel1 As LinkLabel = New LinkLabel()
+                        linklabel1.Text = "View Details"
+                        linklabel1.Size = New System.Drawing.Size(HomePanel.Width, 25)
+                        linklabel1.Links.Add(0, Len(linklabel1.Text), dr("Course_url"))
+                        linklabel1.Location = New Point(x, y)
+                        AddHandler linklabel1.LinkClicked, AddressOf LinkClicked
+                        TeachingPanel.Controls.Add(linklabel1)
+                        y += 25
+                    End If
+
+
+                End If
+            End While
+            conn.Close()
+        Catch ex As Exception
+            'MessageBox.Show(ex.Message, "Warning")
+        End Try
+        If count = 0 Then
+            label_old.Visible = False
+            y = y_prev
+        Else
+            y_prev = y
+        End If
+    End Sub
+    
+    
+    Private Sub ContactPanel_Paint(sender As Object, e As PaintEventArgs) Handles ContactPanel.Paint
+
+    End Sub
+
+    Private Sub NewsPanel_Paint(sender As Object, e As PaintEventArgs) Handles NewsPanel.Paint
+
+    End Sub
+
+   
+    Private Sub AchievementPanel_Paint(sender As Object, e As PaintEventArgs) Handles AchievementPanel.Paint
+
+    End Sub
 End Class
