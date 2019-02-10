@@ -1,4 +1,6 @@
-﻿Imports Microsoft.VisualBasic
+﻿' image upload karke ke baad, ya fir in general info update karne ke liye logout karna pad rha hai
+
+Imports Microsoft.VisualBasic
 Imports System.Data.OleDb
 Imports System.Data
 
@@ -55,6 +57,7 @@ Public Class Form1
             img.Dispose()
         End If
         OBJ.Show()
+        Me.Close()
     End Sub
 
     Private Sub Button_preview_Click(sender As Object, e As EventArgs) Handles Button_preview.Click

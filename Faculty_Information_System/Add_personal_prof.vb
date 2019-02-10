@@ -106,6 +106,9 @@ Public Class Add_personal_prof
             End Try
         End If
         Me.Close()
+        Dim OBJ As New Form1
+        OBJ.EmailPass = EmailPass
+        OBJ.Show()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click

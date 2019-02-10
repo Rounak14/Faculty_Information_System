@@ -8,12 +8,12 @@ Public Class AddProf
     Private Sub Update_Click(sender As Object, e As EventArgs) Handles Update.Click
         Dim conn = New OleDbConnection(connectionString)
         conn.Open()
-        If String.IsNullOrEmpty(TextBox1.Text) Or String.IsNullOrEmpty(TextBox2.Text) Or String.IsNullOrEmpty(TextBox3.Text) Or String.IsNullOrEmpty(TextBox4.Text) Then
+        If String.IsNullOrEmpty(TextBox1.Text) Or String.IsNullOrEmpty(ComboBox1.Text) Or String.IsNullOrEmpty(TextBox3.Text) Or String.IsNullOrEmpty(TextBox4.Text) Then
             MessageBox.Show("First Fill all the required entries")
             Exit Sub
         End If
         Dim namestring As String = TextBox1.Text
-        Dim emailstring As String = TextBox2.Text
+        Dim emailstring As String = ComboBox1.Text
         Dim departmentstring As String = TextBox3.Text
         Dim passwordstring As String = TextBox4.Text
         Dim confirmpasswordstring As String = TextBox5.Text
@@ -46,9 +46,5 @@ Public Class AddProf
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Admin_form.Show()
         Me.Close()
-    End Sub
-
-    Private Sub AddProf_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-
     End Sub
 End Class
