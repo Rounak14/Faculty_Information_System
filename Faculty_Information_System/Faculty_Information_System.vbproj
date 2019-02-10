@@ -94,6 +94,12 @@
     <Compile Include="Admin_form.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="DelProf.Designer.vb">
+      <DependentUpon>DelProf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="DelProf.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Faculty_databaseDataSet1.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_form.resx">
       <DependentUpon>Admin_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DelProf.resx">
+      <DependentUpon>DelProf.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Faculty_Page.resx">
       <DependentUpon>Faculty_Page.vb</DependentUpon>

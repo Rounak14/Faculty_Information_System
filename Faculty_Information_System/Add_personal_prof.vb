@@ -76,7 +76,6 @@ Public Class Add_personal_prof
         Dim cmd As New OleDbCommand(query, conn)
         Dim Reader As OleDbDataReader = cmd.ExecuteReader()
 
-
         Designation = ComboBox_desig.Text.ToString
 
         While (Reader.Read())
@@ -89,7 +88,7 @@ Public Class Add_personal_prof
         homepage = TextBox_homepage.Text
 
         Dim cmdUpdate As New OleDbCommand(query, conn)
-        cmdUpdate.CommandText = "UPDATE faculty_info SET Designation = '" & Designation & "' , Room = '" & Room & "' , Telephone = '" & Telephone & "' , Additional_Responsibilty = '" & Responsibility & "' , Personal_Homepage = '" & homepage & "'   WHERE ID = " & id_number & ";"
+        cmdUpdate.CommandText = "UPDATE faculty_info SET Designation = '" & Designation & "' , Room = '" & Room & "' , Telephone = '" & Telephone & "' , Additional_Responsibilty = '" & Responsibility & "' , Personal_Homepage = '" & homepage & "'WHERE ID = " & id_number & ";"
         Try
             cmdUpdate.ExecuteNonQuery() 'Executing Update Command
         Catch ex As Exception

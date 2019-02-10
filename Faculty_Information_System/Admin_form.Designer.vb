@@ -37,7 +37,7 @@ Partial Class Admin_form
         Me.Label1.Location = New System.Drawing.Point(318, 55)
         Me.Label1.Margin = New System.Windows.Forms.Padding(5, 0, 5, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(245, 26)
+        Me.Label1.Size = New System.Drawing.Size(304, 32)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "ADMIN DASHBOARD"
         '
@@ -73,7 +73,7 @@ Partial Class Admin_form
         '
         'Admin_form
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(10.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(13.0!, 25.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(982, 410)
         Me.Controls.Add(Me.Button1)

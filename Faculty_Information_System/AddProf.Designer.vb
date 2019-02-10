@@ -38,6 +38,7 @@ Partial Class AddProf
         Me.Update = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.TextBox5 = New System.Windows.Forms.TextBox()
+        Me.Button1 = New System.Windows.Forms.Button()
         NameLabel = New System.Windows.Forms.Label()
         DepartmentLabel = New System.Windows.Forms.Label()
         EmailLabel = New System.Windows.Forms.Label()
@@ -98,8 +99,13 @@ Partial Class AddProf
         '
         'TableAdapterManager
         '
+        Me.TableAdapterManager.AchievementsTableAdapter = Nothing
         Me.TableAdapterManager.BackupDataSetBeforeUpdate = False
+        Me.TableAdapterManager.EducationTableAdapter = Nothing
+        Me.TableAdapterManager.ExperienceTableAdapter = Nothing
         Me.TableAdapterManager.faculty_infoTableAdapter = Me.Faculty_infoTableAdapter
+        Me.TableAdapterManager.NewsTableAdapter = Nothing
+        Me.TableAdapterManager.PublicationsTableAdapter = Nothing
         Me.TableAdapterManager.UpdateOrder = Faculty_Information_System.Faculty_databaseDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete
         '
         'TextBox1
@@ -141,7 +147,7 @@ Partial Class AddProf
         '
         'Update
         '
-        Me.Update.Location = New System.Drawing.Point(240, 278)
+        Me.Update.Location = New System.Drawing.Point(185, 278)
         Me.Update.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Update.Name = "Update"
         Me.Update.Size = New System.Drawing.Size(112, 32)
@@ -167,11 +173,22 @@ Partial Class AddProf
         Me.TextBox5.Size = New System.Drawing.Size(142, 22)
         Me.TextBox5.TabIndex = 11
         '
+        'Button1
+        '
+        Me.Button1.Location = New System.Drawing.Point(357, 278)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(112, 32)
+        Me.Button1.TabIndex = 12
+        Me.Button1.Text = "Back"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
         'AddProf
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(589, 352)
+        Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox5)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Update)
@@ -203,4 +220,5 @@ Partial Class AddProf
     Friend WithEvents Update As System.Windows.Forms.Button
     Friend WithEvents Label1 As System.Windows.Forms.Label
     Friend WithEvents TextBox5 As System.Windows.Forms.TextBox
+    Friend WithEvents Button1 As System.Windows.Forms.Button
 End Class
