@@ -39,87 +39,95 @@ Partial Class Prof_Edu
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"BTech", "BSc", "MTech", "MSc", "PHD"})
-        Me.ComboBox1.Location = New System.Drawing.Point(183, 38)
+        Me.ComboBox1.Location = New System.Drawing.Point(344, 38)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(165, 25)
+        Me.ComboBox1.Size = New System.Drawing.Size(217, 28)
         Me.ComboBox1.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(13, 38)
+        Me.Label1.BackColor = System.Drawing.Color.Transparent
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(68, 40)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(61, 17)
+        Me.Label1.Size = New System.Drawing.Size(95, 25)
         Me.Label1.TabIndex = 1
-        Me.Label1.Text = "Degree"
+        Me.Label1.Text = "Degree :"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(13, 105)
+        Me.Label2.BackColor = System.Drawing.Color.Transparent
+        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label2.Location = New System.Drawing.Point(62, 107)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(104, 17)
+        Me.Label2.Size = New System.Drawing.Size(153, 25)
         Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Passing Year"
+        Me.Label2.Text = "Passing Year :"
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(183, 105)
+        Me.TextBox1.Location = New System.Drawing.Point(344, 105)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(165, 23)
+        Me.TextBox1.Size = New System.Drawing.Size(217, 27)
         Me.TextBox1.TabIndex = 3
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(13, 176)
+        Me.Label3.BackColor = System.Drawing.Color.Transparent
+        Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label3.Location = New System.Drawing.Point(62, 178)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(66, 17)
+        Me.Label3.Size = New System.Drawing.Size(101, 25)
         Me.Label3.TabIndex = 4
-        Me.Label3.Text = "Institute"
+        Me.Label3.Text = "Institute :"
         '
         'TextBox2
         '
-        Me.TextBox2.Location = New System.Drawing.Point(183, 176)
+        Me.TextBox2.Location = New System.Drawing.Point(344, 176)
         Me.TextBox2.Multiline = True
         Me.TextBox2.Name = "TextBox2"
-        Me.TextBox2.Size = New System.Drawing.Size(165, 27)
+        Me.TextBox2.Size = New System.Drawing.Size(217, 27)
         Me.TextBox2.TabIndex = 5
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(13, 252)
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.Location = New System.Drawing.Point(62, 254)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(62, 17)
+        Me.Label4.Size = New System.Drawing.Size(98, 25)
         Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Subject"
+        Me.Label4.Text = "Subject :"
         '
         'TextBox3
         '
-        Me.TextBox3.Location = New System.Drawing.Point(183, 252)
+        Me.TextBox3.Location = New System.Drawing.Point(344, 252)
         Me.TextBox3.Multiline = True
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(165, 27)
+        Me.TextBox3.Size = New System.Drawing.Size(217, 27)
         Me.TextBox3.TabIndex = 7
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(30, 324)
+        Me.Button1.Location = New System.Drawing.Point(30, 306)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(157, 39)
+        Me.Button1.Size = New System.Drawing.Size(157, 55)
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "Add Education"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Button2
         '
-        Me.Button2.Location = New System.Drawing.Point(366, 316)
+        Me.Button2.Location = New System.Drawing.Point(344, 306)
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(217, 55)
         Me.Button2.TabIndex = 9
@@ -137,8 +145,10 @@ Partial Class Prof_Edu
         '
         'Prof_Edu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 17.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Faculty_Information_System.My.Resources.Resources.images
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(604, 426)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
