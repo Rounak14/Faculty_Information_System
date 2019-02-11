@@ -51,13 +51,15 @@ Public Class Form1
     End Sub
 
     Private Sub AboutMe_Button_Click(sender As Object, e As EventArgs) Handles AboutMe_Button.Click
+        Panel2.Controls.Clear()
         Dim OBJ As New Add_personal_prof
         OBJ.EmailPass = EmailPass
         If Imagepresent = 1 Then
             img.Dispose()
         End If
+        OBJ.TopLevel = False
+        Panel2.Controls.Add(OBJ)
         OBJ.Show()
-        Me.Close()
     End Sub
 
     Private Sub Button_preview_Click(sender As Object, e As EventArgs) Handles Button_preview.Click
@@ -67,38 +69,64 @@ Public Class Form1
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Panel2.Controls.Clear()
         Dim OBJ As New password_reset
         OBJ.EmailPass = EmailPass
+        OBJ.TopLevel = False
+        OBJ.Size = Panel2.Size
+        Panel2.Controls.Add(OBJ)
         OBJ.Show()
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Panel2.Controls.Clear()
         Dim OBJ As New Prof_Edu
         OBJ.EmailPass = EmailPass
+        OBJ.TopLevel = False
+        OBJ.Size = Panel2.Size
+        Panel2.Controls.Add(OBJ)
         OBJ.Show()
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Panel2.Controls.Clear()
         Dim OBJ As New Prof_Courses
         OBJ.EmailPass = EmailPass
+        OBJ.TopLevel = False
+        OBJ.Size = Panel2.Size
+        Panel2.Controls.Add(OBJ)
         OBJ.Show()
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Panel2.Controls.Clear()
         Dim OBJ As New Prof_Publication
         OBJ.EmailPass = EmailPass
+        OBJ.TopLevel = False
+        OBJ.Size = Panel2.Size
+        Panel2.Controls.Add(OBJ)
         OBJ.Show()
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Panel2.Controls.Clear()
         Dim OBJ As New Prof_Experience
         OBJ.EmailPass = EmailPass
+        OBJ.TopLevel = False
+        OBJ.Size = Panel2.Size
+        Panel2.Controls.Add(OBJ)
         OBJ.Show()
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Panel2.Controls.Clear()
         Dim OBJ As New Prof_Achievements
         OBJ.EmailPass = EmailPass
+        OBJ.TopLevel = False
+        OBJ.Size = Panel2.Size
+        Panel2.Controls.Add(OBJ)
         OBJ.Show()
     End Sub
+
+   
 End Class

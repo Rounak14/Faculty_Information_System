@@ -42,7 +42,7 @@ Partial Class Prof_Edu
         Me.ComboBox1.Location = New System.Drawing.Point(183, 38)
         Me.ComboBox1.Margin = New System.Windows.Forms.Padding(4)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(165, 28)
+        Me.ComboBox1.Size = New System.Drawing.Size(165, 25)
         Me.ComboBox1.TabIndex = 0
         '
         'Label1
@@ -51,7 +51,7 @@ Partial Class Prof_Edu
         Me.Label1.Location = New System.Drawing.Point(13, 38)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(70, 20)
+        Me.Label1.Size = New System.Drawing.Size(61, 17)
         Me.Label1.TabIndex = 1
         Me.Label1.Text = "Degree"
         '
@@ -61,7 +61,7 @@ Partial Class Prof_Edu
         Me.Label2.Location = New System.Drawing.Point(13, 105)
         Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(120, 20)
+        Me.Label2.Size = New System.Drawing.Size(104, 17)
         Me.Label2.TabIndex = 2
         Me.Label2.Text = "Passing Year"
         '
@@ -69,7 +69,7 @@ Partial Class Prof_Edu
         '
         Me.TextBox1.Location = New System.Drawing.Point(183, 105)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(165, 27)
+        Me.TextBox1.Size = New System.Drawing.Size(165, 23)
         Me.TextBox1.TabIndex = 3
         '
         'Label3
@@ -78,7 +78,7 @@ Partial Class Prof_Edu
         Me.Label3.Location = New System.Drawing.Point(13, 176)
         Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(77, 20)
+        Me.Label3.Size = New System.Drawing.Size(66, 17)
         Me.Label3.TabIndex = 4
         Me.Label3.Text = "Institute"
         '
@@ -96,7 +96,7 @@ Partial Class Prof_Edu
         Me.Label4.Location = New System.Drawing.Point(13, 252)
         Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(72, 20)
+        Me.Label4.Size = New System.Drawing.Size(62, 17)
         Me.Label4.TabIndex = 6
         Me.Label4.Text = "Subject"
         '
@@ -137,7 +137,7 @@ Partial Class Prof_Edu
         '
         'Prof_Edu
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(11.0!, 20.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 17.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(604, 426)
         Me.Controls.Add(Me.Button3)
@@ -152,6 +152,7 @@ Partial Class Prof_Edu
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.ComboBox1)
         Me.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Prof_Edu"
         Me.Text = "Add Prof Education"

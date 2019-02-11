@@ -22,7 +22,6 @@ Partial Class Search_Form
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container()
         Me.SearchBox = New System.Windows.Forms.TextBox()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.Login_Button = New System.Windows.Forms.Button()
@@ -39,8 +38,6 @@ Partial Class Search_Form
         Me.Column3 = New System.Windows.Forms.DataGridViewTextBoxColumn()
         Me.Column4 = New System.Windows.Forms.DataGridViewButtonColumn()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
-        Me.NotifyIcon1 = New System.Windows.Forms.NotifyIcon(Me.components)
-        Me.NotifyIcon2 = New System.Windows.Forms.NotifyIcon(Me.components)
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -49,14 +46,14 @@ Partial Class Search_Form
         Me.SearchBox.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.SearchBox.Location = New System.Drawing.Point(58, 102)
         Me.SearchBox.Name = "SearchBox"
-        Me.SearchBox.Size = New System.Drawing.Size(508, 26)
+        Me.SearchBox.Size = New System.Drawing.Size(592, 26)
         Me.SearchBox.TabIndex = 0
         '
         'Label1
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(194, 30)
+        Me.Label1.Location = New System.Drawing.Point(250, 28)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(231, 47)
         Me.Label1.TabIndex = 1
@@ -67,7 +64,7 @@ Partial Class Search_Form
         Me.Login_Button.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Login_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Login_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Login_Button.Location = New System.Drawing.Point(480, 12)
+        Me.Login_Button.Location = New System.Drawing.Point(585, 12)
         Me.Login_Button.Name = "Login_Button"
         Me.Login_Button.Size = New System.Drawing.Size(120, 34)
         Me.Login_Button.TabIndex = 2
@@ -81,7 +78,7 @@ Partial Class Search_Form
         Me.Button_search.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_search.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button_search.ForeColor = System.Drawing.Color.White
-        Me.Button_search.Location = New System.Drawing.Point(219, 235)
+        Me.Button_search.Location = New System.Drawing.Point(294, 241)
         Me.Button_search.Name = "Button_search"
         Me.Button_search.Size = New System.Drawing.Size(120, 29)
         Me.Button_search.TabIndex = 3
@@ -121,7 +118,7 @@ Partial Class Search_Form
         Me.ComboBox_dept.ForeColor = System.Drawing.Color.Black
         Me.ComboBox_dept.FormattingEnabled = True
         Me.ComboBox_dept.Items.AddRange(New Object() {"Bioscience and Bioengineering", "Chemical Engineering", "Chemistry", "Civil Engineering", "Computer Science and Engineering", "Design", "Electronics and Electrical Engineering", "Humanities and Social Science", "Mathematics", "Mechanical Engineering", "Physics"})
-        Me.ComboBox_dept.Location = New System.Drawing.Point(209, 162)
+        Me.ComboBox_dept.Location = New System.Drawing.Point(224, 162)
         Me.ComboBox_dept.Name = "ComboBox_dept"
         Me.ComboBox_dept.Size = New System.Drawing.Size(207, 21)
         Me.ComboBox_dept.TabIndex = 7
@@ -150,7 +147,7 @@ Partial Class Search_Form
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.2!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText
-        Me.Label3.Location = New System.Drawing.Point(204, 285)
+        Me.Label3.Location = New System.Drawing.Point(270, 322)
         Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(174, 26)
@@ -170,14 +167,14 @@ Partial Class Search_Form
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column5, Me.Column1, Me.Column2, Me.Column3, Me.Column4})
         Me.DataGridView1.GridColor = System.Drawing.SystemColors.Info
-        Me.DataGridView1.Location = New System.Drawing.Point(11, 313)
+        Me.DataGridView1.Location = New System.Drawing.Point(11, 366)
         Me.DataGridView1.Margin = New System.Windows.Forms.Padding(2)
         Me.DataGridView1.MultiSelect = False
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.ReadOnly = True
         Me.DataGridView1.RowTemplate.Height = 24
         Me.DataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect
-        Me.DataGridView1.Size = New System.Drawing.Size(593, 196)
+        Me.DataGridView1.Size = New System.Drawing.Size(694, 215)
         Me.DataGridView1.TabIndex = 10
         '
         'Column5
@@ -232,16 +229,6 @@ Partial Class Search_Form
         Me.RadioButton2.Text = "Research Interest"
         Me.RadioButton2.UseVisualStyleBackColor = False
         '
-        'NotifyIcon1
-        '
-        Me.NotifyIcon1.Text = "NotifyIcon1"
-        Me.NotifyIcon1.Visible = True
-        '
-        'NotifyIcon2
-        '
-        Me.NotifyIcon2.Text = "NotifyIcon2"
-        Me.NotifyIcon2.Visible = True
-        '
         'Search_Form
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -249,7 +236,7 @@ Partial Class Search_Form
         Me.AutoScroll = True
         Me.BackgroundImage = Global.Faculty_Information_System.My.Resources.Resources.cliqz_search_background
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(611, 513)
+        Me.ClientSize = New System.Drawing.Size(717, 592)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.RadioButton_Name)
@@ -262,7 +249,7 @@ Partial Class Search_Form
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.SearchBox)
         Me.Name = "Search_Form"
-        Me.Text = "Search_Form"
+        Me.Text = "SEARCH"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
@@ -279,8 +266,6 @@ Partial Class Search_Form
     Friend WithEvents RadioButton_Name As System.Windows.Forms.RadioButton
     Friend WithEvents Label3 As System.Windows.Forms.Label
     Friend WithEvents DataGridView1 As System.Windows.Forms.DataGridView
-    Friend WithEvents NotifyIcon1 As System.Windows.Forms.NotifyIcon
-    Friend WithEvents NotifyIcon2 As System.Windows.Forms.NotifyIcon
     Friend WithEvents Column5 As System.Windows.Forms.DataGridViewImageColumn
     Friend WithEvents Column1 As System.Windows.Forms.DataGridViewTextBoxColumn
     Friend WithEvents Column2 As System.Windows.Forms.DataGridViewTextBoxColumn
