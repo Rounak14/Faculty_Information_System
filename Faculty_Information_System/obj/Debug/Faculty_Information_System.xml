@@ -179,7 +179,15 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources._131_1319878_employee_self_serve_portal_people_icon_png">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Faculty_Information_System.My.Resources.Resources._1859b6432e5af07">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources._1859b6432e5af071">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -187,7 +195,19 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources._220px_User_icon_21">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources._47949">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Faculty_Information_System.My.Resources.Resources._77597064f5b9eb0">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.add_users_group_512">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -195,11 +215,47 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.admin_login_background_images_81">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.cAMrktol_400x400">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Faculty_Information_System.My.Resources.Resources.cliqz_search_background">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.core_2_iitg">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.delete_users_group_512">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.download">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.IIT_Guwahati">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Faculty_Information_System.My.Resources.Resources.IIT_Guwahati_Logo_svg">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.IIT_Guwahati1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.images">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.images__1_">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
@@ -211,7 +267,27 @@ TableAdapterManager is used to coordinate TableAdapters in the dataset to enable
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.login_logo">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.manager_512">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.photo_1518600654093_2a24cddafa38">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.slide3">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Faculty_Information_System.My.Resources.Resources.top_line_management_login_background_1">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources.Untitled_1">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
 </summary>

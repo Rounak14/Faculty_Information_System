@@ -114,30 +114,6 @@ Public Class Add_personal_prof
         Responsibility = TextBox_Responsibility.Text
         homepage = TextBox_homepage.Text
 
-        Dim cmdUpdate As New OleDbCommand(query, conn)
-        cmdUpdate.CommandText = "UPDATE faculty_info SET Designation = '" & Designation & "' , Room = '" & Room & "' , Telephone = '" & Telephone & "' , Additional_Responsibilty = '" & Responsibility & "' , Personal_Homepage = '" & homepage & "'WHERE ID = " & id_number & ";"
-        Try
-            cmdUpdate.ExecuteNonQuery() 'Executing Update Command
-        Catch ex As Exception
-            MessageBox.Show(ex.Message) 'Error Message
-        End Try
-
-        Dim query3 As String = "INSERT INTO Research_Interest ([Prof_id],[Field]) VALUES (?,?)"
-
-        Dim Ar() As String = Split(TextBox1.Text, Environment.NewLine)
-        For Each s As String In Ar
-            Dim cmdResearchAdd As OleDbCommand = New OleDbCommand(query3, conn)
-            cmdResearchAdd.Parameters.Add(New OleDbParameter("Prof_id", CType(id_number, Integer)))
-            cmdResearchAdd.Parameters.Add(New OleDbParameter("Field", CType(s, String)))
-            Try
-                cmdResearchAdd.ExecuteNonQuery() 'Executing Update Command
-                cmdResearchAdd.Dispose()
-            Catch ex As Exception
-                MessageBox.Show(ex.Message) 'Error Message
-            End Try
-        Next
-
-        conn.Close()
         If Not PictureBox1.Image Is Nothing Then
             Try
                 Using img As Image = PictureBox1.Image
@@ -147,6 +123,40 @@ Public Class Add_personal_prof
                 MessageBox.Show(ex.Message)
             End Try
         End If
+        Dim cmdUpdate As New OleDbCommand(query, conn)
+        cmdUpdate.CommandText = "UPDATE faculty_info SET Designation = '" & Designation & "' , Room = '" & Room & "' , Telephone = '" & Telephone & "' , Additional_Responsibilty = '" & Responsibility & "' , Personal_Homepage = '" & homepage & "'WHERE ID = " & id_number & ";"
+        Try
+            cmdUpdate.ExecuteNonQuery() 'Executing Update Command
+            cmdUpdate.Dispose()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message) 'Error Message
+        End Try
+
+        Dim query3 As String = "INSERT INTO Research_Interest ([Prof_id],[Field]) VALUES (?,?)"
+
+        TextBox1.Text = TextBox1.Text.Trim()
+        If TextBox1.Text = "" Then
+
+        Else
+            Dim Ar() As String = Split(TextBox1.Text, Environment.NewLine)
+            For Each s As String In Ar
+                Dim cmdResearchAdd As OleDbCommand = New OleDbCommand(query3, conn)
+                cmdResearchAdd.Parameters.Add(New OleDbParameter("Prof_id", CType(id_number, Integer)))
+                cmdResearchAdd.Parameters.Add(New OleDbParameter("Field", CType(s, String)))
+                Try
+                    cmdResearchAdd.ExecuteNonQuery() 'Executing Update Command
+                    cmdResearchAdd.Dispose()
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message) 'Error Message
+                End Try
+            Next
+        End If
+        
+
+        conn.Close()
+        For Each Form In My.Application.OpenForms
+            Form.Hide()
+        Next
         Me.Close()
         Dim OBJ As New Form1
         OBJ.EmailPass = EmailPass

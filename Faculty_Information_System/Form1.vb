@@ -4,13 +4,15 @@ Imports Microsoft.VisualBasic
 Imports System.Data.OleDb
 Imports System.Data
 
+
 Public Class Form1
     Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
     Dim img As Image
     Dim Imagepresent As Int32 = 1
     Public Property EmailPass As String
 
-    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Function Loader()
+
         Dim name As String
         Dim dept As String
         Dim email As String
@@ -36,17 +38,21 @@ Public Class Form1
         Try
             img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
             PictureBox2.Image = img
+            'img.Dispose()
         Catch ex As Exception
             Imagepresent = 0
         End Try
         Label_Details.Text = name & vbNewLine & dept & vbNewLine & email
-
+    End Function
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Loader()
     End Sub
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim SecondForm As New Search_Form
         SecondForm.Show()
+        startup.Hide()
         Me.Close()
     End Sub
 
@@ -83,7 +89,6 @@ Public Class Form1
         Dim OBJ As New Prof_Edu
         OBJ.EmailPass = EmailPass
         OBJ.TopLevel = False
-        OBJ.Size = Panel2.Size
         Panel2.Controls.Add(OBJ)
         OBJ.Show()
     End Sub
@@ -129,4 +134,9 @@ Public Class Form1
     End Sub
 
    
+    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
+
+    End Sub
+
+    
 End Class

@@ -1,4 +1,6 @@
-﻿Imports Microsoft.VisualBasic
+﻿'Send mail feature for professor
+
+Imports Microsoft.VisualBasic
 Imports System.Data.OleDb
 Imports System.Data
 

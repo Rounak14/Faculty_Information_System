@@ -52,9 +52,10 @@ Partial Class AddProf
         NameLabel.AutoSize = True
         NameLabel.BackColor = System.Drawing.Color.Transparent
         NameLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        NameLabel.Location = New System.Drawing.Point(54, 49)
+        NameLabel.Location = New System.Drawing.Point(40, 40)
+        NameLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         NameLabel.Name = "NameLabel"
-        NameLabel.Size = New System.Drawing.Size(84, 29)
+        NameLabel.Size = New System.Drawing.Size(66, 24)
         NameLabel.TabIndex = 1
         NameLabel.Text = "Name:"
         '
@@ -63,9 +64,10 @@ Partial Class AddProf
         DepartmentLabel.AutoSize = True
         DepartmentLabel.BackColor = System.Drawing.Color.Transparent
         DepartmentLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        DepartmentLabel.Location = New System.Drawing.Point(54, 96)
+        DepartmentLabel.Location = New System.Drawing.Point(40, 78)
+        DepartmentLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         DepartmentLabel.Name = "DepartmentLabel"
-        DepartmentLabel.Size = New System.Drawing.Size(144, 29)
+        DepartmentLabel.Size = New System.Drawing.Size(112, 24)
         DepartmentLabel.TabIndex = 3
         DepartmentLabel.Text = "Department:"
         '
@@ -74,9 +76,10 @@ Partial Class AddProf
         EmailLabel.AutoSize = True
         EmailLabel.BackColor = System.Drawing.Color.Transparent
         EmailLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        EmailLabel.Location = New System.Drawing.Point(54, 138)
+        EmailLabel.Location = New System.Drawing.Point(40, 112)
+        EmailLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         EmailLabel.Name = "EmailLabel"
-        EmailLabel.Size = New System.Drawing.Size(80, 29)
+        EmailLabel.Size = New System.Drawing.Size(62, 24)
         EmailLabel.TabIndex = 5
         EmailLabel.Text = "Email:"
         '
@@ -85,9 +88,10 @@ Partial Class AddProf
         PasswordLabel.AutoSize = True
         PasswordLabel.BackColor = System.Drawing.Color.Transparent
         PasswordLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        PasswordLabel.Location = New System.Drawing.Point(54, 181)
+        PasswordLabel.Location = New System.Drawing.Point(40, 147)
+        PasswordLabel.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         PasswordLabel.Name = "PasswordLabel"
-        PasswordLabel.Size = New System.Drawing.Size(126, 29)
+        PasswordLabel.Size = New System.Drawing.Size(97, 24)
         PasswordLabel.TabIndex = 7
         PasswordLabel.Text = "Password:"
         '
@@ -121,39 +125,39 @@ Partial Class AddProf
         'TextBox1
         '
         Me.TextBox1.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Faculty_infoBindingSource, "Name", True))
-        Me.TextBox1.Location = New System.Drawing.Point(338, 49)
-        Me.TextBox1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBox1.Location = New System.Drawing.Point(254, 40)
+        Me.TextBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(224, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(169, 20)
         Me.TextBox1.TabIndex = 2
         '
         'TextBox3
         '
         Me.TextBox3.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Faculty_infoBindingSource, "Email", True))
-        Me.TextBox3.Location = New System.Drawing.Point(338, 145)
-        Me.TextBox3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBox3.Location = New System.Drawing.Point(254, 118)
+        Me.TextBox3.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox3.Name = "TextBox3"
-        Me.TextBox3.Size = New System.Drawing.Size(224, 22)
+        Me.TextBox3.Size = New System.Drawing.Size(169, 20)
         Me.TextBox3.TabIndex = 6
         '
         'TextBox4
         '
         Me.TextBox4.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Faculty_infoBindingSource, "Password", True))
-        Me.TextBox4.Location = New System.Drawing.Point(338, 188)
-        Me.TextBox4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBox4.Location = New System.Drawing.Point(254, 153)
+        Me.TextBox4.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox4.Name = "TextBox4"
         Me.TextBox4.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox4.Size = New System.Drawing.Size(224, 22)
+        Me.TextBox4.Size = New System.Drawing.Size(169, 20)
         Me.TextBox4.TabIndex = 8
         '
         'Update
         '
         Me.Update.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Update.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Update.Location = New System.Drawing.Point(98, 297)
-        Me.Update.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Update.Location = New System.Drawing.Point(74, 241)
+        Me.Update.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Update.Name = "Update"
-        Me.Update.Size = New System.Drawing.Size(167, 44)
+        Me.Update.Size = New System.Drawing.Size(125, 36)
         Me.Update.TabIndex = 9
         Me.Update.Text = "Update"
         Me.Update.UseVisualStyleBackColor = True
@@ -162,30 +166,31 @@ Partial Class AddProf
         '
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(54, 220)
+        Me.Label1.Location = New System.Drawing.Point(40, 179)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(222, 30)
+        Me.Label1.Size = New System.Drawing.Size(166, 24)
         Me.Label1.TabIndex = 10
         Me.Label1.Text = "Confirm Password :"
         '
         'TextBox5
         '
         Me.TextBox5.DataBindings.Add(New System.Windows.Forms.Binding("Text", Me.Faculty_infoBindingSource, "Password", True))
-        Me.TextBox5.Location = New System.Drawing.Point(338, 228)
-        Me.TextBox5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.TextBox5.Location = New System.Drawing.Point(254, 185)
+        Me.TextBox5.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.TextBox5.Name = "TextBox5"
         Me.TextBox5.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.TextBox5.Size = New System.Drawing.Size(224, 22)
+        Me.TextBox5.Size = New System.Drawing.Size(169, 20)
         Me.TextBox5.TabIndex = 11
         '
         'Button1
         '
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 10.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(351, 297)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Location = New System.Drawing.Point(263, 241)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(167, 44)
+        Me.Button1.Size = New System.Drawing.Size(125, 36)
         Me.Button1.TabIndex = 12
         Me.Button1.Text = "Back"
         Me.Button1.UseVisualStyleBackColor = True
@@ -194,18 +199,19 @@ Partial Class AddProf
         '
         Me.ComboBox1.FormattingEnabled = True
         Me.ComboBox1.Items.AddRange(New Object() {"Bioscience and Bioengineering", "Chemical Engineering", "Chemistry", "Civil Engineering", "Computer Science and Engineering", "Design", "Electronics and Electrical Engineering", "Humanities and Social Science", "Mathematics", "Mechanical Engineering", "Physics"})
-        Me.ComboBox1.Location = New System.Drawing.Point(338, 96)
+        Me.ComboBox1.Location = New System.Drawing.Point(254, 78)
+        Me.ComboBox1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.ComboBox1.Name = "ComboBox1"
-        Me.ComboBox1.Size = New System.Drawing.Size(224, 24)
+        Me.ComboBox1.Size = New System.Drawing.Size(169, 21)
         Me.ComboBox1.TabIndex = 13
         '
         'AddProf
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Faculty_Information_System.My.Resources.Resources.images
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(600, 394)
+        Me.ClientSize = New System.Drawing.Size(512, 320)
         Me.Controls.Add(Me.ComboBox1)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.TextBox5)
@@ -219,7 +225,7 @@ Partial Class AddProf
         Me.Controls.Add(NameLabel)
         Me.Controls.Add(Me.TextBox1)
         Me.DoubleBuffered = True
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "AddProf"
         Me.Text = "Add_Prof"
         CType(Me.Faculty_databaseDataSet, System.ComponentModel.ISupportInitialize).EndInit()
