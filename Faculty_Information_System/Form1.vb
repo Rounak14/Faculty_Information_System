@@ -50,6 +50,15 @@ Public Class Form1
 
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
+        Button1.BackColor = Color.Aqua
+        AboutMe_Button.BackColor = Color.Turquoise
+        Button_preview.BackColor = Color.Turquoise
+        Button2.BackColor = Color.Turquoise
+        Button3.BackColor = Color.Turquoise
+        Button4.BackColor = Color.Turquoise
+        Button5.BackColor = Color.Turquoise
+        Button6.BackColor = Color.Turquoise
+        Button7.BackColor = Color.Turquoise
         Dim SecondForm As New Search_Form
         SecondForm.Show()
         startup.Hide()
@@ -57,6 +66,15 @@ Public Class Form1
     End Sub
 
     Private Sub AboutMe_Button_Click(sender As Object, e As EventArgs) Handles AboutMe_Button.Click
+        Button1.BackColor = Color.Turquoise
+        AboutMe_Button.BackColor = Color.Aqua
+        Button_preview.BackColor = Color.Turquoise
+        Button2.BackColor = Color.Turquoise
+        Button3.BackColor = Color.Turquoise
+        Button4.BackColor = Color.Turquoise
+        Button5.BackColor = Color.Turquoise
+        Button6.BackColor = Color.Turquoise
+        Button7.BackColor = Color.Turquoise
         Panel2.Controls.Clear()
         Dim OBJ As New Add_personal_prof
         OBJ.EmailPass = EmailPass
@@ -69,12 +87,30 @@ Public Class Form1
     End Sub
 
     Private Sub Button_preview_Click(sender As Object, e As EventArgs) Handles Button_preview.Click
+        Button1.BackColor = Color.Turquoise
+        AboutMe_Button.BackColor = Color.Turquoise
+        Button_preview.BackColor = Color.Aqua
+        Button2.BackColor = Color.Turquoise
+        Button3.BackColor = Color.Turquoise
+        Button4.BackColor = Color.Turquoise
+        Button5.BackColor = Color.Turquoise
+        Button6.BackColor = Color.Turquoise
+        Button7.BackColor = Color.Turquoise
         Dim OBJ As New Faculty_Page
         OBJ.EmailPass = EmailPass
         OBJ.Show()
     End Sub
 
     Private Sub Button2_Click(sender As Object, e As EventArgs) Handles Button2.Click
+        Button1.BackColor = Color.Turquoise
+        AboutMe_Button.BackColor = Color.Turquoise
+        Button_preview.BackColor = Color.Turquoise
+        Button2.BackColor = Color.Aqua
+        Button3.BackColor = Color.Turquoise
+        Button4.BackColor = Color.Turquoise
+        Button5.BackColor = Color.Turquoise
+        Button6.BackColor = Color.Turquoise
+        Button7.BackColor = Color.Turquoise
         Panel2.Controls.Clear()
         Dim OBJ As New password_reset
         OBJ.EmailPass = EmailPass
@@ -85,6 +121,15 @@ Public Class Form1
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
+        Button1.BackColor = Color.Turquoise
+        AboutMe_Button.BackColor = Color.Turquoise
+        Button_preview.BackColor = Color.Turquoise
+        Button2.BackColor = Color.Turquoise
+        Button3.BackColor = Color.Aqua
+        Button4.BackColor = Color.Turquoise
+        Button5.BackColor = Color.Turquoise
+        Button6.BackColor = Color.Turquoise
+        Button7.BackColor = Color.Turquoise
         Panel2.Controls.Clear()
         Dim OBJ As New Prof_Edu
         OBJ.EmailPass = EmailPass
@@ -94,6 +139,15 @@ Public Class Form1
     End Sub
 
     Private Sub Button4_Click(sender As Object, e As EventArgs) Handles Button4.Click
+        Button1.BackColor = Color.Turquoise
+        AboutMe_Button.BackColor = Color.Turquoise
+        Button_preview.BackColor = Color.Turquoise
+        Button2.BackColor = Color.Turquoise
+        Button3.BackColor = Color.Turquoise
+        Button4.BackColor = Color.Aqua
+        Button5.BackColor = Color.Turquoise
+        Button6.BackColor = Color.Turquoise
+        Button7.BackColor = Color.Turquoise
         Panel2.Controls.Clear()
         Dim OBJ As New Prof_Courses
         OBJ.EmailPass = EmailPass
@@ -104,6 +158,15 @@ Public Class Form1
     End Sub
 
     Private Sub Button5_Click(sender As Object, e As EventArgs) Handles Button5.Click
+        Button1.BackColor = Color.Turquoise
+        AboutMe_Button.BackColor = Color.Turquoise
+        Button_preview.BackColor = Color.Turquoise
+        Button2.BackColor = Color.Turquoise
+        Button3.BackColor = Color.Turquoise
+        Button4.BackColor = Color.Turquoise
+        Button5.BackColor = Color.Aqua
+        Button6.BackColor = Color.Turquoise
+        Button7.BackColor = Color.Turquoise
         Panel2.Controls.Clear()
         Dim OBJ As New Prof_Publication
         OBJ.EmailPass = EmailPass
@@ -114,6 +177,15 @@ Public Class Form1
     End Sub
 
     Private Sub Button6_Click(sender As Object, e As EventArgs) Handles Button6.Click
+        Button1.BackColor = Color.Turquoise
+        AboutMe_Button.BackColor = Color.Turquoise
+        Button_preview.BackColor = Color.Turquoise
+        Button2.BackColor = Color.Turquoise
+        Button3.BackColor = Color.Turquoise
+        Button4.BackColor = Color.Turquoise
+        Button5.BackColor = Color.Turquoise
+        Button6.BackColor = Color.Aqua
+        Button7.BackColor = Color.Turquoise
         Panel2.Controls.Clear()
         Dim OBJ As New Prof_Experience
         OBJ.EmailPass = EmailPass
@@ -124,6 +196,15 @@ Public Class Form1
     End Sub
 
     Private Sub Button7_Click(sender As Object, e As EventArgs) Handles Button7.Click
+        Button1.BackColor = Color.Turquoise
+        AboutMe_Button.BackColor = Color.Turquoise
+        Button_preview.BackColor = Color.Turquoise
+        Button2.BackColor = Color.Turquoise
+        Button3.BackColor = Color.Turquoise
+        Button4.BackColor = Color.Turquoise
+        Button5.BackColor = Color.Turquoise
+        Button6.BackColor = Color.Turquoise
+        Button7.BackColor = Color.Aqua
         Panel2.Controls.Clear()
         Dim OBJ As New Prof_Achievements
         OBJ.EmailPass = EmailPass
