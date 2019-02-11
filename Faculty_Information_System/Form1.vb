@@ -47,7 +47,7 @@ Public Class Form1
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim SecondForm As New Search_Form
         SecondForm.Show()
-        Me.Hide()
+        Me.Close()
     End Sub
 
     Private Sub AboutMe_Button_Click(sender As Object, e As EventArgs) Handles AboutMe_Button.Click
