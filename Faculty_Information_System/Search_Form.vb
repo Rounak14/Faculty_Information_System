@@ -158,7 +158,6 @@ Public Class Search_Form
 
 
     Private Sub Login_Button_Click(sender As Object, e As EventArgs) Handles Login_Button.Click
-        DataGridView1.Dispose()
         Dim Secondform As New Form2
         Secondform.Show()
         Me.Hide()

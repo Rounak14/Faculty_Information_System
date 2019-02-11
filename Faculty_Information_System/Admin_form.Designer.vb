@@ -108,7 +108,7 @@ Partial Class Admin_form
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Faculty_Information_System.My.Resources.Resources.slide3
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.ClientSize = New System.Drawing.Size(917, 410)
+        Me.ClientSize = New System.Drawing.Size(861, 410)
         Me.Controls.Add(Me.PictureBox2)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.Button1)

@@ -34,13 +34,13 @@ Public Class Prof_Publication
         End If
 
         Dim topicstring As String = TextBox1.Text
-        Dim publicationstring As Integer = TextBox2.Text
+        Dim publicationstring As String = TextBox2.Text
 
         Dim query2 As String = "INSERT INTO Publications ([Prof_id],[Topic],[Publication_Year],[Link]) VALUES (?,?,?,?)"
         Dim cmdPub As OleDbCommand = New OleDbCommand(query2, conn)
         cmdPub.Parameters.Add(New OleDbParameter("Prof_id", CType(id_number, Integer)))
         cmdPub.Parameters.Add(New OleDbParameter("Topic", CType(topicstring, String)))
-        cmdPub.Parameters.Add(New OleDbParameter("Publication_Year", CType(publicationstring, Integer)))
+        cmdPub.Parameters.Add(New OleDbParameter("Publication_Year", CType(publicationstring, String)))
         cmdPub.Parameters.Add(New OleDbParameter("Link", CType(link_string, String)))
 
         Try
@@ -52,13 +52,5 @@ Public Class Prof_Publication
         conn.Close()
         Me.Close()
 
-    End Sub
-
-    Private Sub TextBox2_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress
-        If Asc(e.KeyChar) > 57 Or (Asc(e.KeyChar) < 48 And Asc(e.KeyChar) > 8) Or Asc(e.KeyChar) < 8 Then
-            MessageBox.Show("Please enter integers only", "Warning")
-            TextBox1.Clear()
-            Exit Sub
-        End If
     End Sub
 End Class

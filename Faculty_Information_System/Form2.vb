@@ -9,41 +9,77 @@ Public Class Form2
     Private Sub btn_login_Click(sender As Object, e As EventArgs) Handles btn_login.Click
 
         Dim email_id As String = ""
-        Dim password As String
+        Dim password As String = ""
         Dim username As String = ""
-        Dim pass As String
        
         email_id = TextBox_email.Text
         password = TextBox_Pass.Text
-        Dim query As String = "Select Password From faculty_info where Email= '" & email_id & "';"
+        Dim query As String = "Select * From faculty_info where Email = '" & email_id & "';"
         'Dim dbsource As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\siddh\Documents\Database2.accdb"
         Dim conn = New OleDbConnection(connectionString)
+        conn.Open()
         Dim cmd As New OleDbCommand(query, conn)
-        Try
-            conn.Open()
-            pass = cmd.ExecuteScalar().ToString
-            If (password = pass) Then
-                If (email_id = "admin@iitg.ac.in") Then
-                    MessageBox.Show("Login Success")
-                    Admin_form.Show()
-                    Me.Hide()
-                Else
-                    MessageBox.Show("Login success")
-                    Dim OBJ As New Form1
-                    OBJ.EmailPass = email_id
-                    OBJ.Show()
-                    Me.Close()
-                End If
-            Else
-                MessageBox.Show("login Failed")
-            End If
-            conn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message, "Warning")
-        End Try
-    End Sub
+        Dim Reader As OleDbDataReader = cmd.ExecuteReader()
 
-    Private Sub Form2_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        Dim counter As Integer = 0
+        Dim password_store As String
+        Try
+            While (Reader.Read())
+                If email_id = Reader("Email") Then
+                    password_store = Reader("Password")
+                    counter = 1
+                    Exit While
+                End If
+            End While
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        
+
+        Try
+            If counter = 1 Then
+                If password = password_store Then
+                    If (email_id = "admin@iitg.ac.in") Then
+                        MessageBox.Show("Login Success")
+                        Admin_form.Show()
+                        Me.Hide()
+                    Else
+                        MessageBox.Show("Login success")
+                        Dim OBJ As New Form1
+                        OBJ.EmailPass = email_id
+                        OBJ.Show()
+                        Me.Close()
+                    End If
+                End If   
+            Else
+                MessageBox.Show("Login Failed", "Warning")
+            End If
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+        conn.Close()
+
+        'Try
+        '    pass = cmd.ExecuteScalar().ToString
+        '    If (password = pass) Then
+        '        If (email_id = "admin@iitg.ac.in") Then
+        '            MessageBox.Show("Login Success")
+        '            Admin_form.Show()
+        '            Me.Hide()
+        '        Else
+        '            MessageBox.Show("Login success")
+        '            Dim OBJ As New Form1
+        '            OBJ.EmailPass = email_id
+        '            OBJ.Show()
+        '            Me.Close()
+        '        End If
+        '    Else
+        '        MessageBox.Show("login Failed")
+        '    End If
+        '    conn.Close()
+        'Catch ex As Exception
+        '    MessageBox.Show(ex.Message, "Warning")
+        'End Try
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -52,9 +88,10 @@ Public Class Form2
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        MessageBox.Show("An email will be sent to your outlook ID containing the password, it is advisable that you reset your password after logging in immediatley")
+        Dim info As String = "An email will be sent to your outlook ID containing the password, it is advisable that you reset your password after logging in immediately." & Environment.NewLine & "Make sure proxy connection is disabled"
+        MessageBox.Show(info, "Information")
         If TextBox_email.Text = "" Then
-            MessageBox.Show("Enter your email first to reset the passowrd", "Warning")
+            MessageBox.Show("Enter your email first to reset the password", "Warning")
             Exit Sub
         End If
 
@@ -80,11 +117,11 @@ Public Class Form2
             Exit Sub
         End If
 
-        Dim s As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+        Dim s As String = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmopqrstuvwxyz"
         Dim r As New Random
         Dim sb As New System.Text.StringBuilder()
         For i As Integer = 1 To 8
-            Dim idx As Integer = r.Next(0, 35)
+            Dim idx As Integer = r.Next(0, 61)
             sb.Append(s.Substring(idx, 1))
         Next
         Dim password_string = sb.ToString()

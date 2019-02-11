@@ -70,3 +70,4 @@ C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Prof_Achievements.resources
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.Prof_Experience.resources
 C:\Users\Aryan Agrawal\Desktop\CS243Lab\Lab2\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.startup.resources
+C:\Users\Priyanshu Singh\Desktop\Faculty_Information_System\Faculty_Information_System\obj\Debug\Faculty_Information_System.startup.resources

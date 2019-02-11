@@ -173,7 +173,7 @@ Public Class Faculty_Page
                     count += 1
                     post = dr2("Post")
                     institute = dr2("Institute")
-                    textOflabel = count & ". " & post & "," & institute
+                    textOflabel = count & ". " & post & "," & institute & "," & dr2("From") & " - " & dr2("To")
                     Dim newlabel As Label = New Label()
                     newlabel.Name = post
                     newlabel.Font = New Font(newlabel.Font.FontFamily, 10)
