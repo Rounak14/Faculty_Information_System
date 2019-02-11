@@ -5,7 +5,6 @@ Imports System.Data
 
 Public Class Add_personal_prof
     Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
-
     Public Property EmailPass As String
 
     Private Sub Add_personal_prof_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -15,8 +14,11 @@ Public Class Add_personal_prof
         Dim cmd As New OleDbCommand(query, conn)
         Dim Reader As OleDbDataReader = cmd.ExecuteReader()
 
-        While (Reader.Read())
+        Dim id_number As Integer
+        TextBox1.Text = ""
 
+        While (Reader.Read())
+            id_number = Reader("ID")
             If IsDBNull(Reader("Designation")) Then
                 ComboBox_desig.Text = ""
             Else
@@ -47,7 +49,23 @@ Public Class Add_personal_prof
                 TextBox_homepage.Text = Reader("Personal_Homepage")
             End If
         End While
+
+        Dim query2 As String = "SELECT * FROM Research_Interest"
+        Dim cmdResearch As New OleDbCommand(query2, conn)
+        Dim dr As OleDbDataReader = cmdResearch.ExecuteReader()
+
+        Try
+            While (dr.Read())
+                If dr("Prof_id") = id_number Then
+                    TextBox1.AppendText(dr("Field"))
+                    TextBox1.AppendText(Environment.NewLine)
+                End If
+            End While
+        Catch ex As Exception
+            MessageBox.Show(ex.Message, "Warning")
+        End Try
         conn.Close()
+
     End Sub
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
@@ -82,6 +100,15 @@ Public Class Add_personal_prof
             id_number = Reader("ID")
         End While
 
+        Dim query2 As String = "delete from Research_Interest where Prof_id =@sno"
+        Dim cmdResearch As New OleDbCommand(query2, conn)
+        cmdResearch.Parameters.AddWithValue("@sno", id_number)
+        Try
+            cmdResearch.ExecuteNonQuery()
+        Catch ex As Exception
+            MessageBox.Show(ex.Message)
+        End Try
+
         Room = TextBox_room.Text
         Telephone = TextBox_tele.Text
         Responsibility = TextBox_Responsibility.Text
@@ -94,6 +121,21 @@ Public Class Add_personal_prof
         Catch ex As Exception
             MessageBox.Show(ex.Message) 'Error Message
         End Try
+
+        Dim query3 As String = "INSERT INTO Research_Interest ([Prof_id],[Field]) VALUES (?,?)"
+
+        Dim Ar() As String = Split(TextBox1.Text, Environment.NewLine)
+        For Each s As String In Ar
+            Dim cmdResearchAdd As OleDbCommand = New OleDbCommand(query3, conn)
+            cmdResearchAdd.Parameters.Add(New OleDbParameter("Prof_id", CType(id_number, Integer)))
+            cmdResearchAdd.Parameters.Add(New OleDbParameter("Field", CType(s, String)))
+            Try
+                cmdResearchAdd.ExecuteNonQuery() 'Executing Update Command
+                cmdResearchAdd.Dispose()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message) 'Error Message
+            End Try
+        Next
 
         conn.Close()
         If Not PictureBox1.Image Is Nothing Then
