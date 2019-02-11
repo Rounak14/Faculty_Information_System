@@ -34,11 +34,11 @@ Partial Class startup
         '
         Me.Label1.AutoSize = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
-        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 22.2!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(217, 130)
+        Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 19.8!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label1.Location = New System.Drawing.Point(206, 130)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(897, 44)
+        Me.Label1.Size = New System.Drawing.Size(812, 39)
         Me.Label1.TabIndex = 0
         Me.Label1.Text = "WELCOME TO FACULTY INFORMATION SYSTEM"
         '
@@ -81,7 +81,7 @@ Partial Class startup
         Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.BackgroundImage = Global.Faculty_Information_System.My.Resources.Resources.IIT_Guwahati_Logo_svg
         Me.PictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
-        Me.PictureBox1.Location = New System.Drawing.Point(59, 85)
+        Me.PictureBox1.Location = New System.Drawing.Point(38, 85)
         Me.PictureBox1.Name = "PictureBox1"
         Me.PictureBox1.Size = New System.Drawing.Size(151, 125)
         Me.PictureBox1.TabIndex = 4

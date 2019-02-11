@@ -74,7 +74,7 @@ Partial Class Form1
         Me.AboutMe_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.AboutMe_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.AboutMe_Button.Location = New System.Drawing.Point(4, 165)
-        Me.AboutMe_Button.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AboutMe_Button.Margin = New System.Windows.Forms.Padding(4)
         Me.AboutMe_Button.Name = "AboutMe_Button"
         Me.AboutMe_Button.Size = New System.Drawing.Size(269, 46)
         Me.AboutMe_Button.TabIndex = 17
@@ -221,7 +221,7 @@ Partial Class Form1
         Me.Panel1.Controls.Add(Me.Button_preview)
         Me.Panel1.Controls.Add(Me.Button5)
         Me.Panel1.Location = New System.Drawing.Point(-4, -2)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(273, 727)
         Me.Panel1.TabIndex = 26
@@ -230,7 +230,7 @@ Partial Class Form1
         '
         Me.Panel2.AutoScroll = True
         Me.Panel2.Location = New System.Drawing.Point(277, 133)
-        Me.Panel2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel2.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel2.Name = "Panel2"
         Me.Panel2.Size = New System.Drawing.Size(723, 592)
         Me.Panel2.TabIndex = 27
@@ -243,6 +243,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
         Me.BackColor = System.Drawing.SystemColors.Control
         Me.BackgroundImage = Global.Faculty_Information_System.My.Resources.Resources.admin_login_background_images_8
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center

@@ -214,10 +214,23 @@ Public Class Form1
         OBJ.Show()
     End Sub
 
-   
-    Private Sub PictureBox2_Click(sender As Object, e As EventArgs) Handles PictureBox2.Click
-
-    End Sub
-
     
+    Private Sub addNews_Button_Click(sender As Object, e As EventArgs) Handles addNews_Button.Click
+        Button1.BackColor = Color.Turquoise
+        AboutMe_Button.BackColor = Color.Turquoise
+        Button_preview.BackColor = Color.Turquoise
+        Button2.BackColor = Color.Turquoise
+        Button3.BackColor = Color.Turquoise
+        Button4.BackColor = Color.Turquoise
+        Button5.BackColor = Color.Turquoise
+        Button6.BackColor = Color.Aqua
+        Button7.BackColor = Color.Turquoise
+        Panel2.Controls.Clear()
+        Dim OBJ As New Prof_News
+        OBJ.EmailPass = EmailPass
+        OBJ.TopLevel = False
+        OBJ.Size = Panel2.Size
+        Panel2.Controls.Add(OBJ)
+        OBJ.Show()
+    End Sub
 End Class

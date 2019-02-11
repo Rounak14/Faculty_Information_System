@@ -50,6 +50,9 @@ Public Class Form2
                         OBJ.Show()
                         Me.Close()
                     End If
+                Else
+                    MessageBox.Show("Incorrect Password", "Warning")
+                    Exit Sub
                 End If
             Else
                 MessageBox.Show("Login Failed", "Warning")
