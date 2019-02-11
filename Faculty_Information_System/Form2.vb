@@ -28,7 +28,6 @@ Public Class Form2
                     Admin_form.Show()
                     Me.Hide()
                 Else
-                    MessageBox.Show("Login success")
                     Dim OBJ As New Form1
                     OBJ.EmailPass = email_id
                     OBJ.Show()
