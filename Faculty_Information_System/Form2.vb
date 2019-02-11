@@ -11,7 +11,7 @@ Public Class Form2
         Dim email_id As String = ""
         Dim password As String = ""
         Dim username As String = ""
-       
+
         email_id = TextBox_email.Text
         password = TextBox_Pass.Text
         Dim query As String = "Select * From faculty_info where Email = '" & email_id & "';"
@@ -24,32 +24,17 @@ Public Class Form2
         Dim counter As Integer = 0
         Dim password_store As String
         Try
-<<<<<<< HEAD
             While (Reader.Read())
                 If email_id = Reader("Email") Then
                     password_store = Reader("Password")
                     counter = 1
                     Exit While
-=======
-                    conn.Open()
-                    pass = cmd.ExecuteScalar().ToString
-                    If (password = pass) Then
-                        If (email_id = "admin@iitg.ac.in") Then
-                            MessageBox.Show("Login Success")
-                            Admin_form.Show()
-                            Me.Hide()
-                        Else
-                            Dim OBJ As New Form1
-                            OBJ.EmailPass = email_id
-                            OBJ.Show()
-                            Me.Close()
->>>>>>> b1feeb0236597927446aca9c830dd957f5c8253c
-                        End If
+                End If
             End While
         Catch ex As Exception
             MessageBox.Show(ex.Message)
         End Try
-        
+
 
         Try
             If counter = 1 Then
@@ -65,7 +50,7 @@ Public Class Form2
                         OBJ.Show()
                         Me.Close()
                     End If
-                End If   
+                End If
             Else
                 MessageBox.Show("Login Failed", "Warning")
             End If

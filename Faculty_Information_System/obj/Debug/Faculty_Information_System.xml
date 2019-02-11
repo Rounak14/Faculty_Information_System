@@ -15,6 +15,10 @@ Faculty_Information_System
   Overrides the current thread's CurrentUICulture property for all
   resource lookups using this strongly typed resource class.
 </summary>
+</member><member name="P:Faculty_Information_System.My.Resources.Resources._131_1319878">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
 </member><member name="P:Faculty_Information_System.My.Resources.Resources._131_1319878_employee_self_serve_portal_people_icon_png">
 	<summary>
   Looks up a localized resource of type System.Drawing.Bitmap.
