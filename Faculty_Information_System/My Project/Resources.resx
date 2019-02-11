@@ -118,34 +118,70 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="white-tecnologia-background-template" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>white-tecnologia-background-template.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="1859b6432e5af07" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>1859b6432e5af07.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="IIT_Guwahati_Logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>IIT_Guwahati_Logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="IIT-Guwahati" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>IIT-Guwahati.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="220px-User_icon_2.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>220px-User_icon_2.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="131-1319878_employee-self-serve-portal-people-icon-png" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>131-1319878_employee-self-serve-portal-people-icon-png.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="logbg" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>logbg.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cliqz-search-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>cliqz-search-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="login_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>login_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="login bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>login bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cAMrktol_400x400" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cAMrktol_400x400.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="top-line-management-login-background-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>top-line-management-login-background-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="cliqz-search-background" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>cliqz-search-background.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="77597064f5b9eb0" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>77597064f5b9eb0.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="47949" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>47949.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="white-tecnologia-background-template" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>white-tecnologia-background-template.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="images (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>images (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="220px-User_icon_2.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>220px-User_icon_2.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="delete_users_group-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>delete_users_group-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="IIT_Guwahati_Logo.svg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>IIT_Guwahati_Logo.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="download" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>download.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="admin-login-background-images-8" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>admin-login-background-images-8.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="add_users_group-512" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>add_users_group-512.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="220px-User_icon_21" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>220px-User_icon_2.svg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="core-2-iitg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>core-2-iitg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="login bg" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>login bg.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="slide3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>slide3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
