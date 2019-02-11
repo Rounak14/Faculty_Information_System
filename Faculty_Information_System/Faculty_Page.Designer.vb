@@ -40,6 +40,7 @@ Partial Class Faculty_Page
         Me.ContactDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
+        Me.PlannerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ParentPanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -63,7 +64,7 @@ Partial Class Faculty_Page
         Me.HomePanel.AutoScroll = True
         Me.HomePanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.HomePanel.Location = New System.Drawing.Point(0, 0)
-        Me.HomePanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.HomePanel.Margin = New System.Windows.Forms.Padding(4)
         Me.HomePanel.Name = "HomePanel"
         Me.HomePanel.Size = New System.Drawing.Size(748, 518)
         Me.HomePanel.TabIndex = 16
@@ -79,7 +80,7 @@ Partial Class Faculty_Page
         Me.ParentPanel.Controls.Add(Me.AchievementPanel)
         Me.ParentPanel.Controls.Add(Me.HomePanel)
         Me.ParentPanel.Location = New System.Drawing.Point(192, 144)
-        Me.ParentPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ParentPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ParentPanel.Name = "ParentPanel"
         Me.ParentPanel.Size = New System.Drawing.Size(750, 520)
         Me.ParentPanel.TabIndex = 19
@@ -88,7 +89,7 @@ Partial Class Faculty_Page
         '
         Me.ContactPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.ContactPanel.Location = New System.Drawing.Point(0, 0)
-        Me.ContactPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ContactPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.ContactPanel.Name = "ContactPanel"
         Me.ContactPanel.Size = New System.Drawing.Size(748, 518)
         Me.ContactPanel.TabIndex = 22
@@ -98,7 +99,7 @@ Partial Class Faculty_Page
         '
         Me.NewsPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.NewsPanel.Location = New System.Drawing.Point(0, 0)
-        Me.NewsPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.NewsPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.NewsPanel.Name = "NewsPanel"
         Me.NewsPanel.Size = New System.Drawing.Size(748, 518)
         Me.NewsPanel.TabIndex = 21
@@ -109,7 +110,7 @@ Partial Class Faculty_Page
         Me.TeachingPanel.AutoScroll = True
         Me.TeachingPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.TeachingPanel.Location = New System.Drawing.Point(0, 0)
-        Me.TeachingPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.TeachingPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.TeachingPanel.Name = "TeachingPanel"
         Me.TeachingPanel.Size = New System.Drawing.Size(748, 518)
         Me.TeachingPanel.TabIndex = 20
@@ -120,7 +121,7 @@ Partial Class Faculty_Page
         Me.PublicationsPanel.AutoScroll = True
         Me.PublicationsPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.PublicationsPanel.Location = New System.Drawing.Point(0, 0)
-        Me.PublicationsPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.PublicationsPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.PublicationsPanel.Name = "PublicationsPanel"
         Me.PublicationsPanel.Size = New System.Drawing.Size(748, 518)
         Me.PublicationsPanel.TabIndex = 19
@@ -131,7 +132,7 @@ Partial Class Faculty_Page
         Me.AchievementPanel.AutoScroll = True
         Me.AchievementPanel.Dock = System.Windows.Forms.DockStyle.Fill
         Me.AchievementPanel.Location = New System.Drawing.Point(0, 0)
-        Me.AchievementPanel.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.AchievementPanel.Margin = New System.Windows.Forms.Padding(4)
         Me.AchievementPanel.Name = "AchievementPanel"
         Me.AchievementPanel.Size = New System.Drawing.Size(748, 518)
         Me.AchievementPanel.TabIndex = 18
@@ -141,7 +142,7 @@ Partial Class Faculty_Page
         '
         Me.Panel1.Controls.Add(Me.MenuStrip1)
         Me.Panel1.Location = New System.Drawing.Point(4, 144)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(180, 519)
         Me.Panel1.TabIndex = 20
@@ -152,7 +153,7 @@ Partial Class Faculty_Page
         Me.MenuStrip1.BackColor = System.Drawing.SystemColors.ActiveCaption
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.Left
         Me.MenuStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.PublicationsToolStripMenuItem, Me.AchievementToolStripMenuItem, Me.TeachingToolStripMenuItem, Me.NewsToolStripMenuItem, Me.ContactDetailsToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HomeToolStripMenuItem, Me.PublicationsToolStripMenuItem, Me.AchievementToolStripMenuItem, Me.TeachingToolStripMenuItem, Me.NewsToolStripMenuItem, Me.ContactDetailsToolStripMenuItem, Me.PlannerToolStripMenuItem})
         Me.MenuStrip1.LayoutStyle = System.Windows.Forms.ToolStripLayoutStyle.VerticalStackWithOverflow
         Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
@@ -173,7 +174,7 @@ Partial Class Faculty_Page
         '
         Me.PublicationsToolStripMenuItem.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.PublicationsToolStripMenuItem.Name = "PublicationsToolStripMenuItem"
-        Me.PublicationsToolStripMenuItem.Size = New System.Drawing.Size(126, 24)
+        Me.PublicationsToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.PublicationsToolStripMenuItem.Text = "Publications"
         Me.PublicationsToolStripMenuItem.ToolTipText = "Publications"
         '
@@ -181,7 +182,7 @@ Partial Class Faculty_Page
         '
         Me.AchievementToolStripMenuItem.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.AchievementToolStripMenuItem.Name = "AchievementToolStripMenuItem"
-        Me.AchievementToolStripMenuItem.Size = New System.Drawing.Size(126, 24)
+        Me.AchievementToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.AchievementToolStripMenuItem.Text = "Achievements"
         Me.AchievementToolStripMenuItem.ToolTipText = "Achievements"
         '
@@ -189,7 +190,7 @@ Partial Class Faculty_Page
         '
         Me.TeachingToolStripMenuItem.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.TeachingToolStripMenuItem.Name = "TeachingToolStripMenuItem"
-        Me.TeachingToolStripMenuItem.Size = New System.Drawing.Size(126, 24)
+        Me.TeachingToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.TeachingToolStripMenuItem.Text = "Teaching"
         Me.TeachingToolStripMenuItem.ToolTipText = "Teaching"
         '
@@ -197,7 +198,7 @@ Partial Class Faculty_Page
         '
         Me.NewsToolStripMenuItem.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.NewsToolStripMenuItem.Name = "NewsToolStripMenuItem"
-        Me.NewsToolStripMenuItem.Size = New System.Drawing.Size(126, 24)
+        Me.NewsToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.NewsToolStripMenuItem.Text = "News"
         Me.NewsToolStripMenuItem.ToolTipText = "News"
         '
@@ -205,7 +206,7 @@ Partial Class Faculty_Page
         '
         Me.ContactDetailsToolStripMenuItem.BackColor = System.Drawing.SystemColors.InactiveCaption
         Me.ContactDetailsToolStripMenuItem.Name = "ContactDetailsToolStripMenuItem"
-        Me.ContactDetailsToolStripMenuItem.Size = New System.Drawing.Size(126, 24)
+        Me.ContactDetailsToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
         Me.ContactDetailsToolStripMenuItem.Text = "Contact Details"
         Me.ContactDetailsToolStripMenuItem.ToolTipText = "Contact Details"
         '
@@ -236,6 +237,12 @@ Partial Class Faculty_Page
         Me.PictureBox2.TabIndex = 12
         Me.PictureBox2.TabStop = False
         '
+        'PlannerToolStripMenuItem
+        '
+        Me.PlannerToolStripMenuItem.Name = "PlannerToolStripMenuItem"
+        Me.PlannerToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
+        Me.PlannerToolStripMenuItem.Text = "Planner"
+        '
         'Faculty_Page
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -246,7 +253,7 @@ Partial Class Faculty_Page
         Me.Controls.Add(Me.Label_Details)
         Me.Controls.Add(Me.PictureBox3)
         Me.Controls.Add(Me.PictureBox2)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Faculty_Page"
         Me.Text = "Faculty_Page"
         Me.ParentPanel.ResumeLayout(False)
@@ -276,4 +283,5 @@ Partial Class Faculty_Page
     Friend WithEvents ContactDetailsToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ContactPanel As System.Windows.Forms.Panel
     Friend WithEvents NewsPanel As System.Windows.Forms.Panel
+    Friend WithEvents PlannerToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

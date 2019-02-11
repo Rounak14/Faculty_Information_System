@@ -94,6 +94,12 @@
     <Compile Include="Admin_form.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Calender.Designer.vb">
+      <DependentUpon>Calender.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Calender.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="DelProf.Designer.vb">
       <DependentUpon>DelProf.vb</DependentUpon>
     </Compile>
@@ -101,8 +107,8 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Faculty_databaseDataSet1.Designer.vb">
-      <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
       <DependentUpon>Faculty_databaseDataSet1.xsd</DependentUpon>
     </Compile>
     <Compile Include="Faculty_Page.Designer.vb">
@@ -204,6 +210,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin_form.resx">
       <DependentUpon>Admin_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Calender.resx">
+      <DependentUpon>Calender.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="DelProf.resx">
       <DependentUpon>DelProf.vb</DependentUpon>

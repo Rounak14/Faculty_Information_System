@@ -611,7 +611,9 @@ Public Class Faculty_Page
     End Sub
 
     Private Sub NewsPanel_Paint(sender As Object, e As PaintEventArgs) Handles NewsPanel.Paint
-
+        Dim OBJ As New Calender
+        OBJ.EmailPass = EmailPass
+        OBJ.Show()
     End Sub
 
    
@@ -672,5 +674,11 @@ Public Class Faculty_Page
         Else
             y_prev = y
         End If
+    End Sub
+
+    Private Sub PlannerToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles PlannerToolStripMenuItem.Click
+        Dim obj As New Calender
+        obj.EmailPass = EmailPass
+        obj.Show()
     End Sub
 End Class
