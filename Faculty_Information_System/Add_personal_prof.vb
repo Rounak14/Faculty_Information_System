@@ -53,7 +53,7 @@ Public Class Add_personal_prof
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Dim dialog As New OpenFileDialog()
         dialog.Title = "Browse Picture"
-        dialog.Filter = "Image Files(*.BMP;*.JPG;*.GIF;*.PNG)|*.BMP;*.JPG;*.GIF;*.PNG"
+        dialog.Filter = "Image Files(*.BMP;*.JPEG,*.JPG;*.GIF;*.PNG)|*.BMP;*.JPEG;*.JPG;*.GIF;*.PNG"
         If dialog.ShowDialog() = Windows.Forms.DialogResult.OK Then
             PictureBox1.Image = Image.FromFile(dialog.FileName)
         End If
