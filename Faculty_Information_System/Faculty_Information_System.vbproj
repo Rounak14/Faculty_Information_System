@@ -182,6 +182,12 @@
     <Compile Include="Prof_News.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Prof_Planner.Designer.vb">
+      <DependentUpon>Prof_Planner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Prof_Planner.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Prof_Publication.Designer.vb">
       <DependentUpon>Prof_Publication.vb</DependentUpon>
     </Compile>
@@ -250,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Prof_News.resx">
       <DependentUpon>Prof_News.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Prof_Planner.resx">
+      <DependentUpon>Prof_Planner.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Prof_Publication.resx">
       <DependentUpon>Prof_Publication.vb</DependentUpon>

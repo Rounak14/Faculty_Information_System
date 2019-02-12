@@ -37,6 +37,7 @@ Partial Class Form1
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.Panel2 = New System.Windows.Forms.Panel()
         Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.Button8 = New System.Windows.Forms.Button()
         CType(Me.PictureBox2, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
@@ -59,10 +60,10 @@ Partial Class Form1
         Me.Button1.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button1.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button1.Location = New System.Drawing.Point(3, 678)
+        Me.Button1.Location = New System.Drawing.Point(3, 666)
         Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(271, 34)
+        Me.Button1.Size = New System.Drawing.Size(271, 57)
         Me.Button1.TabIndex = 16
         Me.Button1.Text = "Logout"
         Me.Button1.UseVisualStyleBackColor = False
@@ -87,10 +88,10 @@ Partial Class Form1
         Me.addNews_Button.Cursor = System.Windows.Forms.Cursors.Hand
         Me.addNews_Button.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.addNews_Button.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.addNews_Button.Location = New System.Drawing.Point(0, 462)
+        Me.addNews_Button.Location = New System.Drawing.Point(4, 465)
         Me.addNews_Button.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.addNews_Button.Name = "addNews_Button"
-        Me.addNews_Button.Size = New System.Drawing.Size(273, 39)
+        Me.addNews_Button.Size = New System.Drawing.Size(273, 49)
         Me.addNews_Button.TabIndex = 18
         Me.addNews_Button.Text = "Add News"
         Me.addNews_Button.UseVisualStyleBackColor = False
@@ -101,7 +102,7 @@ Partial Class Form1
         Me.Button_preview.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button_preview.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button_preview.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button_preview.Location = New System.Drawing.Point(3, 229)
+        Me.Button_preview.Location = New System.Drawing.Point(4, 217)
         Me.Button_preview.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button_preview.Name = "Button_preview"
         Me.Button_preview.Size = New System.Drawing.Size(270, 42)
@@ -117,7 +118,7 @@ Partial Class Form1
         Me.PictureBox2.Location = New System.Drawing.Point(49, 16)
         Me.PictureBox2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.PictureBox2.Name = "PictureBox2"
-        Me.PictureBox2.Size = New System.Drawing.Size(164, 143)
+        Me.PictureBox2.Size = New System.Drawing.Size(154, 123)
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 13
         Me.PictureBox2.TabStop = False
@@ -128,10 +129,10 @@ Partial Class Form1
         Me.Button2.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button2.Location = New System.Drawing.Point(3, 626)
+        Me.Button2.Location = New System.Drawing.Point(3, 619)
         Me.Button2.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(270, 37)
+        Me.Button2.Size = New System.Drawing.Size(270, 43)
         Me.Button2.TabIndex = 20
         Me.Button2.Text = "Reset Password"
         Me.Button2.UseVisualStyleBackColor = False
@@ -142,10 +143,10 @@ Partial Class Form1
         Me.Button3.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button3.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(3, 406)
+        Me.Button3.Location = New System.Drawing.Point(4, 414)
         Me.Button3.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(270, 42)
+        Me.Button3.Size = New System.Drawing.Size(270, 47)
         Me.Button3.TabIndex = 21
         Me.Button3.Text = "Add Education"
         Me.Button3.UseVisualStyleBackColor = False
@@ -156,10 +157,10 @@ Partial Class Form1
         Me.Button4.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(0, 519)
+        Me.Button4.Location = New System.Drawing.Point(0, 518)
         Me.Button4.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(274, 39)
+        Me.Button4.Size = New System.Drawing.Size(274, 48)
         Me.Button4.TabIndex = 22
         Me.Button4.Text = "Add Courses"
         Me.Button4.UseVisualStyleBackColor = False
@@ -170,7 +171,7 @@ Partial Class Form1
         Me.Button5.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button5.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(0, 286)
+        Me.Button5.Location = New System.Drawing.Point(0, 263)
         Me.Button5.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button5.Name = "Button5"
         Me.Button5.Size = New System.Drawing.Size(274, 47)
@@ -184,10 +185,10 @@ Partial Class Form1
         Me.Button6.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button6.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button6.Location = New System.Drawing.Point(3, 574)
+        Me.Button6.Location = New System.Drawing.Point(4, 570)
         Me.Button6.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button6.Name = "Button6"
-        Me.Button6.Size = New System.Drawing.Size(270, 38)
+        Me.Button6.Size = New System.Drawing.Size(270, 45)
         Me.Button6.TabIndex = 24
         Me.Button6.Text = "Add Experience"
         Me.Button6.UseVisualStyleBackColor = False
@@ -198,7 +199,7 @@ Partial Class Form1
         Me.Button7.Cursor = System.Windows.Forms.Cursors.Hand
         Me.Button7.FlatStyle = System.Windows.Forms.FlatStyle.Popup
         Me.Button7.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button7.Location = New System.Drawing.Point(0, 345)
+        Me.Button7.Location = New System.Drawing.Point(1, 314)
         Me.Button7.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Button7.Name = "Button7"
         Me.Button7.Size = New System.Drawing.Size(273, 46)
@@ -209,6 +210,7 @@ Partial Class Form1
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.MediumAquamarine
+        Me.Panel1.Controls.Add(Me.Button8)
         Me.Panel1.Controls.Add(Me.PictureBox2)
         Me.Panel1.Controls.Add(Me.Button1)
         Me.Panel1.Controls.Add(Me.Button2)
@@ -238,6 +240,20 @@ Partial Class Form1
         'PrintDialog1
         '
         Me.PrintDialog1.UseEXDialog = True
+        '
+        'Button8
+        '
+        Me.Button8.BackColor = System.Drawing.Color.Turquoise
+        Me.Button8.Cursor = System.Windows.Forms.Cursors.Hand
+        Me.Button8.FlatStyle = System.Windows.Forms.FlatStyle.Popup
+        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button8.Location = New System.Drawing.Point(1, 364)
+        Me.Button8.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button8.Name = "Button8"
+        Me.Button8.Size = New System.Drawing.Size(273, 46)
+        Me.Button8.TabIndex = 27
+        Me.Button8.Text = "Planner"
+        Me.Button8.UseVisualStyleBackColor = False
         '
         'Form1
         '
@@ -275,4 +291,5 @@ Partial Class Form1
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
     Friend WithEvents Panel2 As System.Windows.Forms.Panel
     Friend WithEvents PrintDialog1 As System.Windows.Forms.PrintDialog
+    Friend WithEvents Button8 As System.Windows.Forms.Button
 End Class

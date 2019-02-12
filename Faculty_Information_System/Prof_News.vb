@@ -29,10 +29,7 @@ Public Class Prof_News
         Reader.Close()
 
         Dim news_add As String = Trim(TextBox1.Text)
-        Dim news_url As String = ""
-        If Not TextBox6.Text = "" Then
-            news_url = TextBox6.Text
-        End If
+        
         Dim checker As Boolean
 
         If RadioButton1.Checked = False And RadioButton2.Checked = False Then

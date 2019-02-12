@@ -314,6 +314,7 @@ Public Class Calender
 
             While (Reader.Read())
                 id = Reader("ID")
+                Label2.Text = Reader("Name")
             End While
             conn.Close()
         Catch ex As Exception

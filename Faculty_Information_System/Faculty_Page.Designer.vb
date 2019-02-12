@@ -38,9 +38,9 @@ Partial Class Faculty_Page
         Me.TeachingToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.NewsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContactDetailsToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PlannerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.PictureBox3 = New System.Windows.Forms.PictureBox()
         Me.PictureBox2 = New System.Windows.Forms.PictureBox()
-        Me.PlannerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ParentPanel.SuspendLayout()
         Me.Panel1.SuspendLayout()
         Me.MenuStrip1.SuspendLayout()
@@ -210,6 +210,13 @@ Partial Class Faculty_Page
         Me.ContactDetailsToolStripMenuItem.Text = "Contact Details"
         Me.ContactDetailsToolStripMenuItem.ToolTipText = "Contact Details"
         '
+        'PlannerToolStripMenuItem
+        '
+        Me.PlannerToolStripMenuItem.BackColor = System.Drawing.SystemColors.InactiveCaption
+        Me.PlannerToolStripMenuItem.Name = "PlannerToolStripMenuItem"
+        Me.PlannerToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
+        Me.PlannerToolStripMenuItem.Text = "Planner"
+        '
         'PictureBox3
         '
         Me.PictureBox3.BackColor = System.Drawing.Color.Transparent
@@ -236,12 +243,6 @@ Partial Class Faculty_Page
         Me.PictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
         Me.PictureBox2.TabIndex = 12
         Me.PictureBox2.TabStop = False
-        '
-        'PlannerToolStripMenuItem
-        '
-        Me.PlannerToolStripMenuItem.Name = "PlannerToolStripMenuItem"
-        Me.PlannerToolStripMenuItem.Size = New System.Drawing.Size(171, 24)
-        Me.PlannerToolStripMenuItem.Text = "Planner"
         '
         'Faculty_Page
         '

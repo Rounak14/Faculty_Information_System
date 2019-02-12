@@ -70,6 +70,7 @@ Public Class Faculty_Page
         PublicationsPanel.Visible = False
         NewsPanel.Visible = False
         ContactPanel.Visible = False
+
     End Sub
 
     Private Sub NewsToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles NewsToolStripMenuItem.Click
@@ -90,7 +91,7 @@ Public Class Faculty_Page
         ContactPanel.Visible = True
     End Sub
 
-   
+
 
     Private Sub HomePanel_Paint(sender As Object, e As PaintEventArgs) Handles HomePanel.Paint
 
@@ -501,8 +502,8 @@ Public Class Faculty_Page
             y_prev = y
         End If
     End Sub
-    
-    
+
+
     Private Sub ContactPanel_Paint(sender As Object, e As PaintEventArgs) Handles ContactPanel.Paint
         Dim name, dept, email, designation, room As String
         Dim phone As Int32
@@ -611,9 +612,108 @@ Public Class Faculty_Page
     End Sub
 
     Private Sub NewsPanel_Paint(sender As Object, e As PaintEventArgs) Handles NewsPanel.Paint
-        Dim OBJ As New Calender
-        OBJ.EmailPass = EmailPass
-        OBJ.Show()
+
+
+        Dim x As Int32 = 0
+        Dim y As Int32 = 0
+        Dim y_prev As Int32 = 0
+
+        Dim label_cn As Label = New Label()
+        label_cn.Text = "NEWS"
+        label_cn.AutoSize = False
+        label_cn.Font = New Font(label_cn.Font.FontFamily, 14, FontStyle.Bold)
+        label_cn.Size = New System.Drawing.Size(150, 30)
+        label_cn.TextAlign = ContentAlignment.MiddleLeft
+        label_cn.Location = New Point(x, y)
+        NewsPanel.Controls.Add(label_cn)
+        label_cn.Visible = True
+
+        y += 30
+
+        '-------------------------------------For Important News--------------------------------------------------------
+
+
+        Dim news, textOflabel As String
+        Dim sem, taught_year As Int32
+        Dim count As Int32 = 0
+        Dim query As String = "SELECT * FROM News"
+        Dim con = New OleDbConnection(connectionString)
+        con.Open()
+        Dim cmd As New OleDbCommand(query, con)
+        Dim dr As OleDbDataReader = cmd.ExecuteReader()
+        Try
+            While (dr.Read())
+                If dr("Prof_id") = id_number And dr("Important") = True Then
+                    count += 1
+                    news = dr("News")
+
+                    textOflabel = count & ". " & news
+
+
+                    Dim newlabel As Label = New Label()
+                    newlabel.Name = "imp_news" & count
+                    newlabel.Font = New Font(newlabel.Font.FontFamily, 10, FontStyle.Italic)
+                    newlabel.Size = New System.Drawing.Size(HomePanel.Width, 25)
+                    newlabel.ForeColor = Color.Red
+                    newlabel.TextAlign = ContentAlignment.MiddleLeft
+                    newlabel.Location = New Point(x, y)
+                    NewsPanel.Controls.Add(newlabel)
+                    newlabel.Text = textOflabel
+                    y += 25
+
+                End If
+            End While
+
+        Catch ex As Exception
+            'MessageBox.Show(ex.Message, "Warning")
+        End Try
+        con.Close()
+        If count = 0 Then
+            label_cn.Visible = False
+            y = y_prev
+        Else
+            y_prev = y
+        End If
+
+
+        '-------------------------------------For Not important news --------------------------------------------------------
+        query = "SELECT * FROM News"
+        Dim conn2 = New OleDbConnection(connectionString)
+        conn2.Open()
+        Dim cmd2 As New OleDbCommand(query, conn2)
+        dr = cmd2.ExecuteReader()
+        Try
+            While (dr.Read())
+                If dr("Prof_id") = id_number And dr("Important") = False Then
+                    count += 1
+                    news = dr("News")
+
+                    textOflabel = count & ". " & news
+
+
+                    Dim newlabel As Label = New Label()
+                    newlabel.Name = "imp_news" & count
+                    newlabel.Font = New Font(newlabel.Font.FontFamily, 10, FontStyle.Regular)
+                    newlabel.Size = New System.Drawing.Size(HomePanel.Width, 25)
+                    newlabel.TextAlign = ContentAlignment.MiddleLeft
+                    newlabel.Location = New Point(x, y)
+                    NewsPanel.Controls.Add(newlabel)
+                    newlabel.Text = textOflabel
+                    y += 25
+
+                End If
+            End While
+
+        Catch ex As Exception
+            'MessageBox.Show(ex.Message, "Warning")
+        End Try
+        conn2.Close()
+        If count = 0 Then
+            label_cn.Visible = False
+            y = y_prev
+        Else
+            y_prev = y
+        End If
     End Sub
 
    

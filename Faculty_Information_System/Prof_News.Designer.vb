@@ -35,9 +35,6 @@ Partial Class Prof_News
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.Button3 = New System.Windows.Forms.Button()
-        Me.TextBox6 = New System.Windows.Forms.TextBox()
-        Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label7 = New System.Windows.Forms.Label()
         Me.RadioButton1 = New System.Windows.Forms.RadioButton()
         Me.RadioButton2 = New System.Windows.Forms.RadioButton()
         Me.RadioButton3 = New System.Windows.Forms.RadioButton()
@@ -47,7 +44,7 @@ Partial Class Prof_News
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(24, 35)
+        Me.Label1.Location = New System.Drawing.Point(26, 46)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(71, 17)
         Me.Label1.TabIndex = 0
@@ -55,7 +52,7 @@ Partial Class Prof_News
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(380, 23)
+        Me.Button1.Location = New System.Drawing.Point(380, 34)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(108, 40)
         Me.Button1.TabIndex = 1
@@ -64,7 +61,7 @@ Partial Class Prof_News
         '
         'TextBox1
         '
-        Me.TextBox1.Location = New System.Drawing.Point(121, 16)
+        Me.TextBox1.Location = New System.Drawing.Point(121, 32)
         Me.TextBox1.Multiline = True
         Me.TextBox1.Name = "TextBox1"
         Me.TextBox1.ScrollBars = System.Windows.Forms.ScrollBars.Both
@@ -160,33 +157,6 @@ Partial Class Prof_News
         Me.Button3.Text = "Delete News"
         Me.Button3.UseVisualStyleBackColor = True
         '
-        'TextBox6
-        '
-        Me.TextBox6.Location = New System.Drawing.Point(121, 98)
-        Me.TextBox6.Multiline = True
-        Me.TextBox6.Name = "TextBox6"
-        Me.TextBox6.ScrollBars = System.Windows.Forms.ScrollBars.Both
-        Me.TextBox6.Size = New System.Drawing.Size(197, 22)
-        Me.TextBox6.TabIndex = 14
-        '
-        'Label5
-        '
-        Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(24, 101)
-        Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(74, 17)
-        Me.Label5.TabIndex = 15
-        Me.Label5.Text = "News URL"
-        '
-        'Label7
-        '
-        Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(339, 98)
-        Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(107, 17)
-        Me.Label7.TabIndex = 16
-        Me.Label7.Text = "* this is optional"
-        '
         'RadioButton1
         '
         Me.RadioButton1.AutoSize = True
@@ -241,9 +211,6 @@ Partial Class Prof_News
         Me.Controls.Add(Me.RadioButton3)
         Me.Controls.Add(Me.RadioButton2)
         Me.Controls.Add(Me.RadioButton1)
-        Me.Controls.Add(Me.Label7)
-        Me.Controls.Add(Me.Label5)
-        Me.Controls.Add(Me.TextBox6)
         Me.Controls.Add(Me.Button3)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Label6)
@@ -277,9 +244,6 @@ Partial Class Prof_News
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents TextBox6 As System.Windows.Forms.TextBox
-    Friend WithEvents Label5 As System.Windows.Forms.Label
-    Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents RadioButton1 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton2 As System.Windows.Forms.RadioButton
     Friend WithEvents RadioButton3 As System.Windows.Forms.RadioButton

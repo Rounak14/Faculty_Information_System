@@ -233,4 +233,28 @@ Public Class Form1
         Panel2.Controls.Add(OBJ)
         OBJ.Show()
     End Sub
+
+
+    Private Sub Button8_Click_1(sender As Object, e As EventArgs) Handles Button8.Click
+        Button1.BackColor = Color.Turquoise
+        AboutMe_Button.BackColor = Color.Turquoise
+        Button_preview.BackColor = Color.Turquoise
+        Button2.BackColor = Color.Turquoise
+        Button3.BackColor = Color.Turquoise
+        Button4.BackColor = Color.Turquoise
+        Button5.BackColor = Color.Turquoise
+        Button6.BackColor = Color.Aqua
+        Button7.BackColor = Color.Turquoise
+        Panel2.Controls.Clear()
+        Dim OBJ As New Prof_Planner
+        OBJ.EmailPass = EmailPass
+        OBJ.TopLevel = False
+        OBJ.Size = Panel2.Size
+        Panel2.Controls.Add(OBJ)
+        OBJ.Show()
+    End Sub
+
+    Private Sub Button8_Click(sender As Object, e As EventArgs)
+
+    End Sub
 End Class
