@@ -163,4 +163,12 @@ Public Class Form2
         conn.Close()
 
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            TextBox_Pass.PasswordChar = ""
+        Else
+            TextBox_Pass.PasswordChar = "*"
+        End If
+    End Sub
 End Class

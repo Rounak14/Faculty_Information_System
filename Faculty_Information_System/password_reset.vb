@@ -61,4 +61,16 @@ Public Class password_reset
     Private Sub password_reset_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
     End Sub
+
+    Private Sub CheckBox1_CheckedChanged(sender As Object, e As EventArgs) Handles CheckBox1.CheckedChanged
+        If CheckBox1.Checked = True Then
+            TextBox1.PasswordChar = ""
+            TextBox2.PasswordChar = ""
+            TextBox3.PasswordChar = ""
+        Else
+            TextBox1.PasswordChar = "*"
+            TextBox2.PasswordChar = "*"
+            TextBox3.PasswordChar = "*"
+        End If
+    End Sub
 End Class
