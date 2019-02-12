@@ -55,7 +55,7 @@ Public Class AddProf
             Smtp_server.Send(e_mail)
             MessageBox.Show("Mail Sent, Thank You!")
         Catch ex As Exception
-            Dim sop As String = ex.Message & Environment.NewLine + "Try removing proxy next time!!"
+            Dim sop As String = ex.Message & Environment.NewLine + "Try removing proxy next time!!" + Environment.NewLine + "Prof not added"
             MessageBox.Show(sop)
             MessageBox.Show("")
             checker = 1

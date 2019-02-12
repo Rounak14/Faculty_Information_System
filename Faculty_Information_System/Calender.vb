@@ -328,4 +328,5 @@ Public Class Calender
         DataGridView1.Rows.Clear()
         display(DateTimePicker1.Value)
     End Sub
+
 End Class

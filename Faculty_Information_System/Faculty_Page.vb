@@ -331,7 +331,7 @@ Public Class Faculty_Page
         Try
             System.Diagnostics.Process.Start(CStr(e.Link.LinkData))
         Catch ex As Exception
-            MessageBox.Show("Server Down")
+            MessageBox.Show("Server Down Or the link does not exist")
         End Try
 
     End Sub

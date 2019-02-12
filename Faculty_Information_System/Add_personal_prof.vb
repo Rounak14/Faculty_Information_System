@@ -151,7 +151,6 @@ Public Class Add_personal_prof
                 End Try
             Next
         End If
-        
 
         conn.Close()
         For Each Form In My.Application.OpenForms

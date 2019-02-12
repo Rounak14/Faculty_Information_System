@@ -41,7 +41,7 @@ Partial Class Calender
         'DateTimePicker1
         '
         Me.DateTimePicker1.Location = New System.Drawing.Point(47, 106)
-        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateTimePicker1.Margin = New System.Windows.Forms.Padding(4)
         Me.DateTimePicker1.Name = "DateTimePicker1"
         Me.DateTimePicker1.Size = New System.Drawing.Size(274, 22)
         Me.DateTimePicker1.TabIndex = 0
@@ -52,7 +52,7 @@ Partial Class Calender
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.DataGridView1.Columns.AddRange(New System.Windows.Forms.DataGridViewColumn() {Me.Column8, Me.Column1, Me.Column2, Me.Column3, Me.Column4, Me.Column5, Me.Column6, Me.Column7})
         Me.DataGridView1.Location = New System.Drawing.Point(9, 181)
-        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DataGridView1.Margin = New System.Windows.Forms.Padding(4)
         Me.DataGridView1.Name = "DataGridView1"
         Me.DataGridView1.Size = New System.Drawing.Size(1087, 379)
         Me.DataGridView1.TabIndex = 1
@@ -100,7 +100,7 @@ Partial Class Calender
         'Button1
         '
         Me.Button1.Location = New System.Drawing.Point(390, 100)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 2
@@ -112,9 +112,10 @@ Partial Class Calender
         Me.Label1.Font = New System.Drawing.Font("Lucida Handwriting", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(42, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(448, 23)
+        Me.Label1.Size = New System.Drawing.Size(514, 43)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Select Date to View Planner of Next 7 days"
+        Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label2
         '
@@ -134,7 +135,7 @@ Partial Class Calender
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.DataGridView1)
         Me.Controls.Add(Me.DateTimePicker1)
-        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Margin = New System.Windows.Forms.Padding(4)
         Me.Name = "Calender"
         Me.Text = "Calender"
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()

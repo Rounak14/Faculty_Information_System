@@ -31,8 +31,6 @@ Partial Class Add_personal_prof
         Me.TextBox_Responsibility = New System.Windows.Forms.TextBox()
         Me.ComboBox_desig = New System.Windows.Forms.ComboBox()
         Me.btn_login = New System.Windows.Forms.Button()
-        Me.Label4 = New System.Windows.Forms.Label()
-        Me.TextBox_homepage = New System.Windows.Forms.TextBox()
         Me.Label6 = New System.Windows.Forms.Label()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.Button2 = New System.Windows.Forms.Button()
@@ -40,6 +38,8 @@ Partial Class Add_personal_prof
         Me.TextBox1 = New System.Windows.Forms.TextBox()
         Me.Label8 = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.TextBox_homepage = New System.Windows.Forms.TextBox()
+        Me.Label4 = New System.Windows.Forms.Label()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -146,28 +146,6 @@ Partial Class Add_personal_prof
         Me.btn_login.Text = "UPDATE"
         Me.btn_login.UseVisualStyleBackColor = False
         '
-        'Label4
-        '
-        Me.Label4.BackColor = System.Drawing.Color.Transparent
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.ForeColor = System.Drawing.Color.Black
-        Me.Label4.Location = New System.Drawing.Point(33, 252)
-        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(316, 34)
-        Me.Label4.TabIndex = 20
-        Me.Label4.Text = "Personal Homepage :"
-        '
-        'TextBox_homepage
-        '
-        Me.TextBox_homepage.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.TextBox_homepage.Location = New System.Drawing.Point(357, 254)
-        Me.TextBox_homepage.Margin = New System.Windows.Forms.Padding(4)
-        Me.TextBox_homepage.Multiline = True
-        Me.TextBox_homepage.Name = "TextBox_homepage"
-        Me.TextBox_homepage.Size = New System.Drawing.Size(340, 34)
-        Me.TextBox_homepage.TabIndex = 21
-        '
         'Label6
         '
         Me.Label6.BackColor = System.Drawing.Color.Transparent
@@ -247,6 +225,28 @@ Partial Class Add_personal_prof
         Me.PictureBox1.TabIndex = 24
         Me.PictureBox1.TabStop = False
         '
+        'TextBox_homepage
+        '
+        Me.TextBox_homepage.Font = New System.Drawing.Font("Microsoft Sans Serif", 11.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.TextBox_homepage.Location = New System.Drawing.Point(357, 254)
+        Me.TextBox_homepage.Margin = New System.Windows.Forms.Padding(4)
+        Me.TextBox_homepage.Multiline = True
+        Me.TextBox_homepage.Name = "TextBox_homepage"
+        Me.TextBox_homepage.Size = New System.Drawing.Size(340, 34)
+        Me.TextBox_homepage.TabIndex = 21
+        '
+        'Label4
+        '
+        Me.Label4.BackColor = System.Drawing.Color.Transparent
+        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label4.ForeColor = System.Drawing.Color.Black
+        Me.Label4.Location = New System.Drawing.Point(33, 252)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(316, 34)
+        Me.Label4.TabIndex = 20
+        Me.Label4.Text = "Personal Homepage :"
+        '
         'Add_personal_prof
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -291,8 +291,6 @@ Partial Class Add_personal_prof
     Friend WithEvents TextBox_Responsibility As System.Windows.Forms.TextBox
     Friend WithEvents ComboBox_desig As System.Windows.Forms.ComboBox
     Friend WithEvents btn_login As System.Windows.Forms.Button
-    Friend WithEvents Label4 As System.Windows.Forms.Label
-    Friend WithEvents TextBox_homepage As System.Windows.Forms.TextBox
     Friend WithEvents Label6 As System.Windows.Forms.Label
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents PictureBox1 As System.Windows.Forms.PictureBox
@@ -300,4 +298,6 @@ Partial Class Add_personal_prof
     Friend WithEvents Label7 As System.Windows.Forms.Label
     Friend WithEvents TextBox1 As System.Windows.Forms.TextBox
     Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents TextBox_homepage As System.Windows.Forms.TextBox
+    Friend WithEvents Label4 As System.Windows.Forms.Label
 End Class
