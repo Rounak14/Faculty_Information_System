@@ -1,11 +1,11 @@
-﻿' Check all the paths, whether they all close
-
+﻿
 Imports Microsoft.VisualBasic
 Imports System.Data.OleDb
 Imports System.Data
 
 
 Public Class Search_Form
+    ' relative connection string
     Dim connectionString As String = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=|DataDirectory|\Faculty_database.accdb;Jet OLEDB:Database Password=group11"
     Dim filter As String = ""
 
@@ -20,6 +20,7 @@ Public Class Search_Form
             Dim cmd As New OleDbCommand(query, conn)
             Dim reader As OleDbDataReader = cmd.ExecuteReader()
             Dim count As Integer = 0
+            ' count is a variable to check if record exists
             While (reader.Read())
                 count += 1
             End While
@@ -37,12 +38,14 @@ Public Class Search_Form
                 email = dr("Email").ToString
                 dept = dr("Department").ToString
                 id = dr("ID").ToString
+                ' saving the image in the media directory
                 Try
                     Img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
                 Catch ex As Exception
                     Img = Image.FromFile(Application.StartupPath & "\media\default.jpg")
                 End Try
 
+                ' added the search results to the data grid view dynamically
                 DataGridView1.RowTemplate.Height = 60
                 DataGridView1.Rows.Add(Img, n.ToString, dept.ToString, email.ToString)
 
@@ -57,6 +60,7 @@ Public Class Search_Form
     End Function
 
     Function SearchByName(input As String) As String
+        ' searching by substring
         If input = "" Then
             Return "exit"
         End If
@@ -84,6 +88,7 @@ Public Class Search_Form
                 email = dr("Email").ToString
                 dept = dr("Department").ToString
                 id = dr("ID").ToString
+                ' image display in the search result
                 Try
                     Img = Image.FromFile(Application.StartupPath & "\media\" & id & ".jpeg")
                 Catch ex As Exception
@@ -104,6 +109,7 @@ Public Class Search_Form
     End Function
 
     Function SearchByResearchInterest(input As String) As String
+        ' substring search for research interest
         Dim conn = New OleDbConnection(connectionString)
         Try
             conn.Open()
@@ -126,12 +132,13 @@ Public Class Search_Form
                         email = dr("Email").ToString
                         dept = dr("Department").ToString
                         id_n = dr("ID").ToString
+                        ' images added
                         Try
                             Img = Image.FromFile(Application.StartupPath & "\media\" & id_n & ".jpeg")
                         Catch ex As Exception
                             Img = Image.FromFile(Application.StartupPath & "\media\default.jpg")
                         End Try
-
+                        ' adding the result dynamically
                         DataGridView1.RowTemplate.Height = 60
                         DataGridView1.Rows.Add(Img, n.ToString, dept.ToString, email.ToString)
 
@@ -146,7 +153,6 @@ Public Class Search_Form
                 DataGridView1.Show()
             End If
             reader.Close()
-
             conn.Close()
 
         Catch ex As Exception
@@ -191,6 +197,7 @@ Public Class Search_Form
     Private Sub Button_search_Click(sender As Object, e As EventArgs) Handles Button_search.Click
         DataGridView1.Hide()
         DataGridView1.Rows.Clear()
+        ' checkers before adding the button
         If filter = "" Then
             MessageBox.Show("Select one Search by option", "Warning")
         ElseIf SearchBox.Text = "" Then
